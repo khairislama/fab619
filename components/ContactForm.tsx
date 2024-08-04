@@ -78,7 +78,7 @@ function ContactForm() {
           type="text"
           name="phone"
           id="phone"
-          placeholder="619 54 544 731"
+          placeholder="+216 54 544 731"
           className="w-full border border-gray-300 bg-transparent"
         />
       </div>
