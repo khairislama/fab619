@@ -1,7 +1,11 @@
+import { cookies } from "next/headers"
+
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/sidebar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -18,6 +22,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = cookies()
+  const defaultOpen = cookieStore.get("sidebar:state")?.value === "true"
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -26,7 +33,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {children}
+        <SidebarProvider defaultOpen={defaultOpen}>
+          <AppSidebar />
+          <div className="flex">
+            <SidebarTrigger />
+            <main className="flex-1 p-8 md:ml-64" ></main>
+            {children}
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
