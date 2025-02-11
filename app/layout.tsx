@@ -27,7 +27,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar:state")?.value === "true";
+  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -37,7 +37,7 @@ export default async function RootLayout({
         <SidebarProvider defaultOpen={defaultOpen}>
           <AppSidebar />
           <div className="relative w-full">
-            <SidebarTrigger className="absolute top-3 left-0" />
+            <SidebarTrigger className="absolute top-3 left-1" />
             <main className="w-full">{children}</main>
           </div>
         </SidebarProvider>
