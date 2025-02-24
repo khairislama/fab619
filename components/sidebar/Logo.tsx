@@ -22,36 +22,34 @@ interface Props {
 
 export default function Logo({ large, mobile }: Props) {
   return (
-    <div className="flex w-full items-center justify-center">
-      <Link href="/">
-        {!!mobile && (
-          <Image
-            src={mobile.url}
-            alt={mobile.alt}
-            width={mobile.width}
-            height={mobile.height}
-            className="py-2 md:hidden h-auto"
-            sizes="30vw"
-            placeholder="blur"
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(mobile.width, mobile.height)
-            )}`}
-          />
-        )}
-        {/* Desktop Logo (hidden on screens smaller than md) */}
+    <Link href="/">
+      {!!mobile && (
         <Image
-          src={large.url}
-          alt={large.alt}
-          width={large.width}
-          height={large.height}
-          className={cn("py-2", !!mobile && "hidden md:block h-auto")}
-          sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+          src={mobile.url}
+          alt={mobile.alt}
+          width={mobile.width}
+          height={mobile.height}
+          className="py-2 md:hidden max-h-16"
+          sizes="30vw"
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(large.width, large.height)
+            shimmer(mobile.width, mobile.height)
           )}`}
         />
-      </Link>
-    </div>
+      )}
+      {/* Desktop Logo (hidden on screens smaller than md) */}
+      <Image
+        src={large.url}
+        alt={large.alt}
+        width={large.width}
+        height={large.height}
+        className={cn("py-2 max-h-16", !!mobile && "hidden md:block h-auto")}
+        sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(
+          shimmer(large.width, large.height)
+        )}`}
+      />
+    </Link>
   );
 }

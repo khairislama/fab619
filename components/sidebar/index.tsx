@@ -1,22 +1,16 @@
-"use client";
-
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { cn } from "@/lib/utils";
 import { Goal, Home, Menu, Presentation, Send, Users } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import AppSidebarHeader from "./header";
 import AppSidebarFooter from "./footer";
+import SidebarMenuBtn from "./client/SidebarMenuBtn";
 
 // Menu items.
 const navItems = [
@@ -48,36 +42,27 @@ const navItems = [
 ];
 
 export function AppSidebar() {
-  const pathname = usePathname();
-
   return (
     <Sidebar
       collapsible="icon"
       className="fixed left-0 top-0 z-40 h-screen w-64 bg-background text-foreground transition-transform duration-300 ease-in-out md:translate-x-0"
     >
-      <AppSidebarHeader />
+      {/* <AppSidebarHeader /> */}
       <SidebarContent className="flex flex-col justify-between h-full">
         <SidebarMenu>
           {navItems.map((item) => (
             <SidebarMenuItem key={item.title}>
               <Link href={item.url} passHref legacyBehavior>
-                <SidebarMenuButton
-                  className={cn(
-                    "flex items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-200",
-                    pathname === item.url
-                      ? "bg-gray-800 text-white"
-                      : "hover:bg-gray-800"
-                  )}
-                >
+                <SidebarMenuBtn url={item.url}>
                   <item.icon className="w-5 h-5" />
                   <span>{item.title}</span>
-                </SidebarMenuButton>
+                </SidebarMenuBtn>
               </Link>
             </SidebarMenuItem>
           ))}
         </SidebarMenu>
       </SidebarContent>
-      <AppSidebarFooter />
+      {/* <AppSidebarFooter /> */}
     </Sidebar>
   );
 }

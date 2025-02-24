@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar";
+import Navbar from "@/components/sidebar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,15 +33,16 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased debug-screens`}
       >
-        <SidebarProvider defaultOpen={defaultOpen}>
+        {/* <SidebarProvider defaultOpen={defaultOpen}>
           <AppSidebar />
           <div className="relative w-full">
             <SidebarTrigger className="absolute top-3 left-1" />
             <main className="w-full">{children}</main>
           </div>
-        </SidebarProvider>
+        </SidebarProvider> */}
+        <Navbar />
       </body>
     </html>
   );

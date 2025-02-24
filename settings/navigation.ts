@@ -1,0 +1,1 @@
+export const NAVIGATION= ["home", "about", "portfolio", "services", "contact"]
