@@ -1,31 +1,36 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { LucideProps } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
 
-export default function MenuBtn({
-  link,
-  setIsOpen,
-}: Readonly<{
-  link: string;
+interface Props {
+  item: {
+    title: string;
+    url: string;
+    icon: ForwardRefExoticComponent<
+      Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+    >;
+  };
   setIsOpen: (isOpen: boolean) => void;
-}>) {
+}
+
+export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
   const pathname = usePathname();
   return (
     <Link
-      key={link}
-      href={link === "home" ? "/" : `/${link}`}
+      href={item.url}
       className={cn(
         "text-xl capitalize transition-colors duration-300 ease-in-out",
-        pathname === link
+        pathname === item.url
           ? "font-bold translate-x-1"
-          : "hover:text-card-foreground/60",
-        link === "home" && pathname === "/" && "font-bold translate-x-1"
+          : "hover:text-card-foreground/60"
       )}
       onClick={() => setIsOpen(false)}
     >
-      {link}
+      {item.title}
     </Link>
   );
 }

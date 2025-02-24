@@ -3,57 +3,16 @@ import { useState } from "react";
 import { X, Menu, Github, Linkedin, Twitter } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import MotionDiv from "./client/MotionDiv";
-import { NAVIGATION } from "@/settings/navigation";
+import { NAVIGATION, SOCIAL } from "@/settings/navigation";
 import Link from "next/link";
 import MenuBtn from "./client/MenuBtn";
 import Logo from "./Logo";
 
-const socialItems = [
-  { name: "GitHub", href: "https://github.com", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Twitter", href: "https://twitter.com", icon: Twitter },
-];
-
-const logoProps = {
-  large: {
-    url: "/logo/fab-619-logo.svg",
-    alt: "Fab 619 Logo",
-    width: 300,
-    height: 114,
-  },
-  mobile: {
-    url: "/logo/fab-619-mobile-logo.svg",
-    alt: "Fab 619 Mobile Logo",
-    width: 104,
-    height: 150,
-  },
-};
-
-export default function Navbar() {
+export default function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-60 bg-gray-900 text-white p-6 flex-col justify-between">
-        {/* Logo */}
-        <div className="text-2xl font-bold">Logo</div>
-        {/* Nav Links */}
-        <nav className="flex flex-col gap-4">
-          {["Home", "Projects", "About", "Contact"].map((link) => (
-            <a key={link} href="#" className="hover:text-gray-400">
-              {link}
-            </a>
-          ))}
-        </nav>
-        {/* Social Icons */}
-        <div className="flex gap-4">
-          <a href="#">🔗</a>
-          <a href="#">🔗</a>
-          <a href="#">🔗</a>
-        </div>
-      </aside>
-
       {/* Top Navbar for Mobile */}
       <header className="lg:hidden fixed top-0 left-0 w-full bg-card text-card-foreground flex justify-between p-4 items-center">
         {/* Burger Button */}
@@ -63,10 +22,10 @@ export default function Navbar() {
           </div>
         </button>
         {/* Logo */}
-        <Logo large={logoProps.large} mobile={logoProps.mobile} />
+        <Logo />
         {/* Social Icons */}
         <div className="flex justify-center space-x-4">
-          {socialItems.map((item) => (
+          {SOCIAL.map((item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -96,8 +55,8 @@ export default function Navbar() {
               </button>
               {/* Nav Links */}
               <nav className="flex flex-col gap-6 mt-24 ml-6">
-                {NAVIGATION.map((link) => (
-                  <MenuBtn key={link} link={link} setIsOpen={setIsOpen} />
+                {NAVIGATION.map((item) => (
+                  <MenuBtn key={item.title} item={item} setIsOpen={setIsOpen} />
                 ))}
               </nav>
             </MotionDiv>

@@ -1,42 +1,28 @@
 import { shimmer, toBase64 } from "@/lib/image";
 import { cn } from "@/lib/utils";
+import { SITE_LOGO } from "@/settings/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
 export const runtime = "edge";
 
-interface Props {
-  large: {
-    url: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-  mobile?: {
-    url: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
-}
+export default function Logo() {
+  const { large, mobile } = SITE_LOGO;
 
-export default function Logo({ large, mobile }: Props) {
   return (
     <Link href="/">
-      {!!mobile && (
-        <Image
-          src={mobile.url}
-          alt={mobile.alt}
-          width={mobile.width}
-          height={mobile.height}
-          className="py-2 md:hidden max-h-16"
-          sizes="30vw"
-          placeholder="blur"
-          blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(mobile.width, mobile.height)
-          )}`}
-        />
-      )}
+      <Image
+        src={mobile.url}
+        alt={mobile.alt}
+        width={mobile.width}
+        height={mobile.height}
+        className="py-2 md:hidden max-h-16"
+        sizes="30vw"
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(
+          shimmer(mobile.width, mobile.height)
+        )}`}
+      />
       {/* Desktop Logo (hidden on screens smaller than md) */}
       <Image
         src={large.url}
