@@ -1,8 +1,6 @@
-import React from "react";
-
 function DesktopNavbar() {
   return (
-    <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-60 bg-gray-900 text-white p-6 flex-col justify-between">
+    <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-60 bg-card text-card-foreground p-6 flex-col justify-between z-50">
       {/* Logo */}
       <div className="text-2xl font-bold">Logo</div>
       {/* Nav Links */}

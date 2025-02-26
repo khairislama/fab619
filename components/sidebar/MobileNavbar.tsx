@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { X, Menu, Github, Linkedin, Twitter } from "lucide-react";
+import { X, Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import MotionDiv from "./client/MotionDiv";
 import { NAVIGATION, SOCIAL } from "@/settings/navigation";
