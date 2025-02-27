@@ -29,7 +29,7 @@ export default function Logo() {
         alt={large.alt}
         width={large.width}
         height={large.height}
-        className={cn("py-2 max-h-16", !!mobile && "hidden md:block h-auto")}
+        className={cn("py-2 max-h-16 hidden md:block h-auto xl:max-h-20")}
         sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
         placeholder="blur"
         blurDataURL={`data:image/svg+xml;base64,${toBase64(

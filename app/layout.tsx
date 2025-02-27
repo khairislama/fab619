@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased debug-screens`}
       >
         <AppSidebar />
-        <main className="w-full">{children}</main>
+        <main className="xl:ml-60">{children}</main>
       </body>
     </html>
   );

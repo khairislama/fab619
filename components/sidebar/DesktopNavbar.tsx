@@ -5,15 +5,15 @@ import DesktopNavigation from "./client/DesktopNavigation";
 
 function DesktopNavbar() {
   return (
-    <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-60 bg-card text-card-foreground p-6 flex-col justify-between z-50">
+    <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-60 bg-card text-card-foreground p-6 flex-col z-50 items-center">
       {/* Logo */}
-      <div className="mt-10">
+      <div className="mt-16 self-start">
         <Logo />
       </div>
       {/* Nav Links */}
       <DesktopNavigation />
       {/* Social Icons */}
-      <div className="flex justify-center space-x-4">
+      <div className="absolute flex space-x-4 bottom-16">
         {SOCIAL.map((item) => (
           <Link
             key={item.name}
