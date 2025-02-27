@@ -1,5 +1,5 @@
 import DesktopNavbar from "./DesktopNavbar";
-import MobileNavbar from "./MobileNavbar";
+import MobileNavbar from "./client/MobileNavbar";
 
 export function AppSidebar() {
   return (

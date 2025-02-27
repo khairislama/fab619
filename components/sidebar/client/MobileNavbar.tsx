@@ -2,11 +2,11 @@
 import { useState } from "react";
 import { X, Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
-import MotionDiv from "./client/MotionDiv";
+import MotionDiv from "./MotionDiv";
 import { NAVIGATION, SOCIAL } from "@/settings/navigation";
 import Link from "next/link";
-import MenuBtn from "./client/MenuBtn";
-import Logo from "./Logo";
+import MenuBtn from "./MenuBtn";
+import Logo from "../Logo";
 
 export default function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function MobileNavbar() {
   return (
     <>
       {/* Top Navbar for Mobile */}
-      <header className="lg:hidden fixed top-0 left-0 w-full bg-card text-card-foreground flex justify-between p-4 items-center">
+      <header className="xl:hidden fixed top-0 left-0 w-full bg-card text-card-foreground flex justify-between p-4 items-center">
         {/* Burger Button */}
         <button onClick={() => setIsOpen(true)}>
           <div className="flex items-center justify-center gap-3 text-xl hover:text-card-foreground/60 transition-colors duration-500 ease-in-out">
@@ -44,7 +44,7 @@ export default function MobileNavbar() {
       {/* AnimatePresence ensures exit animations work */}
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-50">
+          <div className="fixed inset-0 z-50 xl:hidden">
             <MotionDiv>
               {/* Close Button */}
               <button

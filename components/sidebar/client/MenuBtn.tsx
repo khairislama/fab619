@@ -14,7 +14,7 @@ interface Props {
       Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
     >;
   };
-  setIsOpen: (isOpen: boolean) => void;
+  setIsOpen?: (isOpen: boolean) => void;
 }
 
 export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
@@ -28,7 +28,9 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
           ? "font-bold translate-x-1"
           : "hover:text-card-foreground/60"
       )}
-      onClick={() => setIsOpen(false)}
+      onClick={() => {
+        setIsOpen && setIsOpen(false);
+      }}
     >
       {item.title}
     </Link>
