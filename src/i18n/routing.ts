@@ -7,7 +7,19 @@ export const routing = defineRouting({
     '/': '/',
     '/about': {
       en: '/about',
-      fr: '/propos'
+      fr: '/about'
+    },
+    '/portfolio': {
+      en: '/portfolio',
+      fr: '/portfolio'
+    },
+    '/services': {
+      en: '/services',
+      fr: '/services'
+    },
+    '/contact': {
+      en: '/contact',
+      fr: '/contact'
     }
   }
 });

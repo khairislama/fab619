@@ -7,7 +7,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "@/src/i18n/routing";
+import { Locale, routing } from "@/src/i18n/routing";
 import { AppSidebar } from "@/src/components/sidebar";
 import { ReactNode } from "react";
 
@@ -43,8 +43,8 @@ export async function generateMetadata(props: Omit<Props, "children">) {
 export default async function LocaleLayout({ children, params }: Props) {
   // Ensure that the incoming `locale` is valid
   const { locale } = await params;
-  // @ts-expect-error locale is hardcoded to be either 'en' or 'fr'.
-  if (!routing.locales.includes(locale)) {
+
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 

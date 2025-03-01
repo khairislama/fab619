@@ -1,6 +1,9 @@
 import { Github, Goal, Home, Linkedin, Presentation, Send, Twitter, Users } from "lucide-react";
 
-export const NAVIGATION= [
+// Define allowed URL paths
+export type UrlPath = "/" | "/about" | "/portfolio" | "/services" | "/contact";
+
+export const NAVIGATION: { title: string; url: UrlPath; icon: React.ComponentType }[]= [
     {
       title: "Home",
       url: "/",

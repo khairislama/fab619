@@ -1,13 +1,14 @@
 "use client";
 
+import { UrlPath } from "@/settings/navigation";
 import { cn } from "@/src/components/lib/utils";
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
 import { usePathname } from "next/navigation";
 
 interface Props {
   item: {
     title: string;
-    url: string;
+    url: UrlPath;
   };
   setIsOpen?: (isOpen: boolean) => void;
 }
