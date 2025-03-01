@@ -3,6 +3,7 @@
 import { UrlPath } from "@/settings/navigation";
 import { cn } from "@/src/components/lib/utils";
 import { Link } from "@/src/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
 interface Props {
@@ -16,6 +17,7 @@ interface Props {
 export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
   const pathname = usePathname();
 
+  const t = useTranslations("Navigation");
   // Normalize pathname by removing "/en" or "/fr"
   const normalizedPath = pathname.replace(/^\/(en|fr)/, "");
   const normalizedUrl = item.url === "/" ? "" : item.url;
@@ -32,7 +34,7 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
         if (setIsOpen) setIsOpen(false);
       }}
     >
-      {item.title}
+      {t(item.title)}
     </Link>
   );
 }

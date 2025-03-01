@@ -5,27 +5,27 @@ export type UrlPath = "/" | "/about" | "/portfolio" | "/services" | "/contact";
 
 export const NAVIGATION: { title: string; url: UrlPath; icon: React.ComponentType }[]= [
     {
-      title: "Home",
+      title: "home",
       url: "/",
       icon: Home,
     },
     {
-      title: "About",
+      title: "about",
       url: "/about",
       icon: Users,
     },
     {
-      title: "Portfolio",
+      title: "portfolio",
       url: "/portfolio",
       icon: Presentation,
     },
     {
-      title: "Services",
+      title: "services",
       url: "/services",
       icon: Goal,
     },
     {
-      title: "Contact",
+      title: "contact",
       url: "/contact",
       icon: Send,
     },
