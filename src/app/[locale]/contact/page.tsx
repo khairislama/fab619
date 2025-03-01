@@ -20,7 +20,7 @@ export default function ContactPage({ params }: Props) {
         <h1>{t("title")}</h1>
       </section>
       <section className="w-full text-4xl text-center mb-6 p-10">
-        <Link href="/about">{t("about")}</Link>
+        <Link href="/about">{t("description")}</Link>
       </section>
       <section className="w-full text-4xl text-center mb-6 p-10">
         <h2>CONTACT CONTACT CONTACT CONTACT CONTACT</h2>

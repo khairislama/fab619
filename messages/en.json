@@ -1,13 +1,45 @@
 {
   "Navigation": {
-      "home": "Home",
-      "about": "About",
-      "portfolio": "Portfolio",
-      "services": "Services",
-      "contact": "Contact"
-    },
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    }
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "HomePage-Metadata": {
+    "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
+    "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
+    "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation",
+    "ogTitle": "FAB619 - Engineering & Innovation",
+    "ogDescription": "FAB619 delivers cutting-edge solutions in electronics, robotics, and 3D printing. Engineering excellence for modern industries.",
+    "ogUrl": "https://fab619.tn",
+    "twitterTitle": "FAB619 | Engineering & Robotics Solutions",
+    "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."  
+  },
+  "HomePage": {
+    "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
+    "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
+    "slideshow": [
+      {
+        "title": "Innovating Electronics for Tomorrow",
+        "text": "Advanced electronic solutions tailored for modern industries."
+      },
+      {
+        "title": "Robotics That Transforms Industries",
+        "text": "Intelligent automation for a smarter, more efficient future."
+      },
+      {
+        "title": "Precision 3D Printing & Prototyping",
+        "text": "Rapid prototyping with cutting-edge 3D printing technology."
+      },
+      {
+        "title": "Engineering Excellence, Designed for You",
+        "text": "Custom solutions to bring your ideas to reality."
+      }
+    ]
+  },
+  "AboutPage": {
+    "title": "About FAB619 - Engineering & Innovation",
+    "description": "At FAB619, we blend engineering expertise with creative design to deliver cutting-edge solutions in electronics, robotics, and 3D printing. With a passion for innovation, our team works closely with clients to turn ideas into reality, from prototyping to full-scale production."
   }
+}
