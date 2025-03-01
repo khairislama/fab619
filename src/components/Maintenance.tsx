@@ -1,4 +1,4 @@
-import { shimmer, toBase64 } from "@/lib/image";
+import { shimmer, toBase64 } from "@/src/components/lib/image";
 import Image from "next/image";
 import Link from "next/link";
 import { Input } from "./ui/input";

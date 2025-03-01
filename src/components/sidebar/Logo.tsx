@@ -1,5 +1,5 @@
-import { shimmer, toBase64 } from "@/lib/image";
-import { cn } from "@/lib/utils";
+import { shimmer, toBase64 } from "@/src/components/lib/image";
+import { cn } from "@/src/components/lib/utils";
 import { SITE_LOGO } from "@/settings/navigation";
 import Image from "next/image";
 import Link from "next/link";
