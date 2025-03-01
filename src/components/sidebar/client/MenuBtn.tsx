@@ -1,18 +1,13 @@
 "use client";
 
 import { cn } from "@/src/components/lib/utils";
-import { LucideProps } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
 
 interface Props {
   item: {
     title: string;
     url: string;
-    icon: ForwardRefExoticComponent<
-      Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-    >;
   };
   setIsOpen?: (isOpen: boolean) => void;
 }
@@ -29,7 +24,7 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
           : "hover:text-card-foreground/60"
       )}
       onClick={() => {
-        setIsOpen && setIsOpen(false);
+        if (setIsOpen) setIsOpen(false);
       }}
     >
       {item.title}

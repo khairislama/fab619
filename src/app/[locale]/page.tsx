@@ -1,7 +1,18 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 import { Link } from "@/src/i18n/navigation";
 
-export default function HomePage() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default function HomePage({ params }: Props) {
+  const { locale } = use(params);
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const t = useTranslations("HomePage");
   return (
     <main className="w-full h-screen xl:ml-60">
