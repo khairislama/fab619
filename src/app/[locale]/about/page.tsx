@@ -7,7 +7,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export default function HomePage({ params }: Props) {
+export default function AboutPage({ params }: Props) {
   const { locale } = use(params);
 
   // Enable static rendering
@@ -23,7 +23,7 @@ export default function HomePage({ params }: Props) {
         <Link href="/about">{t("about")}</Link>
       </section>
       <section className="w-full text-4xl text-center mb-6 p-10">
-        <h2>HOME HOME HOME HOME HOME</h2>
+        <h2>ABOUT ABOUT ABOUT ABOUT ABOUT</h2>
       </section>
       <section className="w-full text-4xl text-center mb-6 p-10">
         <h2>This is a banner after hero</h2>

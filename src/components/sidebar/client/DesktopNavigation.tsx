@@ -5,7 +5,7 @@ import MenuBtn from "./MenuBtn";
 
 function DesktopNavigation() {
   return (
-    <nav className="flex flex-col gap-4 mt-16">
+    <nav className="flex flex-col gap-4 mt-20 ml-12">
       {NAVIGATION.map((item) => (
         <MenuBtn key={item.title} item={item} />
       ))}

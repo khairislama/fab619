@@ -15,12 +15,16 @@ interface Props {
 
 export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
   const pathname = usePathname();
+
+  // Normalize pathname by removing "/en" or "/fr"
+  const normalizedPath = pathname.replace(/^\/(en|fr)/, "");
+  const normalizedUrl = item.url === "/" ? "" : item.url;
   return (
     <Link
       href={item.url}
       className={cn(
-        "text-xl capitalize transition-colors duration-300 ease-in-out",
-        pathname === item.url
+        "text-2xl capitalize transition-all duration-300 ease-in-out",
+        normalizedPath === normalizedUrl
           ? "font-bold translate-x-1"
           : "hover:text-card-foreground/60"
       )}

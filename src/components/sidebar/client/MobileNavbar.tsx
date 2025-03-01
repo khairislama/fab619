@@ -54,7 +54,7 @@ export default function MobileNavbar() {
                 <X className="w-8 h-8" />
               </button>
               {/* Nav Links */}
-              <nav className="flex flex-col gap-6 mt-24 ml-6">
+              <nav className="flex flex-col gap-6 mt-24 ml-2">
                 {NAVIGATION.map((item) => (
                   <MenuBtn key={item.title} item={item} setIsOpen={setIsOpen} />
                 ))}
