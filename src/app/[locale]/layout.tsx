@@ -87,7 +87,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       >
         <NextIntlClientProvider messages={messages}>
           <AppSidebar />
-          <main className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)]">
+          <main className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)] relative">
             {children}
           </main>
         </NextIntlClientProvider>

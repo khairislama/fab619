@@ -19,7 +19,7 @@ export default function MaintenancePage({ params }: Props) {
   const maintenanceST = useTranslations("Maintenance.services");
 
   return (
-    <div className="h-[calc(100vh-6rem)] overflow-hidden">
+    <div className="h-[calc(100vh-6rem)] xl:h-full overflow-hidden">
       <Image
         src="/images/maintenance-background.webp"
         alt="Background"
@@ -31,7 +31,7 @@ export default function MaintenancePage({ params }: Props) {
       />
       <div className="absolute inset-0 bg-foreground/90 -z-10" />
       <div className="h-screen overflow-y-auto scrollbar-hide">
-        <div className="container mx-auto flex flex-col items-center p-4 text-card">
+        <div className="container mx-auto flex flex-col items-center p-4 text-card relative mb-24">
           <Image
             src="/logo/fab-619-logo-white-min.svg"
             alt="Logo"
@@ -48,7 +48,9 @@ export default function MaintenancePage({ params }: Props) {
             {maintenanceT("message")}
           </p>
           <ContactForm />
-          <div className="flex flex-col items-center my-10 gap-6">
+          <ContactForm />
+          <ContactForm />
+          <div className="flex flex-col items-center my-10 gap-6 mb-40">
             {Array.from({ length: 5 }).map((_, i) => (
               <p
                 key={i}
@@ -58,17 +60,15 @@ export default function MaintenancePage({ params }: Props) {
               </p>
             ))}
           </div>
-          <div className="flex justify-between mx-auto w-full mt-20 mb-28">
-            <p className="text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/2">
-              {maintenanceT("copyrights")}
-            </p>
-            <p className="text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/2 text-end">
-              B125 ,Fabrique Entrepreneuriale,
-              <br />
-              Néotex Menzel Harb 5036 <br />
-              Monastir ,Tunisie
-            </p>
-          </div>
+          <p className="text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/3 absolute left-12 bottom-12">
+            {maintenanceT("copyrights")}
+          </p>
+          <p className="text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/3 text-end absolute right-12 bottom-12">
+            B125 ,Fabrique Entrepreneuriale,
+            <br />
+            Néotex Menzel Harb 5036 <br />
+            Monastir ,Tunisie
+          </p>
         </div>
       </div>
     </div>
