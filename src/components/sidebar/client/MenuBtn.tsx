@@ -6,19 +6,6 @@ import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
-// todo: integrate with maintenance
-// todo: make not found page
-// todo: create loading page
-// todo: make contact form work
-// todo: get slideshow
-// todo: make a banner for navigation path and filter options
-// todo: make a grid view
-// todo: to upper page button in grid view when scrolled down
-// todo: footer
-// todo: sponsors or clients section
-// todo: like with database and get grid view from database data with headless CMS
-// todo: ask about animation
-
 interface Props {
   item: {
     title: string;
@@ -41,7 +28,7 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
         "text-2xl capitalize transition-all duration-300 ease-in-out",
         normalizedPath === normalizedUrl
           ? "font-bold translate-x-1"
-          : "hover:text-card-foreground/60"
+          : "sm:hover:text-card-foreground/60"
       )}
       onClick={() => {
         if (setIsOpen) setIsOpen(false);

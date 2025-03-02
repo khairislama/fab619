@@ -37,57 +37,38 @@ export default function MaintenancePage({ params }: Props) {
             alt="Logo"
             width={134}
             height={150}
-            className="animate-bounce mt-20"
+            className="animate-bounce mt-24"
           />
 
-          <h1 className="text-3xl md:text-5xl font-bold my-4 uppercase text-center">
+          <h1 className="text-3xl md:text-5xl font-bold my-6 uppercase text-center">
             {maintenanceT("title")}
           </h1>
           <div className="w-64 h-2 mx-auto bg-card" />
-          <p className="my-4 text-justify text-lg font-semibold ">
+          <p className="my-8 text-justify text-lg font-semibold ">
             {maintenanceT("message")}
           </p>
           <ContactForm />
-          <ContactForm />
-          <div className="flex w-full max-w-sm items-center justify-around mt-24">
-            <Link href="https://www.facebook.com/fab619" target="_blank">
-              <div className="bg-red-500 h-6 w-6 text-xs">fb</div>
-            </Link>
-            <Link href="https://www.instagram.com/fab_619" target="_blank">
-              <div className="bg-red-500 h-6 w-6 text-xs">ins</div>
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/fab619/"
-              target="_blank"
-            >
-              <div className="bg-red-500 h-6 w-6 text-xs">lkn</div>
-            </Link>
-            <Link href="https://github.com/fab619" target="_blank">
-              <div className="bg-red-500 h-6 w-6 text-xs">git</div>
-            </Link>
+          <div className="flex flex-col items-center my-10 gap-6">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <p
+                key={i}
+                className="sm:hover:text-white sm:hover:scale-105 cursor-pointer transition-all ease-in-out text-xl sm:text-3xl"
+              >
+                {maintenanceST(`${i + 1}`)}
+              </p>
+            ))}
           </div>
-          <p className="text-xs font-extralight tracking-tighter">
-            {maintenanceT("copyrights")}
-          </p>
-          <div className="hidden lg:block w-1/3">
-            <div className="text-right flex flex-col gap-10 text-gray-400">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <p
-                  key={i}
-                  className="hover:text-white hover:scale-105 cursor-pointer transition-all ease-in-out"
-                >
-                  {maintenanceST(`${i + 1}`)}
-                </p>
-              ))}
-            </div>
-            <p className="text-sm">
+          <div className="flex justify-between mx-auto w-full mt-20 mb-28">
+            <p className="text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/2">
+              {maintenanceT("copyrights")}
+            </p>
+            <p className="text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/2 text-end">
               B125 ,Fabrique Entrepreneuriale,
               <br />
               Néotex Menzel Harb 5036 <br />
               Monastir ,Tunisie
             </p>
           </div>
-          <div className="bg-green-400 w-60 h-44 ">sd</div>
         </div>
       </div>
     </div>

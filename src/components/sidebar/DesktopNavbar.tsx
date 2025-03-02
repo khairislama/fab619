@@ -20,7 +20,7 @@ function DesktopNavbar() {
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-card-foreground/60 transition-colors duration-200 ease-in-out"
+            className="sm:hover:text-card-foreground/60 transition-colors duration-200 ease-in-out"
           >
             <item.icon className="w-6 h-6" />
             <span className="sr-only">{item.name}</span>
