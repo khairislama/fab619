@@ -6,13 +6,24 @@
     "services": "Services",
     "contact": "Contact"
   },
+  "Maintenance": {
+    "title": "En cours de maintenance",
+    "message": "Notre équipe met actuellement à jour le site web pour vous offrir une meilleure expérience utilisateur. N'hésitez pas à nous contacter directement pour toute demande ou assistance immédiate.",
+    "copyrights": "© Droits d'auteur FAB619 - Fabrication à la demande | Tous droits réservés",
+    "services": {
+      "1": "Fabrication numérique",
+      "2": "Usinage CNC sur mesure",
+      "3": "Conception et prototypage matériel",
+      "4": "Électronique et systèmes embarqués",
+      "5": "Logiciels et algorithmes de contrôle machine"
+    }
+  },
   "HomePage-Metadata": {
     "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique & Impression 3D",
     "description": "Découvrez FAB619, un bureau d'ingénierie spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
     "keywords": "ingénierie, bureau d'étude, robotique, impression 3D, électronique, prototypage, automatisation, solutions industrielles, FAB619, innovation",
     "ogTitle": "FAB619 - Ingénierie & Innovation",
     "ogDescription": "FAB619 propose des solutions innovantes en électronique, robotique et impression 3D. L'excellence en ingénierie au service des industries modernes.",
-    "ogUrl": "https://fab619.tn",
     "twitterTitle": "FAB619 | Solutions en Ingénierie et Robotique",
     "twitterDescription": "Ingénierie, robotique et impression 3D adaptées aux besoins industriels."
   },

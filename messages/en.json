@@ -6,13 +6,24 @@
     "services": "Services",
     "contact": "Contact"
   },
+  "Maintenance": {
+    "title": "Under construction",
+    "message": "Our team is currently updating the website to provide you with an enhanced user experience. Feel free to contact us directly for any immediate assistance or inquiries.",
+    "copyrights": "© Copyrights FAB619-On demand fabrication | All Rights Reserved",
+    "services": {
+      "1": "Digital Fabrication",
+      "2": "Custom CNC Machining",
+      "3": "Hardware Design & Prototyping",
+      "4": "Electronics & Embedded Systems",
+      "5": "Software & Machine Control Algorithms"
+    }
+  },
   "HomePage-Metadata": {
     "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
     "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
     "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation",
     "ogTitle": "FAB619 - Engineering & Innovation",
     "ogDescription": "FAB619 delivers cutting-edge solutions in electronics, robotics, and 3D printing. Engineering excellence for modern industries.",
-    "ogUrl": "https://fab619.tn",
     "twitterTitle": "FAB619 | Engineering & Robotics Solutions",
     "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."  
   },

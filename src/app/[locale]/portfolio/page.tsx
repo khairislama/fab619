@@ -15,7 +15,7 @@ export default function PortfolioPage({ params }: Props) {
 
   const t = useTranslations("HomePage");
   return (
-    <main className="w-full h-screen xl:ml-60">
+    <div>
       <section className="w-full text-4xl text-center mb-6 p-10">
         <h1>{t("title")}</h1>
       </section>
@@ -31,6 +31,6 @@ export default function PortfolioPage({ params }: Props) {
       <section className="w-full text-4xl text-center mb-6 p-10">
         <h2>This is a grid with filter</h2>
       </section>
-    </main>
+    </div>
   );
 }

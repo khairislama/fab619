@@ -14,7 +14,7 @@ export default function MobileNavbar() {
   return (
     <>
       {/* Top Navbar for Mobile */}
-      <header className="xl:hidden fixed top-0 left-0 w-full bg-card text-card-foreground flex justify-between p-4 items-center">
+      <header className="xl:hidden fixed top-0 left-0 w-full bg-card text-card-foreground flex justify-between p-4 items-center h-24 z-50">
         {/* Burger Button */}
         <button onClick={() => setIsOpen(true)}>
           <div className="flex items-center justify-center gap-3 text-xl hover:text-card-foreground/60 transition-colors duration-500 ease-in-out">
