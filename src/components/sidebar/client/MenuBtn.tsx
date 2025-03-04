@@ -1,7 +1,7 @@
 "use client";
 
 import { UrlPath } from "@/settings/navigation";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";

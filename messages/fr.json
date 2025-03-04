@@ -8,6 +8,14 @@
   },
   "Maintenance": {
     "title": "En cours de maintenance",
+    "contact": {
+    "title": "Contact Us",
+    "description": "Veuillez remplir le formulaire ci-dessous et nous vous répondrons sous peu.",
+    "email": "votre adresse e-mail",
+    "phone": "votre numéro de téléphone",
+    "message": "Laissez un message et nous vous contacterons plus tard",
+    "submit": "envoyer le message"
+    },
     "message": "Notre équipe met actuellement à jour le site web pour vous offrir une meilleure expérience utilisateur. N'hésitez pas à nous contacter directement pour toute demande ou assistance immédiate.",
     "copyrights": "© Droits d'auteur FAB619 - Fabrication à la demande | Tous droits réservés",
     "services": {

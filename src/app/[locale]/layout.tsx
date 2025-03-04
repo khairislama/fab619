@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -10,19 +10,16 @@ import { notFound } from "next/navigation";
 import { Locale, routing } from "@/src/i18n/routing";
 import { AppSidebar } from "@/src/components/sidebar";
 import { ReactNode } from "react";
+import { Toaster } from "@/components/ui/sonner";
 
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -83,13 +80,14 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background font-sans antialiased debug-screens`}
+        className={`${poppins.variable} bg-background font-sans antialiased debug-screens`}
       >
         <NextIntlClientProvider messages={messages}>
           <AppSidebar />
-          <main className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)] relative">
+          <main className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)] relative font-poppins">
             {children}
           </main>
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>

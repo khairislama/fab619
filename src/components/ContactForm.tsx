@@ -1,24 +1,169 @@
-import Link from "next/link";
+"use client";
 
-function ContactForm() {
+import * as v from "valibot";
+import { valibotResolver } from "@hookform/resolvers/valibot";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
+
+// Schema for contact form validation
+const formSchema = v.object({
+  name: v.pipe(
+    v.string(),
+    v.minLength(2, "Name must be at least 2 characters long")
+  ),
+  email: v.pipe(v.string(), v.email("Invalid email address")),
+  message: v.pipe(
+    v.string(),
+    v.minLength(10, "Message must be at least 10 characters long")
+  ),
+});
+
+export default function ContactFormPreview() {
+  const contactTranslation = useTranslations("Maintenance.contact");
+  const [isLoading, setIsLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [retry, setRetry] = useState(false);
+
+  const form = useForm<v.InferOutput<typeof formSchema>>({
+    resolver: valibotResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(values: v.InferOutput<typeof formSchema>) {
+    try {
+      setIsLoading(true);
+      setRetry(false);
+      // Simulate a successful contact form submission
+      console.log(values);
+      toast.success("Your message has been sent successfully!");
+      setSent(true);
+    } catch (error) {
+      console.error("Error submitting contact form", error);
+      toast.error("Failed to send your message. Please try again.");
+      setRetry(true);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
-    <div className="h-80 bg-red-400 w-full">
-      <div className="flex w-full max-w-sm items-center justify-around mt-24">
-        <Link href="https://www.facebook.com/fab619" target="_blank">
-          <div className="bg-green-500 h-6 w-6 text-xs">fb</div>
-        </Link>
-        <Link href="https://www.instagram.com/fab_619" target="_blank">
-          <div className="bg-green-500 h-6 w-6 text-xs">ins</div>
-        </Link>
-        <Link href="https://www.linkedin.com/company/fab619/" target="_blank">
-          <div className="bg-green-500 h-6 w-6 text-xs">lkn</div>
-        </Link>
-        <Link href="https://github.com/fab619" target="_blank">
-          <div className="bg-green-500 h-6 w-6 text-xs">git</div>
-        </Link>
-      </div>
-    </div>
+    <Card className="">
+      <CardHeader>
+        <CardTitle className="text-3xl mb-1">
+          {contactTranslation("title")}
+        </CardTitle>
+        <CardDescription className="text-xl">
+          {contactTranslation("description")}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <div className="grid gap-7">
+              {/* Email Field */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="grid gap-2">
+                    <FormLabel htmlFor="email">
+                      {contactTranslation("email")}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        id="email"
+                        placeholder="johndoe@mail.com"
+                        type="email"
+                        autoComplete="email"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              {/* Name Field */}
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="grid gap-2">
+                    <FormLabel htmlFor="name">
+                      {contactTranslation("phone")}
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        id="name"
+                        placeholder="John Doe"
+                        type="text"
+                        autoComplete="name"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              {/* Message Field */}
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem className="grid gap-2">
+                    <FormLabel htmlFor="message">Message</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        id="message"
+                        placeholder={contactTranslation("message")}
+                        autoComplete="off"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <Button type="submit" size={"lg"} disabled={sent || isLoading}>
+                {isLoading
+                  ? "Sending..."
+                  : retry
+                  ? "Retry"
+                  : sent
+                  ? "Message Sent"
+                  : "Send Message"}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
   );
 }
-
-export default ContactForm;

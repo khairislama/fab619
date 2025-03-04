@@ -2,6 +2,7 @@ import { SOCIAL } from "@/settings/navigation";
 import Logo from "./Logo";
 import Link from "next/link";
 import DesktopNavigation from "./client/DesktopNavigation";
+import NavLanguage from "./NavLanguage";
 
 function DesktopNavbar() {
   return (
@@ -12,6 +13,9 @@ function DesktopNavbar() {
       </div>
       {/* Nav Links */}
       <DesktopNavigation />
+      <div className="w-full mt-20 ml-10 text-xl">
+        <NavLanguage />
+      </div>
       {/* Social Icons */}
       <div className="absolute flex space-x-4 bottom-16 ml-8">
         {SOCIAL.map((item) => (

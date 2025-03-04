@@ -1,9 +1,9 @@
 import { use } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import ContactForm from "@/src/components/ContactForm";
+import { ChevronsDown } from "lucide-react";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -37,18 +37,17 @@ export default function MaintenancePage({ params }: Props) {
             alt="Logo"
             width={134}
             height={150}
-            className="animate-bounce mt-24"
+            className="animate-bounceSlow mt-24"
           />
 
           <h1 className="text-3xl md:text-5xl font-bold my-6 uppercase text-center">
             {maintenanceT("title")}
           </h1>
           <div className="w-64 h-2 mx-auto bg-card" />
-          <p className="my-8 text-justify text-lg font-semibold ">
+          <p className="my-8 text-justify text-lg font-semibold">
             {maintenanceT("message")}
           </p>
-          <ContactForm />
-          <ContactForm />
+          <ChevronsDown className="h-20 w-20 animate-bounceFast my-4" />
           <ContactForm />
           <div className="flex flex-col items-center my-10 gap-6 mb-40">
             {Array.from({ length: 5 }).map((_, i) => (

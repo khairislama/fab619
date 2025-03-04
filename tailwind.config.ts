@@ -3,7 +3,7 @@ import scrollbarHide from "tailwind-scrollbar-hide";
 
 export default {
   darkMode: ["class"],
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./components/**/*.{ts,tsx}", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -64,8 +64,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        bounce: "bounce 4s infinite",
+        bounceSlow: "bounce 4s infinite",
+        bounceFast: "bounce 1s infinite",
         spin: "spin 2s linear infinite",
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
     },
   },
