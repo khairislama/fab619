@@ -25,9 +25,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { handleContact } from "../app/actions/contact";
 
 // Schema for contact form validation
-const formSchema = v.object({
+export const formSchema = v.object({
   email: v.pipe(v.string(), v.email("Invalid email address")),
   phone: v.pipe(
     v.string(),
@@ -55,13 +56,19 @@ export default function ContactForm() {
   });
 
   async function onSubmit(values: v.InferOutput<typeof formSchema>) {
+    setIsLoading(true);
+    setRetry(false);
+
     try {
-      setIsLoading(true);
-      setRetry(false);
-      // Simulate a successful contact form submission
-      console.log(values);
-      toast.success("Your message has been sent successfully!");
-      setSent(true);
+      const result = await handleContact(values);
+      if (result.success) {
+        toast.success("Your message has been sent successfully!");
+        setSent(true);
+        form.reset(); // Reset form fields
+      } else {
+        toast.error("Failed to send your message. Please try again.");
+        setRetry(true);
+      }
     } catch (error) {
       console.error("Error submitting contact form", error);
       toast.error("Failed to send your message. Please try again.");
