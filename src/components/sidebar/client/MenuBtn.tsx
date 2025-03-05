@@ -25,7 +25,7 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
     <Link
       href={item.url}
       className={cn(
-        "text-2xl capitalize transition-all duration-300 ease-in-out",
+        "text-2xl capitalize transition-all duration-300 ease-in-out cursor-not-allowed",
         normalizedPath === normalizedUrl
           ? "font-bold translate-x-1"
           : "sm:hover:text-card-foreground/60"

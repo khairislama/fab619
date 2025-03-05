@@ -1,7 +1,6 @@
-import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { Link } from "@/src/i18n/navigation";
+import Maintenance from "@/src/components/Maintenance";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -13,24 +12,5 @@ export default function PortfolioPage({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale);
 
-  const t = useTranslations("HomePage");
-  return (
-    <div>
-      <section className="w-full text-4xl text-center mb-6 p-10">
-        <h1>{t("title")}</h1>
-      </section>
-      <section className="w-full text-4xl text-center mb-6 p-10">
-        <Link href="/about">{t("description")}</Link>
-      </section>
-      <section className="w-full text-4xl text-center mb-6 p-10">
-        <h2>PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO</h2>
-      </section>
-      <section className="w-full text-4xl text-center mb-6 p-10">
-        <h2>This is a banner after hero</h2>
-      </section>
-      <section className="w-full text-4xl text-center mb-6 p-10">
-        <h2>This is a grid with filter</h2>
-      </section>
-    </div>
-  );
+  return <Maintenance locale={locale} />;
 }

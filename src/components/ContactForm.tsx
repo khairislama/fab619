@@ -28,18 +28,18 @@ import { useTranslations } from "next-intl";
 
 // Schema for contact form validation
 const formSchema = v.object({
-  name: v.pipe(
-    v.string(),
-    v.minLength(2, "Name must be at least 2 characters long")
-  ),
   email: v.pipe(v.string(), v.email("Invalid email address")),
+  phone: v.pipe(
+    v.string(),
+    v.regex(/^(\+\d{1,3})?\d{8,15}$/, "Invalid phone number format")
+  ),
   message: v.pipe(
     v.string(),
     v.minLength(10, "Message must be at least 10 characters long")
   ),
 });
 
-export default function ContactFormPreview() {
+export default function ContactForm() {
   const contactTranslation = useTranslations("Maintenance.contact");
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -48,8 +48,8 @@ export default function ContactFormPreview() {
   const form = useForm<v.InferOutput<typeof formSchema>>({
     resolver: valibotResolver(formSchema),
     defaultValues: {
-      name: "",
       email: "",
+      phone: "",
       message: "",
     },
   });
@@ -72,14 +72,12 @@ export default function ContactFormPreview() {
   }
 
   return (
-    <Card className="">
+    <Card className="max-w-2xl mb-10">
       <CardHeader>
         <CardTitle className="text-3xl mb-1">
           {contactTranslation("title")}
         </CardTitle>
-        <CardDescription className="text-xl">
-          {contactTranslation("description")}
-        </CardDescription>
+        <CardDescription>{contactTranslation("description")}</CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -108,21 +106,21 @@ export default function ContactFormPreview() {
                 )}
               />
 
-              {/* Name Field */}
+              {/* phone Field */}
               <FormField
                 control={form.control}
-                name="name"
+                name="phone"
                 render={({ field }) => (
                   <FormItem className="grid gap-2">
-                    <FormLabel htmlFor="name">
+                    <FormLabel htmlFor="phone">
                       {contactTranslation("phone")}
                     </FormLabel>
                     <FormControl>
                       <Input
-                        id="name"
-                        placeholder="John Doe"
+                        id="phone"
+                        placeholder="number"
                         type="text"
-                        autoComplete="name"
+                        autoComplete="phone"
                         {...field}
                       />
                     </FormControl>

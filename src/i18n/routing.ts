@@ -1,27 +1,27 @@
-import {defineRouting} from 'next-intl/routing';
+import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ['en', 'fr'],
-  defaultLocale: 'en',
+  locales: ["en", "fr"],
+  defaultLocale: "en",
   pathnames: {
-    '/': '/',
-    '/about': {
-      en: '/about',
-      fr: '/about'
+    "/": "/",
+    "/about": {
+      en: "/about",
+      fr: "/about",
     },
-    '/portfolio': {
-      en: '/portfolio',
-      fr: '/portfolio'
+    "/portfolio": {
+      en: "/portfolio",
+      fr: "/portfolio",
     },
-    '/services': {
-      en: '/services',
-      fr: '/services'
+    "/services": {
+      en: "/services",
+      fr: "/services",
     },
-    '/contact': {
-      en: '/contact',
-      fr: '/contact'
-    }
-  }
+    "/contact": {
+      en: "/contact",
+      fr: "/contact",
+    },
+  },
 });
 
 export type Pathnames = keyof typeof routing.pathnames;
