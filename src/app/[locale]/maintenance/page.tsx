@@ -7,6 +7,7 @@ import Slideshow from "@/src/components/slideshow";
 import { JSX, useState } from "react";
 import Grid from "@/src/components/grid";
 import { Button } from "@/components/ui/button";
+import { AboutHeroContainer } from "@/src/components/about/AboutHeroContainer";
 
 // type Props = {
 //   params: Promise<{ locale: string }>;
@@ -57,6 +58,7 @@ export default function MaintenancePage() {
         <div className="h-1 w-full bg-black my-6"></div>
         {show === "Grid" && <Grid />}
         {show === "Slideshow" && <Slideshow />}
+        {show === "About" && <AboutHeroContainer />}
 
         {/* <AboutHeroContainer /> */}
 
