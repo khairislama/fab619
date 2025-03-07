@@ -13,11 +13,11 @@ function DesktopNavbar() {
       </div>
       {/* Nav Links */}
       <DesktopNavigation />
-      <div className="w-full mt-20 ml-10 text-xl">
+      <div className="w-full mt-20 ml-10 text-xl mb-8">
         <NavLanguage />
       </div>
       {/* Social Icons */}
-      <div className="absolute flex space-x-4 bottom-16 ml-8">
+      <div className="flex space-x-4 ml-8">
         {SOCIAL.map((item) => (
           <Link
             key={item.name}

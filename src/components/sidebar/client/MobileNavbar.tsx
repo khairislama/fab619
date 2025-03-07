@@ -24,7 +24,7 @@ export default function MobileNavbar() {
         {/* Logo */}
         <Logo />
         {/* Social Icons */}
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-2 sm:space-x-4">
           {SOCIAL.map((item) => (
             <Link
               key={item.name}

@@ -1,4 +1,5 @@
 import {
+  Facebook,
   Github,
   Goal,
   Home,
@@ -71,7 +72,7 @@ export const SITE_LOGO = {
 };
 
 export const SOCIAL = [
-  { name: "Facebook", href: "https://www.facebook.com/fab619", icon: Github },
+  { name: "Facebook", href: "https://www.facebook.com/fab619", icon: Facebook },
   {
     name: "Instagram",
     href: "https://www.instagram.com/fab_619",

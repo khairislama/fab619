@@ -39,7 +39,7 @@ export default function Slideshow() {
     if (!isHovered) {
       slideTimerRef.current = setTimeout(() => {
         goToNextSlide();
-      }, 6000);
+      }, 3000);
     }
   };
 
@@ -250,7 +250,7 @@ export default function Slideshow() {
           className="h-full bg-white transition-all duration-300 ease-out"
           style={{
             width: isHovered ? "100%" : "0%",
-            transition: isHovered ? "none" : "width 6s linear",
+            transition: isHovered ? "none" : "width 3s linear",
           }}
         />
       </div>

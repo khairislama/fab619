@@ -12,7 +12,7 @@ function Maintenance({ locale }: { locale: string }) {
   const maintenanceST = useTranslations("Maintenance.services");
 
   return (
-    <div className="h-[calc(100vh-6rem)] xl:h-full overflow-hidden">
+    <div className="h-full">
       <Image
         src="/images/maintenance-background.webp"
         alt="Background"
@@ -24,7 +24,7 @@ function Maintenance({ locale }: { locale: string }) {
       />
       <div className="absolute inset-0 bg-foreground/90 -z-10" />
       <div className="h-screen overflow-y-auto scrollbar-hide">
-        <div className="container mx-auto flex flex-col items-center p-4 text-card relative mb-24">
+        <div className="container mx-auto flex flex-col items-center p-4 text-card relative min-h-screen">
           <Image
             src="/logo/fab-619-logo-white-min.svg"
             alt="Logo"
@@ -41,7 +41,7 @@ function Maintenance({ locale }: { locale: string }) {
           <ChevronsDown className="h-20 w-20 animate-bounceFast my-4" />
           <ContactForm />
           <ChevronsDown className="h-20 w-20 animate-bounceFast my-4" />
-          <div className="flex flex-col items-center my-10 gap-6 mb-40">
+          <div className="flex flex-col items-center my-10 gap-6 mb-40 grow">
             {Array.from({ length: 5 }).map((_, i) => (
               <p
                 key={i}
@@ -51,15 +51,17 @@ function Maintenance({ locale }: { locale: string }) {
               </p>
             ))}
           </div>
-          <p className="text-xs sm:text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/3 absolute left-12 bottom-12">
-            {maintenanceT("copyrights")}
-          </p>
-          <p className="text-xs sm:text-sm lg:text-lg font-extralight tracking-tighter text-muted w-1/3 text-end absolute right-12 bottom-12">
-            B125 ,Fabrique Entrepreneuriale,
-            <br />
-            Néotex Menzel Harb 5036 <br />
-            Monastir ,Tunisie
-          </p>
+          <div className="flex items-center justify-between w-full">
+            <p className="text-xs sm:text-sm lg:text-lg font-extralight tracking-tighter text-muted basis-1/2">
+              {maintenanceT("copyrights")}
+            </p>
+            <p className="text-xs sm:text-sm lg:text-lg font-extralight tracking-tighter text-muted text-end basis-1/2">
+              B125 ,Fabrique Entrepreneuriale,
+              <br />
+              Néotex Menzel Harb 5036 <br />
+              Monastir ,Tunisie
+            </p>
+          </div>
         </div>
       </div>
     </div>
