@@ -13,11 +13,12 @@ import {
 // Define allowed URL paths
 export type UrlPath =
   | "/"
-  | "/about"
-  | "/portfolio"
-  | "/services"
-  | "/contact"
-  | "/maintenance";
+  | "/maintenance/preview"
+  | "/maintenance/preview/about"
+  | "/maintenance/preview/portfolio"
+  | "/maintenance/preview/services"
+  | "/maintenance/preview/contact"
+  | "/maintenance/preview/events&media";
 
 export const NAVIGATION: {
   title: string;
@@ -26,32 +27,32 @@ export const NAVIGATION: {
 }[] = [
   {
     title: "home",
-    url: "/",
+    url: "/maintenance/preview",
     icon: Home,
   },
   {
     title: "about",
-    url: "/about",
+    url: "/maintenance/preview/about",
     icon: Users,
   },
   {
     title: "portfolio",
-    url: "/portfolio",
+    url: "/maintenance/preview/portfolio",
     icon: Presentation,
   },
   {
     title: "services",
-    url: "/services",
+    url: "/maintenance/preview/services",
     icon: Goal,
   },
   {
     title: "contact",
-    url: "/contact",
+    url: "/maintenance/preview/contact",
     icon: Send,
   },
   {
     title: "preview",
-    url: "/maintenance",
+    url: "/maintenance/preview/events&media",
     icon: Send,
   },
 ];

@@ -5,25 +5,29 @@ export const routing = defineRouting({
   defaultLocale: "en",
   pathnames: {
     "/": "/",
-    "/about": {
-      en: "/about",
-      fr: "/about",
+    "/maintenance/preview": {
+      en: "/maintenance/preview",
+      fr: "/maintenance/preview",
     },
-    "/portfolio": {
-      en: "/portfolio",
-      fr: "/portfolio",
+    "/maintenance/preview/about": {
+      en: "/maintenance/preview/about",
+      fr: "/maintenance/preview/about",
     },
-    "/services": {
-      en: "/services",
-      fr: "/services",
+    "/maintenance/preview/portfolio": {
+      en: "/maintenance/preview/portfolio",
+      fr: "/maintenance/preview/portfolio",
     },
-    "/contact": {
-      en: "/contact",
-      fr: "/contact",
+    "/maintenance/preview/services": {
+      en: "/maintenance/preview/services",
+      fr: "/maintenance/preview/services",
     },
-    "/maintenance": {
-      en: "/maintenance",
-      fr: "/maintenance",
+    "/maintenance/preview/contact": {
+      en: "/maintenance/preview/contact",
+      fr: "/maintenance/preview/contact",
+    },
+    "/maintenance/preview/events&media": {
+      en: "/maintenance/preview/events&media",
+      fr: "/maintenance/preview/events&media",
     },
   },
 });
