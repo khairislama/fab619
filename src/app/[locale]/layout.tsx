@@ -11,6 +11,7 @@ import { Locale, routing } from "@/src/i18n/routing";
 import { AppSidebar } from "@/src/components/sidebar";
 import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
+import Head from "next/head";
 
 type Props = {
   children: ReactNode;
@@ -79,6 +80,26 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body
         className={`${poppins.variable} bg-background font-sans antialiased debug-screens`}
       >
