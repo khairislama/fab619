@@ -8,7 +8,6 @@ import {
 } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/src/i18n/routing";
-import { AppSidebar } from "@/src/components/sidebar";
 import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import Head from "next/head";
