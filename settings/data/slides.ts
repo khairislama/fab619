@@ -20,7 +20,7 @@ export const slides: SlideItem[] = [
     description:
       "We blend cutting-edge engineering with creative digital artistry to deliver innovative solutions for the modern world.",
     buttonText: "Explore Our Vision",
-    buttonLink: "/about",
+    buttonLink: "/maintenance/preview/about",
     color: "from-purple-600/80 to-blue-600/80",
   },
   {
@@ -31,7 +31,7 @@ export const slides: SlideItem[] = [
     description:
       "Explore our diverse range of projects showcasing our expertise in engineering and digital art creation.",
     buttonText: "View Our Work",
-    buttonLink: "/portfolio",
+    buttonLink: "/maintenance/preview/portfolio",
     color: "from-emerald-600/80 to-teal-600/80",
   },
   {
@@ -42,7 +42,7 @@ export const slides: SlideItem[] = [
     description:
       "From technical engineering solutions to stunning digital art, we offer comprehensive services tailored to your needs.",
     buttonText: "Discover Services",
-    buttonLink: "/services",
+    buttonLink: "/maintenance/preview/services",
     color: "from-amber-600/80 to-orange-600/80",
   },
   {
@@ -53,7 +53,7 @@ export const slides: SlideItem[] = [
     description:
       "Ready to transform your ideas into reality? Contact our team of experts today to discuss your project.",
     buttonText: "Contact Us",
-    buttonLink: "/contact",
+    buttonLink: "/maintenance/preview/contact",
     color: "from-rose-600/80 to-pink-600/80",
   },
 ];

@@ -12,7 +12,7 @@ function Maintenance({ locale }: { locale: string }) {
   const maintenanceST = useTranslations("Maintenance.services");
 
   return (
-    <div className="h-[calc(100vh-6rem)] xl:h-full overflow-hidden">
+    <div className="h-full overflow-hidden">
       <Image
         src="/images/maintenance-background.webp"
         alt="Background"
@@ -37,7 +37,9 @@ function Maintenance({ locale }: { locale: string }) {
             {maintenanceT("title")}
           </h1>
           <div className="w-64 h-2 mx-auto bg-card" />
-          <p className="my-8 text-justify text-sm">{maintenanceT("message")}</p>
+          <p className="my-8 text-justify xl:text-lg">
+            {maintenanceT("message")}
+          </p>
           <ChevronsDown className="h-20 w-20 animate-bounceFast my-4" />
           <ContactForm />
           <ChevronsDown className="h-20 w-20 animate-bounceFast my-4" />

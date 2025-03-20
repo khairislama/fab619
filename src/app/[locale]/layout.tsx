@@ -104,10 +104,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${poppins.variable} bg-background font-sans antialiased debug-screens`}
       >
         <NextIntlClientProvider messages={messages}>
-          <AppSidebar />
-          <main className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)] relative font-poppins">
-            {children}
-          </main>
+          <main className="relative font-poppins">{children}</main>
           <Toaster />
         </NextIntlClientProvider>
       </body>
