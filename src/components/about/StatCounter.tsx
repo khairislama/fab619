@@ -34,13 +34,15 @@ export function StatCounter({
       { threshold: 0.1 }
     );
 
-    if (nodeRef.current) {
-      observer.observe(nodeRef.current);
+    const currentNode = nodeRef.current;
+
+    if (currentNode) {
+      observer.observe(currentNode);
     }
 
     return () => {
-      if (nodeRef.current) {
-        observer.unobserve(nodeRef.current);
+      if (currentNode) {
+        observer.unobserve(currentNode);
       }
     };
   }, []);

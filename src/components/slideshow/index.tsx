@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { ChevronLeft, ChevronRight, ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "@/src/i18n/navigation";
 import { slides } from "@/settings/data/slides";
@@ -12,11 +12,11 @@ export default function Slideshow() {
   const [direction, setDirection] = useState("right");
   const slideTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const goToNextSlide = () => {
+  const goToNextSlide = useCallback(() => {
     setPrevSlide(currentSlide);
     setDirection("right");
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+  }, [currentSlide, slides.length]);
 
   const goToPrevSlide = () => {
     setPrevSlide(currentSlide);
@@ -31,7 +31,7 @@ export default function Slideshow() {
   };
 
   // Reset and start the timer
-  const resetSlideTimer = () => {
+  const resetSlideTimer = useCallback(() => {
     if (slideTimerRef.current) {
       clearTimeout(slideTimerRef.current);
     }
@@ -41,7 +41,7 @@ export default function Slideshow() {
         goToNextSlide();
       }, 6000);
     }
-  };
+  }, [isHovered, goToNextSlide]);
 
   // Auto-advance slides, pause on hover
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Slideshow() {
         clearTimeout(slideTimerRef.current);
       }
     };
-  }, [currentSlide, isHovered]);
+  }, [currentSlide, isHovered, resetSlideTimer]);
 
   return (
     <div

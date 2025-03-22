@@ -4,7 +4,7 @@
 // import { setRequestLocale } from "next-intl/server";
 // import { useTranslations } from "next-intl";
 import Slideshow from "@/src/components/slideshow";
-import { JSX, useState } from "react";
+import { useState } from "react";
 import Grid from "@/src/components/grid";
 import { Button } from "@/components/ui/button";
 import { AboutHeroContainer } from "@/src/components/about/AboutHeroContainer";
@@ -59,10 +59,6 @@ export default function MaintenancePage() {
         {show === "Grid" && <Grid />}
         {show === "Slideshow" && <Slideshow />}
         {show === "About" && <AboutHeroContainer />}
-
-        {/* <AboutHeroContainer /> */}
-
-        {/* Additional about page content can go here */}
       </div>
     </main>
   );

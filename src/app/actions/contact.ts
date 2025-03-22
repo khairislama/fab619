@@ -12,7 +12,6 @@ export async function handleContact(values: v.InferOutput<typeof formSchema>) {
   if (!phone || !email || !message) {
     return { success: false, error: "All fields are required." };
   }
-  return { success: true, email };
 
   // Configure Nodemailer
   const transporter = nodemailer.createTransport({
@@ -27,8 +26,8 @@ export async function handleContact(values: v.InferOutput<typeof formSchema>) {
 
   // Construct the email message
   const mailOptions = {
-    from: "contact@khairislama.com", // Your email (sender)
-    to: "contact@khairislama.com", // Your email (receiver)
+    from: "contact@fab619.tn", // Your email (sender)
+    to: "contact@fab619.tn", // Your email (receiver)
     subject: `New Contact from ${email}`,
     text: `Email: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     html: `
