@@ -11,7 +11,9 @@ export default async function LocaleLayout({ children }: Props) {
     <>
       <AppSidebar />
       <div className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)]">
-        {children}
+        <div className="scrollbar-hide overflow-y-auto h-screen">
+          {children}
+        </div>
       </div>
     </>
   );

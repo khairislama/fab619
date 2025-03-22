@@ -16,7 +16,7 @@ export default function Slideshow() {
     setPrevSlide(currentSlide);
     setDirection("right");
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  }, [currentSlide, slides.length]);
+  }, [currentSlide]);
 
   const goToPrevSlide = () => {
     setPrevSlide(currentSlide);

@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import Maintenance from "@/src/components/Maintenance";
+import { AboutHeroContainer } from "@/src/components/about/AboutHeroContainer";
+import PageHeader from "@/src/components/page-header";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,5 +13,10 @@ export default function AboutPage({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale);
 
-  return <Maintenance locale={locale} />;
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <PageHeader pageName={"AboutPage"} />
+      <AboutHeroContainer />
+    </div>
+  );
 }
