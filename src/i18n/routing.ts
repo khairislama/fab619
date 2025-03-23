@@ -25,6 +25,10 @@ export const routing = defineRouting({
       en: "/maintenance/preview",
       fr: "/maintenance/preview",
     },
+    "/maintenance/preview/projects/[projectSlug]": {
+      en: "/maintenance/preview/projects/[projectSlug]",
+      fr: "/maintenance/preview/projects/[projectSlug]",
+    },
   },
 });
 

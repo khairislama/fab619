@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { filters, works } from "@/settings/data/grid";
+import { Link } from "@/src/i18n/navigation";
 
 export default function Grid() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -107,33 +108,40 @@ export default function Grid() {
       {/* Works grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
         {filteredWorks.slice(0, visibleItems).map((work) => (
-          <motion.div
+          <Link
+            href={{
+              pathname: "/maintenance/preview/projects/[projectSlug]",
+              params: { projectSlug: work.slug },
+            }}
             key={work.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            layout
-            className="group relative overflow-hidden bg-gray-50 dark:bg-gray-900 aspect-[4/3]"
           >
-            <Image
-              src={work.image || "/placeholder.svg"}
-              alt={work.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              layout
+              className="group relative overflow-hidden bg-gray-50 dark:bg-gray-900 aspect-[4/3] cursor-pointer"
+            >
+              <Image
+                src={work.image || "/placeholder.svg?height=800&width=600"}
+                alt={work.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
 
-            <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <span className="text-xs uppercase tracking-wider text-gray-300">
-                {filters.find((f) => f.id === work.tag)?.label || work.tag}
-              </span>
-              <h3 className="text-xl font-medium text-white mt-1 mb-2">
-                {work.title}
-              </h3>
-              <p className="text-sm text-gray-300 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                {work.description}
-              </p>
-            </div>
-          </motion.div>
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span className="text-xs uppercase tracking-wider text-gray-300">
+                  {filters.find((f) => f.id === work.tag)?.label || work.tag}
+                </span>
+                <h3 className="text-xl font-medium text-white mt-1 mb-2">
+                  {work.title}
+                </h3>
+                <p className="text-sm text-gray-300 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  {work.description}
+                </p>
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </div>
 

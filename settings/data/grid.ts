@@ -3,8 +3,12 @@ type WorkItem = {
   id: number;
   image: string;
   title: string;
+  slug: string;
   tag: "product design" | "brand identity" | "digital solutions";
   description: string;
+  client?: string;
+  year?: string;
+  location?: string;
 };
 
 type filterItem = {
@@ -12,107 +16,155 @@ type filterItem = {
   label: "View All" | "Product Design" | "Brand Identity" | "Digital Solutions";
 };
 
-// Sample data
+// Sample data with placeholder images that will work in the preview
 export const works: WorkItem[] = [
   {
     id: 1,
     image: "/images/placeholder-800x600.webp",
-    title: "Automated Assembly Line",
-    tag: "digital solutions",
+    title: "AFP - Automated Fiber Placement",
+    slug: "automated-fiber-placement",
+    tag: "product design",
     description:
-      "Interactive web platform for monitoring and controlling robotic assembly systems in real-time.",
+      "CNC transformation for composite fiber placement with precision control and advanced automation.",
+    client: "Industrial Manufacturing Client",
+    year: "2022",
+    location: "Tunisia",
   },
   {
     id: 2,
     image: "/images/placeholder-800x600.webp",
-    title: "Precision Engineering Brand",
-    tag: "brand identity",
+    title: "IoT Multi-Technology Model",
+    slug: "iot-multi-technology-model",
+    tag: "digital solutions",
     description:
-      "Modern brand identity for a precision engineering firm specializing in custom manufacturing solutions.",
+      "Demonstrating IoT integration in industry with real-time monitoring and control capabilities.",
+    client: "Industry 4.0 Training Center",
+    year: "2021",
+    location: "Tunis, Tunisia",
   },
   {
     id: 3,
     image: "/images/placeholder-800x600.webp",
-    title: "3D Printed Prototype",
+    title: "WAAM 3D Printer",
+    slug: "waam-3d-printer",
     tag: "product design",
     description:
-      "Lightweight component design optimized for 3D printing with enhanced structural integrity.",
+      "Wire Arc Additive Manufacturing transformation of CNC machines for large-scale metal printing.",
+    client: "Manufacturing Research Lab",
+    year: "2023",
+    location: "Monastir, Tunisia",
   },
   {
     id: 4,
     image: "/images/placeholder-800x600.webp",
-    title: "Engineering Dashboard",
-    tag: "digital solutions",
+    title: "3D Printing Architecture - Tunisia",
+    slug: "3d-printing-architecture-tunisia",
+    tag: "product design",
     description:
-      "Comprehensive web interface for monitoring machinery performance and maintenance schedules.",
+      "Large-scale heritage restoration using digital manufacturing techniques and custom 3D printing solutions.",
+    client: "Heritage Preservation Authority",
+    year: "2022",
+    location: "Tunisia",
   },
   {
     id: 5,
     image: "/images/placeholder-800x600.webp",
-    title: "Robotics Division Identity",
-    tag: "brand identity",
+    title: "RUMBA SP-Link Machine Controller",
+    slug: "rumba-sp-link-controller",
+    tag: "digital solutions",
     description:
-      "Visual identity system for the advanced robotics division of an engineering firm.",
+      "Machine Controller with ESP connectivity for 3D printers and other digital fabrication equipment.",
+    client: "Open Hardware Initiative",
+    year: "2021",
+    location: "Tunisia",
   },
   {
     id: 6,
     image: "/images/placeholder-800x600.webp",
-    title: "Custom Machine Part",
-    tag: "product design",
+    title: "AI Model for Industrial Applications",
+    slug: "ai-model-industrial-applications",
+    tag: "digital solutions",
     description:
-      "Precision-engineered replacement part designed for improved durability and performance.",
+      "Real-time image classification for industrial applications with machine learning integration.",
+    client: "Manufacturing Technology Center",
+    year: "2023",
+    location: "Tunis, Tunisia",
   },
   {
     id: 7,
     image: "/images/placeholder-800x600.webp",
-    title: "Manufacturing Process Portal",
+    title: "RFID Smart Inventory Management",
+    slug: "rfid-inventory-management",
     tag: "digital solutions",
     description:
-      "Client portal for tracking custom engineering projects from design to manufacturing.",
+      "Smart inventory management solutions using RFID technology for industrial applications.",
+    client: "Logistics Company",
+    year: "2022",
+    location: "Tunisia",
   },
   {
     id: 8,
     image: "/images/placeholder-800x600.webp",
-    title: "Industrial Robot Arm",
-    tag: "product design",
+    title: "API Supervision Model",
+    slug: "api-supervision-model",
+    tag: "digital solutions",
     description:
-      "Redesigned robotic arm with improved range of motion and precision for industrial applications.",
+      "Remote control and monitoring of automated processes through API integration.",
+    client: "Industrial Automation Client",
+    year: "2021",
+    location: "Tunisia",
   },
   {
     id: 9,
     image: "/images/placeholder-800x600.webp",
-    title: "CNC Machining Interface",
-    tag: "digital solutions",
+    title: "FAB619 Brand Identity",
+    slug: "fab619-brand-identity",
+    tag: "brand identity",
     description:
-      "Intuitive control interface for advanced CNC machinery with real-time feedback.",
+      "Comprehensive brand identity system for FAB619, including logo, color palette, and applications.",
+    client: "FAB619",
+    year: "2018",
+    location: "Tunisia",
   },
   {
     id: 10,
     image: "/images/placeholder-800x600.webp",
-    title: "Engineering Consultancy",
-    tag: "brand identity",
+    title: "Custom CNC Router System",
+    slug: "custom-cnc-router-system",
+    tag: "product design",
     description:
-      "Minimalist brand identity for an engineering consultancy specializing in industrial automation.",
+      "Precision CNC router system designed for versatile manufacturing applications.",
+    client: "Educational Institution",
+    year: "2020",
+    location: "Monastir, Tunisia",
   },
   {
     id: 11,
     image: "/images/placeholder-800x600.webp",
-    title: "3D Printed Tooling",
-    tag: "product design",
+    title: "Digital Fabrication Training Platform",
+    slug: "digital-fabrication-training",
+    tag: "digital solutions",
     description:
-      "Custom tooling solutions created with advanced 3D printing technology for rapid deployment.",
+      "Interactive learning platform for digital fabrication techniques and technologies.",
+    client: "Technical Training Institute",
+    year: "2022",
+    location: "Tunisia",
   },
   {
     id: 12,
     image: "/images/placeholder-800x600.webp",
-    title: "IoT Machinery Monitoring",
-    tag: "digital solutions",
+    title: "Embedded Systems for Automation",
+    slug: "embedded-systems-automation",
+    tag: "product design",
     description:
-      "Web application for IoT-enabled machinery monitoring and predictive maintenance.",
+      "Custom embedded systems for industrial automation and control applications.",
+    client: "Manufacturing Client",
+    year: "2023",
+    location: "Tunisia",
   },
 ];
 
-// Improved filter categories with more engineering-focused terms
+// Portfolio-focused filter categories
 export const filters = [
   { id: "all", label: "View All" },
   { id: "product design", label: "Product Design" },
