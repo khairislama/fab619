@@ -9,7 +9,7 @@ export default function PageHeader({ pageName }: { pageName: string }) {
         {" "}
         {translation("title")}{" "}
       </h1>
-      <p className="text-xl text-muted-foreground mb-12 max-w-6xl">
+      <p className="text-xl text-muted-foreground mb-12">
         {translation("description")}
       </p>
       <div className="h-1 w-full bg-foreground my-6 scrollbar-hide"></div>
