@@ -15,7 +15,7 @@ export default function AboutPage({ params }: Props) {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <PageHeader pageName={"AboutPage"} />
+      <PageHeader pageName={"about"} />
       <AboutHeroContainer />
     </div>
   );

@@ -30,7 +30,7 @@ export function generateStaticParams() {
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
 
-  const t = await getTranslations({ locale, namespace: "HomePage-Metadata" });
+  const t = await getTranslations({ locale, namespace: "home-Metadata" });
 
   return {
     title: t("title"),

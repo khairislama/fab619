@@ -27,7 +27,7 @@
       "5": "Logiciels et algorithmes de contrôle machine"
     }
   },
-  "HomePage-Metadata": {
+  "home-Metadata": {
     "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique & Impression 3D",
     "description": "Découvrez FAB619, un bureau d'ingénierie spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
     "keywords": "ingénierie, bureau d'étude, robotique, impression 3D, électronique, prototypage, automatisation, solutions industrielles, FAB619, innovation",
@@ -36,7 +36,7 @@
     "twitterTitle": "FAB619 | Solutions en Ingénierie et Robotique",
     "twitterDescription": "Ingénierie, robotique et impression 3D adaptées aux besoins industriels."
   },
-  "HomePage": {
+  "home": {
     "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique & Impression 3D",
     "description": "Découvrez FAB619, un bureau d'ingénierie et de conception spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
     "slideshow": [
@@ -58,8 +58,16 @@
       }
     ]
   },
-  "AboutPage": {
+  "about": {
     "title": "À propos de FAB619 - Ingénierie & Innovation",
     "description": "Chez FAB619, nous allions expertise en ingénierie et design créatif pour offrir des solutions innovantes en électronique, robotique et impression 3D. Passionnés par l'innovation, nous accompagnons nos clients de l'idée au produit final, du prototypage à la production à grande échelle."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation."
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
   }
 }

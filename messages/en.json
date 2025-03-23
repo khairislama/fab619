@@ -27,7 +27,7 @@
       "5": "Software & Machine Control Algorithms"
     }
   },
-  "HomePage-Metadata": {
+  "home-Metadata": {
     "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
     "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
     "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation",
@@ -36,7 +36,7 @@
     "twitterTitle": "FAB619 | Engineering & Robotics Solutions",
     "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."  
   },
-  "HomePage": {
+  "home": {
     "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
     "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
     "slideshow": [
@@ -58,8 +58,16 @@
       }
     ]
   },
-  "AboutPage": {
+  "about": {
     "title": "About FAB619 - Engineering & Innovation",
     "description": "At FAB619, we blend engineering expertise with creative design to deliver cutting-edge solutions in electronics, robotics, and 3D printing. With a passion for innovation, our team works closely with clients to turn ideas into reality, from prototyping to full-scale production."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation."
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
   }
 }
