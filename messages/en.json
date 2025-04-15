@@ -69,5 +69,18 @@
   "portfolio": {
     "title": "Our Portfolio",
     "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "contact-us": "contact us",
+    "address": "address",
+    "request": "Request Information",
+    "name": "name",
+    "company": "your company",
+    "email": "Email",
+    "phone-number": "Phone number",
+    "your-request": "Your Request",
+    "send": "send",
+    "faq": "Frequently Asked Questions"
   }
 }
