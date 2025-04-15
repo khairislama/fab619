@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { useTranslations } from "next-intl";
 import ContactInfo from "@/src/components/contact/ContactInfo";
+import RequestForm from "@/src/components/contact/RequestForm";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -24,6 +25,7 @@ export default function ContactPage({ params }: Props) {
         <ContactInfo />
       </div>
       <div className="h-1 w-full bg-foreground my-6 scrollbar-hide" />
+      <RequestForm />
     </div>
   );
 }
