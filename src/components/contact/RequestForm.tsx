@@ -34,87 +34,84 @@ export default function RequestForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-3 ml-1">
       <div>
         <Label htmlFor="name" className="sr-only">
-          Name
+          {translation("name")}
         </Label>
         <Input
           id="name"
           name="name"
-          placeholder="Name *"
+          placeholder={translation("name") + " *"}
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full border-gray-300 focus:border-black focus:ring-black"
+          className="w-full capitalize"
         />
       </div>
 
       <div>
         <Label htmlFor="company" className="sr-only">
-          Your company
+          {translation("company")}
         </Label>
         <Input
           id="company"
           name="company"
-          placeholder="Your company *"
+          placeholder={translation("company") + " *"}
           value={formData.company}
           onChange={handleChange}
           required
-          className="w-full border-gray-300 focus:border-black focus:ring-black"
+          className="w-full capitalize"
         />
       </div>
 
       <div>
         <Label htmlFor="email" className="sr-only">
-          Email
+          {translation("email")}
         </Label>
         <Input
           id="email"
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder={translation("email") + " *"}
           value={formData.email}
           onChange={handleChange}
-          className="w-full border-gray-300 focus:border-black focus:ring-black"
+          className="w-full capitalize"
         />
       </div>
 
       <div>
         <Label htmlFor="phone" className="sr-only">
-          Phone number
+          {translation("phone-number")}
         </Label>
         <Input
           id="phone"
           name="phone"
-          placeholder="Phone number *"
+          placeholder={translation("phone-number") + " *"}
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full border-gray-300 focus:border-black focus:ring-black"
+          className="w-full capitalize"
         />
       </div>
 
       <div>
         <Label htmlFor="request" className="sr-only">
-          Your Request
+          {translation("your-request")}
         </Label>
         <Textarea
           id="request"
           name="request"
-          placeholder="Your Request *"
+          placeholder={translation("your-request") + " *"}
           value={formData.request}
           onChange={handleChange}
           required
-          className="w-full min-h-[120px] border-gray-300 focus:border-black focus:ring-black"
+          className="w-full min-h-[120px] capitalize"
         />
       </div>
 
-      <Button
-        type="submit"
-        className="w-full bg-black hover:bg-gray-800 text-white py-3 uppercase font-medium"
-      >
-        SEND
+      <Button type="submit" className="w-full py-3 uppercase font-bold">
+        {translation("send")}
       </Button>
     </form>
   );

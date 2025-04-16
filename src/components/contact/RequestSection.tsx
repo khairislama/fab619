@@ -21,7 +21,7 @@ export default async function RequestSection({ children }: Props) {
       {/* Image Section */}
       <div className="relative h-full min-h-[400px]">
         <Image
-          src="/images/placeholder-800x800.webp"
+          src="/images/address.webp"
           alt="Location map"
           fill
           className="object-cover"
