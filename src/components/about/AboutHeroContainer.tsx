@@ -7,7 +7,7 @@ import { StatsSection } from "./StatsSection";
 export function AboutHeroContainer() {
   return (
     <section className="w-full py-12 md:py-24">
-      <div className="container relative px-4 md:px-6">
+      <div className="container relative">
         <div className="grid grid-cols-12 gap-6">
           {/* Image Container - 8/12 width */}
           <AboutHeroImage />

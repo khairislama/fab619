@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: Props) {
   }
 
   return (
-    <main className="container mx-auto px-6 py-12">
+    <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
       <Link href="/maintenance/preview/portfolio" className="inline-block mb-8">
         <Button variant="ghost" className="gap-2">
           <ArrowLeft className="h-4 w-4" />

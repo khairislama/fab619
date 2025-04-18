@@ -86,7 +86,7 @@ export default function Grid() {
   }, [columnsPerRow]);
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-16">
       {/* Filter buttons */}
       <div className="flex flex-wrap gap-2 mb-12 justify-center">
         {filters.map((filter) => (

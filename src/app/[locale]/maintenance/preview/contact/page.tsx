@@ -19,7 +19,7 @@ export default function ContactPage({ params }: Props) {
   const translation = useTranslations("contact");
 
   return (
-    <main className="container mx-auto px-8 py-12">
+    <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
       <div className="flex items-center justify-between">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
           {translation("title")}

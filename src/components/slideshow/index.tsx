@@ -119,7 +119,7 @@ export default function Slideshow() {
 
             {/* Content */}
             <div className="relative z-20 flex h-full items-center">
-              <div className="container mx-auto px-6">
+              <div className="container">
                 <div className="w-full md:w-1/2 md:ml-auto lg:w-2/5 text-left">
                   {/* Animated Content */}
                   <div className="space-y-6">
