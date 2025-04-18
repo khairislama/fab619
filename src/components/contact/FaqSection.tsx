@@ -9,7 +9,7 @@ import {
 
 export default function FaqSection() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">
+    <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-24">
       {/* Title Section */}
       <div className="lg:col-span-4">
         <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold">FAQ</h2>

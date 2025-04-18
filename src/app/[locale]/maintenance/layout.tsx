@@ -1,3 +1,4 @@
+import Footer from "@/src/components/Footer";
 import { AppSidebar } from "@/src/components/sidebar";
 import { ReactNode } from "react";
 
@@ -13,6 +14,7 @@ export default async function LocaleLayout({ children }: Props) {
       <div className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)]">
         <div className="scrollbar-hide overflow-y-auto h-screen">
           {children}
+          <Footer />
         </div>
       </div>
     </>

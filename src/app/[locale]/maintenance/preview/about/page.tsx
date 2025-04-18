@@ -14,9 +14,9 @@ export default function AboutPage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <main className="container mx-auto px-6 py-12">
       <PageHeader pageName={"about"} />
       <AboutHeroContainer />
-    </div>
+    </main>
   );
 }
