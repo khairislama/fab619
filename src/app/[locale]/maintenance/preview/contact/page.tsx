@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import ContactInfo from "@/src/components/contact/ContactInfo";
 import RequestForm from "@/src/components/contact/RequestForm";
 import RequestSection from "@/src/components/contact/RequestSection";
+import FaqSection from "@/src/components/contact/FaqSection";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,6 +30,7 @@ export default function ContactPage({ params }: Props) {
       <RequestSection>
         <RequestForm />
       </RequestSection>
+      <FaqSection />
     </div>
   );
 }

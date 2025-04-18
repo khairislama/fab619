@@ -21,7 +21,7 @@ function ContactInfo() {
       <div className="hidden lg:block h-12 w-[2px] bg-foreground"></div>
 
       {/* Horizontal Divider - visible only on smaller screens */}
-      <div className="lg:hidden h-[2px] w-full bg-foreground my-1"></div>
+      <div className="lg:hidden h-[2px] w-full bg-foreground my-2"></div>
 
       {/* Address */}
       <div className="flex items-center space-x-2">
@@ -41,7 +41,7 @@ function ContactInfo() {
       <div className="hidden lg:block h-12 w-[2px] bg-foreground"></div>
 
       {/* Horizontal Divider - visible only on smaller screens */}
-      <div className="lg:hidden h-[2px] w-full bg-foreground my-1"></div>
+      <div className="lg:hidden h-[2px] w-full bg-foreground my-2"></div>
 
       {/* Email */}
       <div className="flex items-center space-x-2">

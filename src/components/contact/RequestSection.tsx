@@ -9,10 +9,10 @@ type Props = {
 export default async function RequestSection({ children }: Props) {
   const translation = useTranslations("contact");
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-3 overflow-hidden">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-6 overflow-hidden my-4">
       {/* Form Section */}
-      <div className="mb-3 lg:mb-0">
-        <h2 className="text-2xl font-bold mb-4 uppercase">
+      <div className="mb-5 lg:mb-0">
+        <h2 className="text-2xl font-bold mb-5 uppercase">
           {translation("request")}
         </h2>
         {children}
