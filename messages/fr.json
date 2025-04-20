@@ -10,12 +10,12 @@
   "Maintenance": {
     "title": "En cours de maintenance",
     "contact": {
-    "title": "Contact Us",
-    "description": "Veuillez remplir le formulaire ci-dessous et nous vous répondrons sous peu.",
-    "email": "votre adresse e-mail",
-    "phone": "votre numéro de téléphone",
-    "message": "Laissez un message et nous vous contacterons plus tard",
-    "submit": "envoyer le message"
+      "title": "Contact Us",
+      "description": "Veuillez remplir le formulaire ci-dessous et nous vous répondrons sous peu.",
+      "email": "votre adresse e-mail",
+      "phone": "votre numéro de téléphone",
+      "message": "Laissez un message et nous vous contacterons plus tard",
+      "submit": "envoyer le message"
     },
     "message": "Notre équipe met actuellement à jour le site web pour vous offrir une meilleure expérience utilisateur. N'hésitez pas à nous contacter directement pour toute demande ou assistance immédiate.",
     "copyrights": "© Droits d'auteur FAB619 - Fabrication à la demande | Tous droits réservés",
@@ -69,5 +69,78 @@
   "portfolio": {
     "title": "Our Portfolio",
     "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "contact-us": "nous contacter",
+    "address": "adresse",
+    "request": "Demande d'informations",
+    "name": "nom",
+    "company": "votre entreprise",
+    "email": "Email",
+    "phone-number": "Numéro de téléphone",
+    "your-request": "Votre demande",
+    "send": "envoyer",
+    "faqTitle": "FAQ",
+    "faqSubtitle": "Foire aux questions",
+    "faqList": [
+      {
+        "question": "1. Quels services proposez-vous ?",
+        "response": {
+          "text": "Nous offrons une gamme complète de services de fabrication numérique et d'ingénierie, incluant :",
+          "list": [
+            "Conception de machines sur mesure et têtes d’outils pour usages industriels",
+            "Conception de produits hardware",
+            "Prototypage à la demande et fabrication en petite série",
+            "Impression 3D (à filament ou à granulés)",
+            "Usinage CNC et découpe laser",
+            "Conception de circuits imprimés, intégration IoT et systèmes embarqués",
+            "Formations, ateliers et conseils en fabrication numérique"
+          ]
+        }
+      },
+      {
+        "question": "2. Développez-vous des solutions sur mesure pour des secteurs spécifiques ?",
+        "response": {
+          "text": "Oui ! Nous sommes spécialisés dans les solutions personnalisées pour des secteurs comme l’aéronautique, le nautique, le mobilier, l’éducation et les fablabs. Nous pouvons concevoir et fabriquer des machines, systèmes de contrôle ou têtes d’outils comme notre extrudeuse PelloBot, selon vos besoins spécifiques."
+        }
+      },
+      {
+        "question": "3. Puis-je demander une machine ou une installation sur mesure ?",
+        "response": {
+          "text": "Absolument. Notre équipe travaille avec vous pour comprendre votre flux de travail, vos objectifs de production et vos contraintes, puis propose une machine ou un système (portique, bras robotisé, tête d’outil, etc.) adapté à vos besoins."
+        }
+      },
+      {
+        "question": "4. Comment fonctionne votre service de fabrication à la demande ?",
+        "response": {
+          "text": "Vous nous envoyez votre modèle 3D ou cahier des charges, et nous nous occupons du reste — de la préparation à l’impression ou à l’usinage. Nous proposons du prototypage rapide, des petites séries, et des impressions grand format avec nos propres machines."
+        }
+      },
+      {
+        "question": "5. Quels sont vos délais de livraison ?",
+        "response": {
+          "text": "Les délais dépendent de la complexité et du volume de votre demande. Les prototypes sont généralement livrés sous 3 à 7 jours ouvrés, tandis que les machines sur mesure peuvent prendre 2 à 6 semaines. Nous vous communiquerons toujours une estimation avant de démarrer."
+        }
+      },
+      {
+        "question": "6. Puis-je visiter votre atelier ou planifier une consultation ?",
+        "response": {
+          "text": "Oui ! Nous recevons sur rendez-vous et proposons des consultations en présentiel ou à distance. Contactez-nous pour planifier une visite ou une réunion afin de voir comment nous pouvons vous aider."
+        }
+      },
+      {
+        "question": "7. Proposez-vous des formations ou ateliers ?",
+        "response": {
+          "text": "Oui, nous proposons des ateliers pratiques en impression 3D, CNC, conception de machines et outils de fabrication numérique. Nous organisons aussi des formations sur mesure pour équipes, écoles ou centres techniques."
+        }
+      },
+      {
+        "question": "8. Expédiez-vous à l'international ?",
+        "response": {
+          "text": "Nous proposons actuellement nos machines et kits personnalisés principalement en Tunisie, mais nous développons notre réseau de livraison et de support pour servir des clients à l’international. Contactez-nous pour discuter des options de livraison dans votre région."
+        }
+      }
+    ]
   }
 }

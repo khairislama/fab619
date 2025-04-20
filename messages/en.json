@@ -81,6 +81,66 @@
     "phone-number": "Phone number",
     "your-request": "Your Request",
     "send": "send",
-    "faq": "Frequently Asked Questions"
+    "faqTitle": "FAQ",
+    "faqSubtitle": "Frequently Asked Questions",
+    "faqList": [
+    {
+      "question": "1. What services do you offer?",
+      "response": {
+        "text": "We provide a full range of digital fabrication and engineering services, including:",
+        "list": [
+          "Custom Machines design and toolheads for industrial purposes",
+          "Hardware product design",
+          "On-demand prototyping and small-batch manufacturing",
+          "3D printing (filament and pellet-based)",
+          "CNC machining and laser cutting",
+          "PCB design, IoT integration, and embedded systems",
+          "Training, workshops, and consulting for digital fabrication"
+        ]
+      }
+    },
+    {
+      "question": "2. Do you develop custom solutions for specific industries?",
+      "response": {
+        "text": "Yes! We specialize in tailor-made solutions for industries like aerospace, nautical, furniture, education, and prototyping labs. We can design and build machines, control systems, or custom toolheads like our PelloBot extruder, based on your unique requirements."
+      }
+    },
+    {
+      "question": "3. Can I request a custom machine or fabrication setup?",
+      "response": {
+        "text": "Absolutely. Our team works closely with you to understand your workflow, production goals, and constraints, then proposes a custom machine or system (gantry, robot arm, toolhead, etc.) built to your specs."
+      }
+    },
+    {
+      "question": "4. How does your on-demand manufacturing service work?",
+      "response": {
+        "text": "You send us your 3D model or design brief, and we take care of the rest — from slicing and material prep to printing or machining. We offer rapid prototyping, small batch runs, and large-format prints with our own hardware."
+      }
+    },
+    {
+      "question": "5. What is your turnaround time?",
+      "response": {
+        "text": "Turnaround depends on the complexity and volume of your request. Prototypes are typically delivered within 3–7 working days, while custom machines or systems may take 2–6 weeks. We'll always provide an estimated delivery date upfront."
+      }
+    },
+    {
+      "question": "6. Can I visit your workshop or schedule a consultation?",
+      "response": {
+        "text": "Yes! We welcome visits by appointment and offer both in-person and virtual consultations. Contact us to schedule a tour or meeting to explore how we can help."
+      }
+    },
+    {
+      "question": "7. Do you provide training or workshops?",
+      "response": {
+        "text": "Yes, we offer hands-on workshops for 3D printing, CNC, machine building, and digital fabrication tools. We also provide custom training sessions for teams, schools, and technical centers."
+      }
+    },
+    {
+      "question": "8. Do you ship internationally?",
+      "response": {
+        "text": "We currently offer custom machines and kits primarily in Tunisia but are expanding our shipping and support network to serve international clients. Reach out to discuss delivery options for your region."
+      }
+    }
+  ]
   }
 }
