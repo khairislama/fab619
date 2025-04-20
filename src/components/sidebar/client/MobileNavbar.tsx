@@ -7,6 +7,7 @@ import { NAVIGATION, SOCIAL } from "@/settings/navigation";
 import Link from "next/link";
 import MenuBtn from "./MenuBtn";
 import Logo from "../Logo";
+import NavLanguage from "../NavLanguage";
 
 export default function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,6 +60,9 @@ export default function MobileNavbar() {
                   <MenuBtn key={item.title} item={item} setIsOpen={setIsOpen} />
                 ))}
               </nav>
+              <div className="w-full mt-20 text-xl">
+                <NavLanguage />
+              </div>
             </MotionDiv>
           </div>
         )}

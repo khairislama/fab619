@@ -6,18 +6,20 @@ import NavLanguage from "./NavLanguage";
 
 function DesktopNavbar() {
   return (
-    <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-60 bg-card text-card-foreground p-6 flex-col z-50 items-start">
+    <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-60 bg-card text-card-foreground p-6 flex-col z-50 items-center justify-between">
       {/* Logo */}
-      <div className="mt-16 self-start">
+      <div className="mt-8 self-start">
         <Logo />
       </div>
       {/* Nav Links */}
-      <DesktopNavigation />
-      <div className="w-full mt-20 ml-10 text-xl">
-        <NavLanguage />
+      <div className="-mt-20">
+        <DesktopNavigation />
+        <div className="w-full mt-8 -ml-3 text-xl">
+          <NavLanguage />
+        </div>
       </div>
       {/* Social Icons */}
-      <div className="absolute flex space-x-4 bottom-16 ml-8">
+      <div className="flex space-x-4 my-8">
         {SOCIAL.map((item) => (
           <Link
             key={item.name}
