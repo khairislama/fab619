@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default async function RequestSection({ children }: Props) {
+export default function RequestSection({ children }: Props) {
   const translation = useTranslations("contact");
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-6 overflow-hidden my-10">
