@@ -90,4 +90,130 @@ export const CLIENTS_LOGOS: ClientsLogo[] = [
     },
     link: "void.html",
   },
+  {
+    name: "la soie - industry on demand",
+    logo: {
+      src: "lasoie.webp",
+      height: 96,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Meditec",
+    logo: {
+      src: "meditec.webp",
+      height: 119,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Seam tech",
+    logo: {
+      src: "seamtech.webp",
+      height: 200,
+      width: 200,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Bako Motors",
+    logo: {
+      src: "bako.webp",
+      height: 213,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Hutchinson",
+    logo: {
+      src: "hutchinson.webp",
+      height: 107,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Calo Tex",
+    logo: {
+      src: "calotex.webp",
+      height: 93,
+      width: 250,
+    },
+    link: "void.html",
+  },
+  {
+    name: "EnixAds",
+    logo: {
+      src: "enixads.webp",
+      height: 150,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Trimakus",
+    logo: {
+      src: "trimakus.webp",
+      height: 200,
+      width: 200,
+    },
+    link: "void.html",
+  },
+  {
+    name: "pole de compétitivité monastir",
+    logo: {
+      src: "pole-de-competitivite-monastir.webp",
+      height: 200,
+      width: 200,
+    },
+    link: "void.html",
+  },
+  {
+    name: "Neotex industrie 4.0",
+    logo: {
+      src: "neotex.webp",
+      height: 145,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "ENIM",
+    logo: {
+      src: "enim.webp",
+      height: 196,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "ISET Ksar Hellal",
+    logo: {
+      src: "iset-ksar-hellal.webp",
+      height: 237,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "association tunisienne de mecanique",
+    logo: {
+      src: "association-tunisienne-de-mecanique.webp",
+      height: 113,
+      width: 300,
+    },
+    link: "void.html",
+  },
+  {
+    name: "National School of Engineers in Sousse",
+    logo: {
+      src: "eniso.webp",
+      height: 224,
+      width: 225,
+    },
+    link: "void.html",
+  },
 ];
