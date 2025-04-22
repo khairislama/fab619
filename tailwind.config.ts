@@ -81,6 +81,11 @@ export default {
         spin: "spin 2s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "marquee-rtl": "marquee-rtl 15s linear infinite",
+        "marquee-ltr": "marquee-ltr 30s linear infinite",
+        "animate-marquee-slow": "marquee-ltr 40s linear infinite",
+        "animate-marquee-medium": "marquee-ltr 25s linear infinite",
+        "animate-marquee-fast": "marquee-ltr 12s linear infinite",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
@@ -101,6 +106,14 @@ export default {
           to: {
             height: "0",
           },
+        },
+        "marquee-rtl": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-ltr": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
       screens: {
