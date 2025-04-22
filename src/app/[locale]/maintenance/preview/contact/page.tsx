@@ -1,10 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { useTranslations } from "next-intl";
-import ContactInfo from "@/src/components/contact/ContactInfo";
+import ContactInfo from "@/src/components/ContactInfo";
 import RequestForm from "@/src/components/contact/RequestForm";
 import RequestSection from "@/src/components/contact/RequestSection";
 import FaqSection from "@/src/components/contact/FaqSection";
+import PageHeader from "@/src/components/page-header";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -20,13 +21,7 @@ export default function ContactPage({ params }: Props) {
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
-      <div className="flex items-center justify-between">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
-          {translation("title")}
-        </h1>
-        <ContactInfo />
-      </div>
-      <div className="h-1 w-full bg-foreground my-6 scrollbar-hide" />
+      <PageHeader pageName="contact" />
       <RequestSection>
         <RequestForm />
       </RequestSection>
