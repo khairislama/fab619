@@ -1,50 +1,11 @@
 "use client";
 
+import { CLIENTS_LOGOS } from "@/settings/data/clients";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-interface MarqueeLogo {
-  name: string;
-  logo: {
-    src: string;
-    height: number;
-    width: number;
-  };
-  link: string;
-}
-
 export function Marquee() {
-  const testLogo: MarqueeLogo[] = [
-    {
-      name: "In Machines",
-      logo: {
-        src: "inmachines.webp",
-        height: 49,
-        width: 300,
-      },
-      link: "void.html",
-    },
-    {
-      name: "OpenLab Hamburg",
-      logo: {
-        src: "openlab-hamburg.webp",
-        height: 132,
-        width: 300,
-      },
-      link: "void.html",
-    },
-    {
-      name: "Helmut Schmidt Universitat",
-      logo: {
-        src: "helmut-schmidt-universitat.webp",
-        height: 219,
-        width: 300,
-      },
-      link: "void.html",
-    },
-  ];
-
-  const duplicatedLogos = [...testLogo, ...testLogo];
+  const duplicatedLogos = [...CLIENTS_LOGOS, ...CLIENTS_LOGOS];
 
   return (
     <div className="flex">
