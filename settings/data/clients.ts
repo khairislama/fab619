@@ -8,7 +8,7 @@ export interface ClientsLogo {
   link: string;
 }
 
-export const CLIENTS_LOGOS: ClientsLogo[] = [
+export const CLIENTS_LOGOS_ING: ClientsLogo[] = [
   {
     name: "In Machines",
     logo: {
@@ -90,6 +90,9 @@ export const CLIENTS_LOGOS: ClientsLogo[] = [
     },
     link: "void.html",
   },
+];
+
+export const CLIENTS_LOGOS_INDUS: ClientsLogo[] = [
   {
     name: "la soie - industry on demand",
     logo: {
@@ -162,6 +165,9 @@ export const CLIENTS_LOGOS: ClientsLogo[] = [
     },
     link: "void.html",
   },
+];
+
+export const CLIENTS_LOGOS_EDUC: ClientsLogo[] = [
   {
     name: "pole de compétitivité monastir",
     logo: {

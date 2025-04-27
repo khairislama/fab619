@@ -64,7 +64,11 @@
   },
   "services": {
     "title": "Services",
-    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation."
+    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation.",
+    "clients": {
+      "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
+      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
+    }
   },
   "portfolio": {
     "title": "Portfolio",

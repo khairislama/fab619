@@ -17,8 +17,6 @@ export default function ContactPage({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale);
 
-  const translation = useTranslations("contact");
-
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
       <PageHeader pageName="contact" />
