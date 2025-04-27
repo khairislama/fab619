@@ -7,9 +7,14 @@ import ProgressBar from "./ProgressBar";
 import SlideIndicators from "./SlideIndicators";
 import IndicatorButton from "./IndicatorButton";
 import { slides } from "@/settings/data/slides";
-import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
-import { Link } from "@/src/i18n/navigation";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ChangeSlide from "./ChangeSlide";
+import SlideBackground from "./SlideBackground";
+import SlideContent from "./SlideContent";
+import SlideSubtitle from "./SlideSubtitle";
+import SlideTitle from "./SlideTitle";
+import SlideDescription from "./SlideDescription";
+import SlideButton from "./SlideButton";
 
 export default function Slideshow() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -106,95 +111,32 @@ export default function Slideshow() {
               }}
             >
               {/* Background Image with Parallax Effect */}
-              <div
-                className="absolute inset-0 bg-cover bg-center w-full"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                  transform: isCurrent ? "scale(1.05)" : "scale(1.15)",
-                  transition: "transform 2s cubic-bezier(0.22, 1, 0.36, 1)",
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/40 to-black/70"></div>
+              <SlideBackground image={slide.image} isCurrent={isCurrent} />
 
               {/* Content */}
-              <div className="relative z-20 flex h-full items-center">
-                <div className="container">
-                  <div className="w-full md:w-1/2 md:ml-auto lg:w-2/5 text-left">
-                    {/* Animated Content */}
-                    <div className="space-y-6">
-                      {/* Subtitle with Animation */}
-                      <div
-                        className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-white/90 text-sm font-medium"
-                        style={{
-                          opacity: isCurrent ? 1 : 0,
-                          transform: isCurrent
-                            ? "translateY(0)"
-                            : "translateY(20px)",
-                          transition:
-                            "opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s",
-                        }}
-                      >
-                        <Sparkles className="w-4 h-4" />
-                        <span>{slide.subtitle}</span>
-                      </div>
+              <SlideContent>
+                {/* Subtitle with Animation */}
+                <SlideSubtitle
+                  isCurrent={isCurrent}
+                  subtitle={slide.subtitle}
+                />
 
-                      {/* Title with Animation */}
-                      <h1
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
-                        style={{
-                          opacity: isCurrent ? 1 : 0,
-                          transform: isCurrent
-                            ? "translateY(0)"
-                            : "translateY(30px)",
-                          transition:
-                            "opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s",
-                        }}
-                      >
-                        {slide.title}
-                      </h1>
+                {/* Title with Animation */}
+                <SlideTitle isCurrent={isCurrent} title={slide.title} />
 
-                      {/* Description with Animation */}
-                      <p
-                        className="text-base text-white/90 max-w-md"
-                        style={{
-                          opacity: isCurrent ? 1 : 0,
-                          transform: isCurrent
-                            ? "translateY(0)"
-                            : "translateY(40px)",
-                          transition:
-                            "opacity 0.8s ease-out 0.7s, transform 0.8s ease-out 0.7s",
-                        }}
-                      >
-                        {slide.description}
-                      </p>
+                {/* Description with Animation */}
+                <SlideDescription
+                  isCurrent={isCurrent}
+                  description={slide.description}
+                />
 
-                      {/* Button with Animation */}
-                      <div
-                        style={{
-                          opacity: isCurrent ? 1 : 0,
-                          transform: isCurrent
-                            ? "translateY(0)"
-                            : "translateY(50px)",
-                          transition:
-                            "opacity 0.8s ease-out 0.9s, transform 0.8s ease-out 0.9s",
-                        }}
-                      >
-                        <Link href={slide.buttonLink}>
-                          <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white/10 backdrop-blur-md px-8 py-3 font-medium text-white transition duration-300 ease-out hover:bg-white/20">
-                            <span className="absolute inset-0 flex h-full w-full justify-center overflow-hidden">
-                              <span className="absolute bottom-0 h-1 w-0 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
-                            </span>
-                            <span className="relative flex items-center gap-2">
-                              {slide.buttonText}
-                              <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
-                            </span>
-                          </button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                {/* Button with Animation */}
+                <SlideButton
+                  isCurrent={isCurrent}
+                  buttonLink={slide.buttonLink}
+                  buttonText={slide.buttonText}
+                />
+              </SlideContent>
             </div>
           );
         })}
