@@ -1,7 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { useTranslations } from "next-intl";
-import ContactInfo from "@/src/components/ContactInfo";
 import RequestForm from "@/src/components/contact/RequestForm";
 import RequestSection from "@/src/components/contact/RequestSection";
 import FaqSection from "@/src/components/contact/FaqSection";
