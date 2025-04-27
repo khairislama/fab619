@@ -16,8 +16,8 @@ export function Marquee({ showDelay, rtl, duration, CLIENTS_LOGOS }: Props) {
 
   return (
     <div className="relative py-1 overflow-hidden">
-      <div className="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -47,7 +47,7 @@ export function Marquee({ showDelay, rtl, duration, CLIENTS_LOGOS }: Props) {
                   : Math.min((duplicatedLogos.length - index) * 0.05, 1),
               }}
             >
-              <div className="flex-shrink-0 w-40 h-20 rounded-xl shadow-md p-6 flex items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+              <div className="flex-shrink-0 w-40 h-20 rounded-xl shadow-md p-6 flex items-center justify-center hover:shadow-lg hover:scale-105 transition-all duration-300 bg-background">
                 <Image
                   src={"/marquees/" + item.logo.src}
                   alt={item.name}
