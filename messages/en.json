@@ -10,12 +10,12 @@
   "Maintenance": {
     "title": "Under construction",
     "contact": {
-    "title": "Contact Us",
-    "description": "Please fill out the form below and we will get back to you shortly.",
-    "email": "your email address",
-    "phone": "your phone number",
-    "message": "Leave a message and we will contact you later",
-    "submit": "Send Message"
+      "title": "Contact Us",
+      "description": "Please fill out the form below and we will get back to you shortly.",
+      "email": "your email address",
+      "phone": "your phone number",
+      "message": "Leave a message and we will contact you later",
+      "submit": "Send Message"
     },
     "message": "Our team is currently updating the website to provide you with an enhanced user experience. Feel free to contact us directly for any immediate assistance or inquiries.",
     "copyrights": "© Copyrights FAB619-On demand fabrication | All Rights Reserved",
@@ -34,7 +34,7 @@
     "ogTitle": "FAB619 - Engineering & Innovation",
     "ogDescription": "FAB619 delivers cutting-edge solutions in electronics, robotics, and 3D printing. Engineering excellence for modern industries.",
     "twitterTitle": "FAB619 | Engineering & Robotics Solutions",
-    "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."  
+    "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."
   },
   "home": {
     "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
@@ -60,11 +60,25 @@
   },
   "about": {
     "title": "About FAB619",
-    "description": "At FAB619, we blend engineering expertise with creative design to deliver cutting-edge solutions in electronics, robotics, and 3D printing. With a passion for innovation, our team works closely with clients to turn ideas into reality, from prototyping to full-scale production."
+    "card": {
+      "title": "Who We Are & What We Do",
+      "description-1": "We are a dynamic engineering design office specializing in digital fabrication and custom machine design. Our team of experts combines innovative technologies with solutions to bring your ideas to life.",
+      "description-2": "From CAD & CAM to 3D scanning, reverse engineering, and custom machine design, we offer comprehensive services to meet the diverse needs of our clients across various industries."
+    },
+    "stats": {
+      "experience": "Years of Experience",
+      "specialists": "Brilliant Specialists",
+      "projects": "Projects",
+      "awards": "Industry Awards"
+    },
+    "workspace": "Our Workspace",
+    "equipments": {
+      "title": "Our Manufacturing Equipment",
+      "description": "We have a comprehensive range of manufacturing equipment to bring your ideas to life"
+    }
   },
   "services": {
     "title": "Services",
-    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation.",
     "clients": {
       "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
       "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
@@ -88,63 +102,63 @@
     "faqTitle": "FAQ",
     "faqSubtitle": "Frequently Asked Questions",
     "faqList": [
-    {
-      "question": "1. What services do you offer?",
-      "response": {
-        "text": "We provide a full range of digital fabrication and engineering services, including:",
-        "list": [
-          "Custom Machines design and toolheads for industrial purposes",
-          "Hardware product design",
-          "On-demand prototyping and small-batch manufacturing",
-          "3D printing (filament and pellet-based)",
-          "CNC machining and laser cutting",
-          "PCB design, IoT integration, and embedded systems",
-          "Training, workshops, and consulting for digital fabrication"
-        ]
+      {
+        "question": "1. What services do you offer?",
+        "response": {
+          "text": "We provide a full range of digital fabrication and engineering services, including:",
+          "list": [
+            "Custom Machines design and toolheads for industrial purposes",
+            "Hardware product design",
+            "On-demand prototyping and small-batch manufacturing",
+            "3D printing (filament and pellet-based)",
+            "CNC machining and laser cutting",
+            "PCB design, IoT integration, and embedded systems",
+            "Training, workshops, and consulting for digital fabrication"
+          ]
+        }
+      },
+      {
+        "question": "2. Do you develop custom solutions for specific industries?",
+        "response": {
+          "text": "Yes! We specialize in tailor-made solutions for industries like aerospace, nautical, furniture, education, and prototyping labs. We can design and build machines, control systems, or custom toolheads like our PelloBot extruder, based on your unique requirements."
+        }
+      },
+      {
+        "question": "3. Can I request a custom machine or fabrication setup?",
+        "response": {
+          "text": "Absolutely. Our team works closely with you to understand your workflow, production goals, and constraints, then proposes a custom machine or system (gantry, robot arm, toolhead, etc.) built to your specs."
+        }
+      },
+      {
+        "question": "4. How does your on-demand manufacturing service work?",
+        "response": {
+          "text": "You send us your 3D model or design brief, and we take care of the rest — from slicing and material prep to printing or machining. We offer rapid prototyping, small batch runs, and large-format prints with our own hardware."
+        }
+      },
+      {
+        "question": "5. What is your turnaround time?",
+        "response": {
+          "text": "Turnaround depends on the complexity and volume of your request. Prototypes are typically delivered within 3–7 working days, while custom machines or systems may take 2–6 weeks. We'll always provide an estimated delivery date upfront."
+        }
+      },
+      {
+        "question": "6. Can I visit your workshop or schedule a consultation?",
+        "response": {
+          "text": "Yes! We welcome visits by appointment and offer both in-person and virtual consultations. Contact us to schedule a tour or meeting to explore how we can help."
+        }
+      },
+      {
+        "question": "7. Do you provide training or workshops?",
+        "response": {
+          "text": "Yes, we offer hands-on workshops for 3D printing, CNC, machine building, and digital fabrication tools. We also provide custom training sessions for teams, schools, and technical centers."
+        }
+      },
+      {
+        "question": "8. Do you ship internationally?",
+        "response": {
+          "text": "We currently offer custom machines and kits primarily in Tunisia but are expanding our shipping and support network to serve international clients. Reach out to discuss delivery options for your region."
+        }
       }
-    },
-    {
-      "question": "2. Do you develop custom solutions for specific industries?",
-      "response": {
-        "text": "Yes! We specialize in tailor-made solutions for industries like aerospace, nautical, furniture, education, and prototyping labs. We can design and build machines, control systems, or custom toolheads like our PelloBot extruder, based on your unique requirements."
-      }
-    },
-    {
-      "question": "3. Can I request a custom machine or fabrication setup?",
-      "response": {
-        "text": "Absolutely. Our team works closely with you to understand your workflow, production goals, and constraints, then proposes a custom machine or system (gantry, robot arm, toolhead, etc.) built to your specs."
-      }
-    },
-    {
-      "question": "4. How does your on-demand manufacturing service work?",
-      "response": {
-        "text": "You send us your 3D model or design brief, and we take care of the rest — from slicing and material prep to printing or machining. We offer rapid prototyping, small batch runs, and large-format prints with our own hardware."
-      }
-    },
-    {
-      "question": "5. What is your turnaround time?",
-      "response": {
-        "text": "Turnaround depends on the complexity and volume of your request. Prototypes are typically delivered within 3–7 working days, while custom machines or systems may take 2–6 weeks. We'll always provide an estimated delivery date upfront."
-      }
-    },
-    {
-      "question": "6. Can I visit your workshop or schedule a consultation?",
-      "response": {
-        "text": "Yes! We welcome visits by appointment and offer both in-person and virtual consultations. Contact us to schedule a tour or meeting to explore how we can help."
-      }
-    },
-    {
-      "question": "7. Do you provide training or workshops?",
-      "response": {
-        "text": "Yes, we offer hands-on workshops for 3D printing, CNC, machine building, and digital fabrication tools. We also provide custom training sessions for teams, schools, and technical centers."
-      }
-    },
-    {
-      "question": "8. Do you ship internationally?",
-      "response": {
-        "text": "We currently offer custom machines and kits primarily in Tunisia but are expanding our shipping and support network to serve international clients. Reach out to discuss delivery options for your region."
-      }
-    }
-  ]
+    ]
   }
 }

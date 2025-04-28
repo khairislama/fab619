@@ -16,6 +16,7 @@ export function AboutHeroImage() {
           src="/images/placeholder-1280x720.webp"
           alt="Fab Lab Workshop"
           fill
+          priority
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 66vw"
         />

@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 export function AboutHeroCard() {
+  const translation = useTranslations("about.card");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -14,18 +17,13 @@ export function AboutHeroCard() {
       <Card className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card/95 backdrop-blur-sm">
         <CardContent className="p-6 md:p-8">
           <h3 className="text-2xl font-bold tracking-tight mb-4 text-primary">
-            Who We Are & What We Do
+            {translation("title")}
           </h3>
           <p className="text-muted-foreground mb-6">
-            We are a dynamic engineering design office specializing in digital
-            fabrication and custom machine design. Our team of experts combines
-            innovative technologies with creative solutions to bring your ideas
-            to life.
+            {translation("description-1")}
           </p>
           <p className="text-muted-foreground">
-            From CAD & CAM to 3D scanning, reverse engineering, and custom
-            machine design, we offer comprehensive services to meet the diverse
-            needs of our clients across various industries.
+            {translation("description-2")}
           </p>
         </CardContent>
       </Card>

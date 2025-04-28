@@ -62,12 +62,7 @@ export function ImageGallery() {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="mt-24 md:mt-32 relative h-[600px] md:h-[500px]"
-    >
-      <h2 className="text-3xl font-bold mb-12 text-center">Our Workspace</h2>
-
+    <div ref={containerRef} className="relative h-[600px] md:h-[500px]">
       <motion.div
         variants={containerVariants}
         initial="hidden"
