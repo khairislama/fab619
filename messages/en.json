@@ -77,16 +77,16 @@
       "description": "We have a comprehensive range of manufacturing equipment to bring your ideas to life"
     }
   },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
+  },
   "services": {
     "title": "Services",
     "clients": {
       "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
       "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
     }
-  },
-  "portfolio": {
-    "title": "Portfolio",
-    "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
   },
   "contact": {
     "title": "Get in Touch",

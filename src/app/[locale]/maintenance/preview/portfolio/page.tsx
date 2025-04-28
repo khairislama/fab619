@@ -2,7 +2,10 @@ import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
 import PageHeader from "@/src/components/page-header";
-import Grid from "@/src/components/grid";
+import { GridProvider } from "@/src/components/grid/GridContext";
+import { GridFilterButtons } from "@/src/components/grid/GridFilterButtons";
+import { GridWrapper } from "@/src/components/grid/GridWrapper";
+import { LoadMoreButton } from "@/src/components/grid/LoadMoreButton";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -30,7 +33,13 @@ export default function PortfolioPage({ params }: Props) {
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
       <PageHeader pageName="portfolio" />
-      <Grid />
+      <GridProvider initialVisibleItems={6}>
+        <div className="py-16">
+          <GridFilterButtons />
+          <GridWrapper />
+          <LoadMoreButton />
+        </div>
+      </GridProvider>
     </main>
   );
 }
