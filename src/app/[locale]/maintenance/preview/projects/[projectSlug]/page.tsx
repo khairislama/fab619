@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { works } from "@/settings/data/grid";
 import { Link } from "@/src/i18n/navigation";
 import { Locale } from "@/src/i18n/routing";
+import Recommendation from "@/src/components/projects/Recommendation";
 
 type Props = {
   params: Promise<{
@@ -61,7 +62,7 @@ export default async function ProjectPage({ params }: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <Image
-            src={project.image || "/placeholder.svg"}
+            src={project.image}
             alt={project.title}
             fill
             className="object-cover"
@@ -126,8 +127,8 @@ export default async function ProjectPage({ params }: Props) {
               {project.tag === "product design"
                 ? " digital fabrication and custom machine design."
                 : project.tag === "brand identity"
-                ? " visual communication and brand development."
-                : " software development and digital solutions."}
+                  ? " visual communication and brand development."
+                  : " software development and digital solutions."}
             </p>
           </div>
 
@@ -187,37 +188,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-8">Other Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {works
-            .filter((work) => work.slug !== project.slug)
-            .slice(0, 3)
-            .map((work) => (
-              <Link
-                href={{
-                  pathname: "/maintenance/preview/projects/[projectSlug]",
-                  params: { projectSlug: work.slug },
-                }}
-                key={work.id}
-              >
-                <div className="group relative overflow-hidden bg-gray-50 dark:bg-gray-900 aspect-[4/3] rounded-lg">
-                  <Image
-                    src={work.image || "/placeholder.svg"}
-                    alt={work.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <h3 className="text-xl font-medium text-white">
-                      {work.title}
-                    </h3>
-                  </div>
-                </div>
-              </Link>
-            ))}
-        </div>
-      </div>
+      <Recommendation slug={project.slug} />
     </main>
   );
 }
