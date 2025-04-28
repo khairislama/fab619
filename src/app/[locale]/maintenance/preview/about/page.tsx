@@ -4,10 +4,10 @@ import PageHeader from "@/src/components/page-header";
 import { AboutHeroImage } from "@/src/components/about/AboutHeroImage";
 import { AboutHeroCard } from "@/src/components/about/AboutHeroCard";
 import { StatsSection } from "@/src/components/about/StatsSection";
-import { ImageGallery } from "@/src/components/about/ImageGallery";
 import { EquipmentShowcase } from "@/src/components/about/EquipmentShowcase";
 import ImageGalleryWrapper from "@/src/components/about/ImageGalleryWrapper";
 import EquipmentsWrapper from "@/src/components/about/EquipmentsWrapper";
+import OverlappingCircles from "@/src/components/about/OverlappingCircles";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -37,7 +37,7 @@ export default function AboutPage({ params }: Props) {
 
           {/* Image Gallery */}
           <ImageGalleryWrapper>
-            <ImageGallery />
+            <OverlappingCircles />
           </ImageGalleryWrapper>
 
           {/* Equipment Showcase */}
