@@ -1,13 +1,8 @@
-import {
-  Github,
-  Goal,
-  Home,
-  Linkedin,
-  Presentation,
-  Send,
-  Twitter,
-  Users,
-} from "lucide-react";
+import { Facebook } from "@/src/components/SocialIcons/Facebook";
+import { Github } from "@/src/components/SocialIcons/Github";
+import { Instagram } from "@/src/components/SocialIcons/Instagram";
+import { LinkedIn } from "@/src/components/SocialIcons/LinkedIn";
+import { Goal, Home, Presentation, Send, Users } from "lucide-react";
 
 // Define allowed URL paths
 export type UrlPath =
@@ -71,16 +66,16 @@ export const SITE_LOGO = {
 };
 
 export const SOCIAL = [
-  { name: "Facebook", href: "https://www.facebook.com/fab619", icon: Github },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/fab_619",
-    icon: Twitter,
-  },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/fab619",
-    icon: Linkedin,
+    icon: LinkedIn,
   },
+  { name: "Facebook", href: "https://www.facebook.com/fab619", icon: Facebook },
   { name: "Github", href: "https://github.com/fab619", icon: Github },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/fab_619",
+    icon: Instagram,
+  },
 ];
