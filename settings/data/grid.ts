@@ -11,11 +11,6 @@ type WorkItem = {
   location?: string;
 };
 
-type filterItem = {
-  id: "all" | "product design" | "brand identity" | "digital solutions";
-  label: "View All" | "Product Design" | "Brand Identity" | "Digital Solutions";
-};
-
 // Sample data with placeholder images that will work in the preview
 export const works: WorkItem[] = [
   {
