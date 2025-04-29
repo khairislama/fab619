@@ -25,7 +25,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { handleContact } from "../app/actions/contact";
+import { handleContactMaintenance } from "../app/actions/contact-maintenance";
 
 // Schema for contact form validation
 export const formSchema = v.object({
@@ -60,7 +60,7 @@ export default function ContactForm() {
     setRetry(false);
 
     try {
-      const result = await handleContact(values);
+      const result = await handleContactMaintenance(values);
       if (result.success) {
         toast.success("Your message has been sent successfully!");
         setSent(true);
@@ -160,10 +160,10 @@ export default function ContactForm() {
                 {isLoading
                   ? "Sending..."
                   : retry
-                  ? "Retry"
-                  : sent
-                  ? "Message Sent"
-                  : "Send Message"}
+                    ? "Retry"
+                    : sent
+                      ? "Message Sent"
+                      : "Send Message"}
               </Button>
             </div>
           </form>

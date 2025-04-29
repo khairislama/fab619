@@ -1,16 +1,29 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useTranslations } from "next-intl";
+import { toast } from "sonner";
+import * as v from "valibot";
+import { handleContact } from "@/src/app/actions/contact";
+
+// Contact schema (extended)
+export const formSchema = v.object({
+  name: v.string(),
+  company: v.string(),
+  email: v.pipe(v.string(), v.email("Invalid email")),
+  phone: v.pipe(
+    v.string(),
+    v.regex(/^(\+\d{1,3})?\d{8,15}$/, "Invalid phone number")
+  ),
+  request: v.pipe(v.string(), v.minLength(10, "Request too short")),
+});
 
 export default function RequestForm() {
-  const translation = useTranslations("contact");
+  const translation = useTranslations("contact.form");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +33,10 @@ export default function RequestForm() {
     request: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [retry, setRetry] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -27,10 +44,42 @@ export default function RequestForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+
+    const parsed = v.safeParse(formSchema, formData);
+    if (!parsed.success) {
+      const firstError = Object.values(parsed.issues)[0]?.message;
+      toast.error(firstError || "Invalid input");
+      return;
+    }
+
+    setIsLoading(true);
+    setRetry(false);
+
+    try {
+      const result = await handleContact(formData);
+      if (result.success) {
+        toast.success("Message sent successfully!");
+        setSent(true);
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          request: "",
+        });
+      } else {
+        toast.error("Failed to send. Please try again.");
+        setRetry(true);
+      }
+    } catch (err) {
+      console.error("Error submitting form", err);
+      toast.error("Something went wrong.");
+      setRetry(true);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -110,8 +159,18 @@ export default function RequestForm() {
         />
       </div>
 
-      <Button type="submit" className="w-full py-3 uppercase font-bold">
-        {translation("send")}
+      <Button
+        type="submit"
+        className="w-full py-3 uppercase font-bold"
+        disabled={isLoading || sent}
+      >
+        {isLoading
+          ? translation("sending")
+          : retry
+            ? translation("retry")
+            : sent
+              ? translation("sent")
+              : translation("send")}
       </Button>
     </form>
   );

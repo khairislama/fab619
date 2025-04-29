@@ -93,12 +93,17 @@
     "contact-us": "contact us",
     "address": "address",
     "request": "Request Information",
-    "name": "name",
-    "company": "your company",
-    "email": "Email",
-    "phone-number": "Phone number",
-    "your-request": "Your Request",
-    "send": "send",
+    "form": {
+      "name": "name",
+      "company": "your company",
+      "email": "Email",
+      "phone-number": "Phone number",
+      "your-request": "Your Request",
+      "send": "Send",
+      "sent": "Sent!",
+      "retry": "Retry",
+      "sending": "Sending..."
+    },
     "faqTitle": "FAQ",
     "faqSubtitle": "Frequently Asked Questions",
     "faqList": [
