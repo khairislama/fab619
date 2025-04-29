@@ -10,6 +10,14 @@ import {
 import { useTranslations } from "next-intl";
 import ServiceCard from "@/src/components/ServiceCard";
 import Image from "next/image";
+import {
+  Activity,
+  Cpu,
+  FlaskConical,
+  GraduationCap,
+  Settings,
+  Share,
+} from "lucide-react";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -22,6 +30,20 @@ export default function ServicesPage({ params }: Props) {
   setRequestLocale(locale);
 
   const translation = useTranslations("services");
+
+  const services = translation.raw("list") as Array<{
+    title: string;
+    description: string;
+  }>;
+
+  const ICONS = [
+    <Cpu className="service-icon" />,
+    <Activity className="service-icon" />,
+    <Settings className="service-icon" />,
+    <Share className="service-icon" />,
+    <GraduationCap className="service-icon" />,
+    <FlaskConical className="service-icon" />,
+  ];
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
@@ -39,12 +61,14 @@ export default function ServicesPage({ params }: Props) {
 
         {/* Accordion Section */}
         <div className="lg:col-span-8 grid grid-cols-2 gap-8">
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          {services.map((service, idx) => (
+            <ServiceCard
+              key={idx}
+              title={service.title}
+              icon={ICONS[idx]}
+              description={service.description}
+            />
+          ))}
         </div>
       </section>
       <section className="relative w-full py-12 flex flex-col 2xl:grid 2xl:grid-cols-7 bg-gray-50 rounded-xl pl-10">

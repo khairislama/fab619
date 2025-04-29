@@ -83,6 +83,38 @@
   },
   "services": {
     "title": "Services",
+    "list": [
+      {
+        "title": "Industrial Design",
+        "description": "We turn ideas into manufacturable solutions...",
+        "icon": "Cpu"
+      },
+      {
+        "title": "Electronics Prototyping",
+        "description": "Rapid prototyping of electronic boards...",
+        "icon": "Activity"
+      },
+      {
+        "title": "Mechanical Engineering",
+        "description": "From CAD to manufacturing...",
+        "icon": "Settings"
+      },
+      {
+        "title": "Open-source Hardware",
+        "description": "We contribute to open hardware...",
+        "icon": "Share"
+      },
+      {
+        "title": "Educational Workshops",
+        "description": "Hands-on learning experiences...",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Research & Innovation",
+        "description": "Collaboration with institutions...",
+        "icon": "FlaskConical"
+      }
+    ],
     "clients": {
       "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
       "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."

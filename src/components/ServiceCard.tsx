@@ -1,20 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Lightbulb } from "lucide-react";
 
-function ServiceCard() {
+interface Props {
+  title: string;
+  icon: React.ReactNode;
+  description: string;
+}
+
+function ServiceCard({ title, icon, description }: Props) {
   return (
     <div className="w-full flex flex-col items-center justify-center space-y-3 text-center group hover:shadow-xl rounded-2xl p-4">
       <div className="w-12 h-12 bg-blue-50 rounded-md flex items-center justify-center my-4 group-hover:bg-blue-700 transition-colors duration-300 ease-in-out">
-        <Lightbulb className="h-6 w-6 text-blue-700 group-hover:text-white transition-colors duration-300 ease-in-out" />
+        {icon}
       </div>
-      <h3 className="font-semibold text-lg cursor-default">
-        User Experience Design
-      </h3>
-      <p className="text-sm cursor-default">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim reiciendis
-        nihil natus impedit corrupti porro eum voluptas magnam, ratione aperiam
-        neque eaque consectetur.
-      </p>
+      <h3 className="font-semibold text-lg cursor-default">{title}</h3>
+      <p className="text-sm cursor-default">{description}</p>
       <Button
         variant="link"
         className="text-blue-700 font-semibold hover:underline"
