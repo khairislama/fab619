@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { filters } from "@/settings/data/grid";
 import { useGridContext } from "./GridContext";
+import { filters } from "@/src/sanity/lib/project/getProjects";
 
 export function GridFilterButtons() {
   const { activeFilter, handleFilterClick } = useGridContext();

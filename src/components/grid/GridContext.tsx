@@ -1,5 +1,7 @@
 "use client";
 
+import { GetProjectsQueryResult } from "@/sanity.types";
+import { getProjects, Work } from "@/src/sanity/lib/project/getProjects";
 import {
   createContext,
   useContext,
@@ -7,22 +9,20 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { works } from "@/settings/data/grid";
 
 // Define types for our context
-type Work = (typeof works)[0];
-
 interface GridContextType {
   activeFilter: string;
   visibleItems: number;
   columnsPerRow: number;
-  filteredWorks: Work[];
+  filteredWorks: GetProjectsQueryResult;
+  works: GetProjectsQueryResult;
+  isLoading: boolean;
   handleFilterClick: (filter: string) => void;
   handleLoadMore: () => void;
   hasMoreItems: boolean;
 }
 
-// Create the context with a default value
 const GridContext = createContext<GridContextType | undefined>(undefined);
 
 // Custom hook to use the grid context
@@ -46,6 +46,25 @@ export function GridProvider({
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [visibleItems, setVisibleItems] = useState<number>(initialVisibleItems);
   const [columnsPerRow, setColumnsPerRow] = useState<number>(3);
+  const [works, setWorks] = useState<GetProjectsQueryResult>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  // Fetch projects on component mount
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        setIsLoading(true);
+        const projects = await getProjects();
+        setWorks(projects);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchProjects();
+  }, []);
 
   // Filter works based on active filter
   const filteredWorks =
@@ -126,6 +145,8 @@ export function GridProvider({
     visibleItems,
     columnsPerRow,
     filteredWorks,
+    works,
+    isLoading,
     handleFilterClick,
     handleLoadMore,
     hasMoreItems,

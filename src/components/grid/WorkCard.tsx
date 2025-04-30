@@ -3,32 +3,25 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link } from "@/src/i18n/navigation";
-import { filters } from "@/settings/data/grid";
-
-interface WorkCardProps {
-  id: number;
-  slug: string;
-  title: string;
-  description: string;
-  image: string;
-  tag: string;
-}
+import { filters } from "@/src/sanity/lib/project/getProjects";
+import { GetProjectsQueryResult } from "@/sanity.types";
+import { urlFor } from "@/src/sanity/lib/image";
 
 export function WorkCard({
-  id,
+  _id,
   slug,
   title,
   description,
   image,
   tag,
-}: WorkCardProps) {
+}: Partial<GetProjectsQueryResult[number]>) {
   const filterLabel = filters.find((f) => f.id === tag)?.label || tag;
 
   return (
     <Link
       href={{
         pathname: "/maintenance/preview/projects/[projectSlug]",
-        params: { projectSlug: slug },
+        params: { projectSlug: slug! },
       }}
     >
       <motion.div
@@ -38,10 +31,10 @@ export function WorkCard({
         layout
         className="group relative overflow-hidden bg-gray-50 dark:bg-gray-900 aspect-[4/3] cursor-pointer"
         role="article"
-        aria-labelledby={`work-title-${id}`}
+        aria-labelledby={`work-title-${_id}`}
       >
         <Image
-          src={image || "/placeholder.svg?height=800&width=600"}
+          src={urlFor(image!).url()}
           alt={`${title} project thumbnail`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -52,7 +45,7 @@ export function WorkCard({
             {filterLabel}
           </span>
           <h3
-            id={`work-title-${id}`}
+            id={`work-title-${_id}`}
             className="text-xl font-medium text-white mt-1 mb-2"
           >
             {title}
