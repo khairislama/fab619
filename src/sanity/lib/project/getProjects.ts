@@ -1,19 +1,6 @@
 import { defineQuery } from "next-sanity";
 import { client } from "../client";
 
-export type Work = {
-  _id: string;
-  title: string;
-  slug: string;
-  image: any;
-  tag: "product design" | "brand identity" | "digital solutions";
-  description: string;
-  client?: string;
-  year?: string;
-  location?: string;
-  content?: any;
-};
-
 export const filters = [
   { id: "all", label: "View All" },
   { id: "product design", label: "Product Design" },

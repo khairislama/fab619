@@ -3,9 +3,14 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { works } from "@/settings/data/grid";
 import { Link } from "@/src/i18n/navigation";
 import { Locale } from "@/src/i18n/routing";
+import { getProjectBySlug } from "@/src/sanity/lib/project/getProjectBySlug";
+import { urlFor } from "@/src/sanity/lib/image";
+import { getProjects } from "@/src/sanity/lib/project/getProjects";
+import ProjectCard from "@/src/components/projects/ProjectCard";
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 import Recommendation from "@/src/components/projects/Recommendation";
 
 type Props = {
@@ -17,10 +22,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-
-  const project = works.find(
-    (work) => work.slug === resolvedParams.projectSlug
-  );
+  const project = await getProjectBySlug(resolvedParams.projectSlug);
 
   if (!project) {
     return {
@@ -35,16 +37,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: project.title,
       description: project.description,
-      images: [{ url: project.image, width: 800, height: 600 }],
+      images: [{ url: urlFor(project.image!).url(), width: 800, height: 600 }],
     },
   };
 }
 
 export default async function ProjectPage({ params }: Props) {
   const resolvedParams = await params;
-  const project = works.find(
-    (work) => work.slug === resolvedParams.projectSlug
-  );
+
+  const project = await getProjectBySlug(resolvedParams.projectSlug);
 
   if (!project) {
     notFound();
@@ -62,8 +63,8 @@ export default async function ProjectPage({ params }: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <Image
-            src={project.image}
-            alt={project.title}
+            src={urlFor(project.image!).url()}
+            alt={`${project.title} project thumbnail`}
             fill
             className="object-cover"
             priority
@@ -107,9 +108,7 @@ export default async function ProjectPage({ params }: Props) {
               <h3 className="text-sm font-medium text-muted-foreground">
                 Category
               </h3>
-              <p className="text-lg capitalize">
-                {project.tag.replace("-", " ")}
-              </p>
+              <p className="text-lg capitalize">{project.tag}</p>
             </div>
           </div>
 
@@ -187,20 +186,20 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         </div>
       </div>
-
-      <Recommendation slug={project.slug} />
+      <Recommendation slug={project.slug || ""} />
     </main>
   );
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const locales: Locale[] = ["en", "fr"]; // Your supported locales
+  const projects = await getProjects();
 
   // Generate params for each locale and project slug combination
   return locales.flatMap((locale) =>
-    works.map((work) => ({
+    projects.map((project) => ({
       locale,
-      projectSlug: work.slug,
+      projectSlug: project.slug,
     }))
   );
 }

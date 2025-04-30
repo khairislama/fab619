@@ -37,12 +37,12 @@ export default function ServicesPage({ params }: Props) {
   }>;
 
   const ICONS = [
-    <Cpu className="service-icon" />,
-    <Activity className="service-icon" />,
-    <Settings className="service-icon" />,
-    <Share className="service-icon" />,
-    <GraduationCap className="service-icon" />,
-    <FlaskConical className="service-icon" />,
+    <Cpu key="cpu" className="service-icon" />,
+    <Activity key="activity" className="service-icon" />,
+    <Settings key="settings" className="service-icon" />,
+    <Share key="share" className="service-icon" />,
+    <GraduationCap key="grad" className="service-icon" />,
+    <FlaskConical key="flask" className="service-icon" />,
   ];
 
   return (

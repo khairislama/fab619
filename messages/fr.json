@@ -8,141 +8,192 @@
     "preview": "Aperçu"
   },
   "Maintenance": {
-    "title": "En cours de maintenance",
+    "title": "En construction",
     "contact": {
-      "title": "Contact Us",
+      "title": "Contactez-nous",
       "description": "Veuillez remplir le formulaire ci-dessous et nous vous répondrons sous peu.",
       "email": "votre adresse e-mail",
       "phone": "votre numéro de téléphone",
       "message": "Laissez un message et nous vous contacterons plus tard",
-      "submit": "envoyer le message"
+      "submit": "Envoyer le message"
     },
-    "message": "Notre équipe met actuellement à jour le site web pour vous offrir une meilleure expérience utilisateur. N'hésitez pas à nous contacter directement pour toute demande ou assistance immédiate.",
+    "message": "Notre équipe met actuellement à jour le site pour vous offrir une expérience utilisateur améliorée. N'hésitez pas à nous contacter directement pour toute assistance ou question immédiate.",
     "copyrights": "© Droits d'auteur FAB619 - Fabrication à la demande | Tous droits réservés",
     "services": {
       "1": "Fabrication numérique",
-      "2": "Usinage CNC sur mesure",
-      "3": "Conception et prototypage matériel",
+      "2": "Usinage CNC personnalisé",
+      "3": "Conception matérielle et prototypage",
       "4": "Électronique et systèmes embarqués",
       "5": "Logiciels et algorithmes de contrôle machine"
     }
   },
   "home-Metadata": {
-    "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique & Impression 3D",
-    "description": "Découvrez FAB619, un bureau d'ingénierie spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
-    "keywords": "ingénierie, bureau d'étude, robotique, impression 3D, électronique, prototypage, automatisation, solutions industrielles, FAB619, innovation",
-    "ogTitle": "FAB619 - Ingénierie & Innovation",
-    "ogDescription": "FAB619 propose des solutions innovantes en électronique, robotique et impression 3D. L'excellence en ingénierie au service des industries modernes.",
-    "twitterTitle": "FAB619 | Solutions en Ingénierie et Robotique",
-    "twitterDescription": "Ingénierie, robotique et impression 3D adaptées aux besoins industriels."
+    "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique et solutions 3D",
+    "description": "Découvrez FAB619, un bureau d'ingénierie et de conception de premier plan spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
+    "keywords": "ingénierie, bureau de conception, robotique, impression 3D, électronique, prototypage, automatisation, solutions industrielles, FAB619, innovation",
+    "ogTitle": "FAB619 - Ingénierie et Innovation",
+    "ogDescription": "FAB619 propose des solutions de pointe en électronique, robotique et impression 3D. Excellence en ingénierie pour les industries modernes.",
+    "twitterTitle": "FAB619 | Solutions d'ingénierie et de robotique",
+    "twitterDescription": "Solutions d'ingénierie, de robotique et d'impression 3D adaptées aux besoins industriels."
   },
   "home": {
-    "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique & Impression 3D",
-    "description": "Découvrez FAB619, un bureau d'ingénierie et de conception spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
+    "title": "FAB619 - Bureau d'ingénierie et de conception | Robotique et solutions 3D",
+    "description": "Découvrez FAB619, un bureau d'ingénierie et de conception de premier plan spécialisé en électronique, robotique et impression 3D. Des solutions innovantes pour les industries et les professionnels.",
     "slideshow": [
       {
         "title": "Innover l'électronique de demain",
-        "text": "Des solutions électroniques avancées pour les industries modernes."
+        "text": "Des solutions électroniques avancées adaptées aux industries modernes."
       },
       {
-        "title": "Une robotique qui transforme les industries",
-        "text": "Automatisation intelligente pour un avenir plus performant."
+        "title": "La robotique qui transforme les industries",
+        "text": "Automatisation intelligente pour un avenir plus intelligent et plus efficace."
       },
       {
-        "title": "Impression 3D & prototypage de précision",
-        "text": "Prototypage rapide avec une technologie de pointe."
+        "title": "Impression 3D et prototypage de précision",
+        "text": "Prototypage rapide avec une technologie d'impression 3D de pointe."
       },
       {
         "title": "Excellence en ingénierie, conçue pour vous",
-        "text": "Des solutions sur mesure pour concrétiser vos idées."
+        "text": "Des solutions personnalisées pour concrétiser vos idées."
       }
     ]
   },
   "about": {
     "title": "À propos de FAB619",
-    "description": "Chez FAB619, nous allions expertise en ingénierie et design créatif pour offrir des solutions innovantes en électronique, robotique et impression 3D. Passionnés par l'innovation, nous accompagnons nos clients de l'idée au produit final, du prototypage à la production à grande échelle."
-  },
-  "services": {
-    "title": "Services",
-    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation.",
-    "clients": {
-      "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
-      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
+    "card": {
+      "title": "Qui nous sommes et ce que nous faisons",
+      "description-1": "Nous sommes un bureau de conception d'ingénierie dynamique spécialisé dans la fabrication numérique et la conception de machines sur mesure. Notre équipe d'experts combine des technologies innovantes avec des solutions pour donner vie à vos idées.",
+      "description-2": "Du CAO & FAO à la numérisation 3D, l'ingénierie inverse et la conception de machines sur mesure, nous offrons des services complets pour répondre aux divers besoins de nos clients dans divers secteurs."
+    },
+    "stats": {
+      "experience": "Années d'expérience",
+      "specialists": "Spécialistes brillants",
+      "projects": "Projets",
+      "awards": "Récompenses industrielles"
+    },
+    "workspace": "Notre espace de travail",
+    "equipments": {
+      "title": "Notre équipement de fabrication",
+      "description": "Nous disposons d'une gamme complète d'équipements de fabrication pour concrétiser vos idées"
     }
   },
   "portfolio": {
     "title": "Portfolio",
-    "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
+    "recommendation": "Autres projets"
+  },
+  "services": {
+    "title": "Services",
+    "list": [
+      {
+        "title": "Conception industrielle",
+        "description": "Nous transformons les idées en solutions manufacturables...",
+        "icon": "Cpu"
+      },
+      {
+        "title": "Prototypage électronique",
+        "description": "Prototypage rapide de cartes électroniques...",
+        "icon": "Activity"
+      },
+      {
+        "title": "Ingénierie mécanique",
+        "description": "De la CAO à la fabrication...",
+        "icon": "Settings"
+      },
+      {
+        "title": "Matériel open-source",
+        "description": "Nous contribuons au matériel open-source...",
+        "icon": "Share"
+      },
+      {
+        "title": "Ateliers éducatifs",
+        "description": "Expériences d'apprentissage pratiques...",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Recherche et innovation",
+        "description": "Collaboration avec des institutions...",
+        "icon": "FlaskConical"
+      }
+    ],
+    "clients": {
+      "title": "<bolder>Clients et partenaires</bolder> Collaborer pour construire l'avenir de la fabrication",
+      "description": "Nous croyons que l'innovation prospère grâce à la collaboration. Nous sommes fiers de travailler avec des <underline>industries</underline>, <underline>institutions</underline> et <underline>organisations</underline> avant-gardistes qui partagent notre passion pour les solutions de fabrication de pointe, la machinerie et le matériel open-source."
+    }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "contact-us": "nous contacter",
+    "title": "Entrer en contact",
+    "contact-us": "contactez-nous",
     "address": "adresse",
-    "request": "Demande d'informations",
-    "name": "nom",
-    "company": "votre entreprise",
-    "email": "Email",
-    "phone-number": "Numéro de téléphone",
-    "your-request": "Votre demande",
-    "send": "envoyer",
+    "request": "Demander des informations",
+    "form": {
+      "name": "nom",
+      "company": "votre entreprise",
+      "email": "E-mail",
+      "phone-number": "Numéro de téléphone",
+      "your-request": "Votre demande",
+      "send": "Envoyer",
+      "sent": "Envoyé !",
+      "retry": "Réessayer",
+      "sending": "Envoi en cours..."
+    },
     "faqTitle": "FAQ",
-    "faqSubtitle": "Foire aux questions",
+    "faqSubtitle": "Questions fréquemment posées",
     "faqList": [
       {
         "question": "1. Quels services proposez-vous ?",
         "response": {
-          "text": "Nous offrons une gamme complète de services de fabrication numérique et d'ingénierie, incluant :",
+          "text": "Nous offrons une gamme complète de services de fabrication numérique et d'ingénierie, notamment :",
           "list": [
-            "Conception de machines sur mesure et têtes d’outils pour usages industriels",
-            "Conception de produits hardware",
-            "Prototypage à la demande et fabrication en petite série",
-            "Impression 3D (à filament ou à granulés)",
+            "Conception de machines personnalisées et têtes d'outils pour des usages industriels",
+            "Conception de produits matériels",
+            "Prototypage à la demande et fabrication en petites séries",
+            "Impression 3D (filament et granulés)",
             "Usinage CNC et découpe laser",
-            "Conception de circuits imprimés, intégration IoT et systèmes embarqués",
-            "Formations, ateliers et conseils en fabrication numérique"
+            "Conception de PCB, intégration IoT et systèmes embarqués",
+            "Formation, ateliers et conseil en fabrication numérique"
           ]
         }
       },
       {
-        "question": "2. Développez-vous des solutions sur mesure pour des secteurs spécifiques ?",
+        "question": "2. Développez-vous des solutions personnalisées pour des industries spécifiques ?",
         "response": {
-          "text": "Oui ! Nous sommes spécialisés dans les solutions personnalisées pour des secteurs comme l’aéronautique, le nautique, le mobilier, l’éducation et les fablabs. Nous pouvons concevoir et fabriquer des machines, systèmes de contrôle ou têtes d’outils comme notre extrudeuse PelloBot, selon vos besoins spécifiques."
+          "text": "Oui ! Nous sommes spécialisés dans les solutions sur mesure pour des industries telles que l'aérospatiale, le nautisme, le mobilier, l'éducation et les laboratoires de prototypage. Nous pouvons concevoir et construire des machines, des systèmes de contrôle ou des têtes d'outils personnalisées comme notre extrudeuse PelloBot, en fonction de vos besoins uniques."
         }
       },
       {
-        "question": "3. Puis-je demander une machine ou une installation sur mesure ?",
+        "question": "3. Puis-je demander une machine ou une configuration de fabrication personnalisée ?",
         "response": {
-          "text": "Absolument. Notre équipe travaille avec vous pour comprendre votre flux de travail, vos objectifs de production et vos contraintes, puis propose une machine ou un système (portique, bras robotisé, tête d’outil, etc.) adapté à vos besoins."
+          "text": "Absolument. Notre équipe travaille en étroite collaboration avec vous pour comprendre votre flux de travail, vos objectifs de production et vos contraintes, puis propose une machine ou un système personnalisé (portique, bras robotisé, tête d'outil, etc.) construit selon vos spécifications."
         }
       },
       {
         "question": "4. Comment fonctionne votre service de fabrication à la demande ?",
         "response": {
-          "text": "Vous nous envoyez votre modèle 3D ou cahier des charges, et nous nous occupons du reste — de la préparation à l’impression ou à l’usinage. Nous proposons du prototypage rapide, des petites séries, et des impressions grand format avec nos propres machines."
+          "text": "Vous nous envoyez votre modèle 3D ou votre cahier des charges, et nous nous occupons du reste — de la découpe et de la préparation des matériaux à l'impression ou à l'usinage. Nous proposons du prototypage rapide, des petites séries et des impressions grand format avec notre propre matériel."
         }
       },
       {
-        "question": "5. Quels sont vos délais de livraison ?",
+        "question": "5. Quel est votre délai d'exécution ?",
         "response": {
-          "text": "Les délais dépendent de la complexité et du volume de votre demande. Les prototypes sont généralement livrés sous 3 à 7 jours ouvrés, tandis que les machines sur mesure peuvent prendre 2 à 6 semaines. Nous vous communiquerons toujours une estimation avant de démarrer."
+          "text": "Le délai dépend de la complexité et du volume de votre demande. Les prototypes sont généralement livrés sous 3 à 7 jours ouvrables, tandis que les machines ou systèmes personnalisés peuvent prendre de 2 à 6 semaines. Nous fournirons toujours une date de livraison estimée à l'avance."
         }
       },
       {
         "question": "6. Puis-je visiter votre atelier ou planifier une consultation ?",
         "response": {
-          "text": "Oui ! Nous recevons sur rendez-vous et proposons des consultations en présentiel ou à distance. Contactez-nous pour planifier une visite ou une réunion afin de voir comment nous pouvons vous aider."
+          "text": "Oui ! Nous accueillons les visites sur rendez-vous et proposons des consultations en personne ou virtuelles. Contactez-nous pour planifier une visite ou une réunion afin d'explorer comment nous pouvons vous aider."
         }
       },
       {
-        "question": "7. Proposez-vous des formations ou ateliers ?",
+        "question": "7. Proposez-vous des formations ou des ateliers ?",
         "response": {
-          "text": "Oui, nous proposons des ateliers pratiques en impression 3D, CNC, conception de machines et outils de fabrication numérique. Nous organisons aussi des formations sur mesure pour équipes, écoles ou centres techniques."
+          "text": "Oui, nous proposons des ateliers pratiques sur l'impression 3D, la CNC, la construction de machines et les outils de fabrication numérique. Nous proposons également des sessions de formation personnalisées pour les équipes, les écoles et les centres techniques."
         }
       },
       {
         "question": "8. Expédiez-vous à l'international ?",
         "response": {
-          "text": "Nous proposons actuellement nos machines et kits personnalisés principalement en Tunisie, mais nous développons notre réseau de livraison et de support pour servir des clients à l’international. Contactez-nous pour discuter des options de livraison dans votre région."
+          "text": "Nous proposons actuellement des machines et des kits sur mesure principalement en Tunisie, mais nous développons notre réseau d'expédition et d'assistance pour servir nos clients internationaux. Contactez-nous pour discuter des options de livraison dans votre région."
         }
       }
     ]
