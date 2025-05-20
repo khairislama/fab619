@@ -39,24 +39,39 @@
   "home": {
     "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
     "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
-    "slideshow": [
-      {
-        "title": "Innovating Electronics for Tomorrow",
-        "text": "Advanced electronic solutions tailored for modern industries."
+    "carousel": {
+      "aria-label": "Featured content carousel",
+      "next-slide": "Next slide",
+      "previous-slide": "Previous slide",
+      "navigation": "Carousel navigation",
+      "goto": "Go to slide ${index}",
+      "video-aria": "Watch video",
+      "video-link": "Video link",
+      "1": {
+        "title": "Welcome to <br></br> FAB619 - On demand Fabrication",
+        "description": "An engineering design office (EDO) specialized in advanced machinery, automation systems, and digital fabrication. From concept to prototype, we ensure efficient, tested solutions for  optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "ADM IDEX machine close up",
+        "cta": "Check out"
       },
-      {
-        "title": "Robotics That Transforms Industries",
-        "text": "Intelligent automation for a smarter, more efficient future."
+      "2": {
+        "title": "Custom Engineering<br></br> &  Design Solutions",
+        "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "ADM IDEX machine parts",
+        "cta": "Check out"
       },
-      {
-        "title": "Precision 3D Printing & Prototyping",
-        "text": "Rapid prototyping with cutting-edge 3D printing technology."
+      "3": {
+        "title": "Hardware<br></br> & Product  Design",
+        "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "Hardware machine parts",
+        "cta": "Check out"
       },
-      {
-        "title": "Engineering Excellence, Designed for You",
-        "text": "Custom solutions to bring your ideas to reality."
+      "4": {
+        "title": "Digital fabrication<br></br> 3D printing, CNC machining",
+        "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "Printed item parts",
+        "cta": "Check out"
       }
-    ]
+    }
   },
   "about": {
     "title": "About FAB619",
@@ -142,7 +157,7 @@
       {
         "question": "1. What services do you offer?",
         "response": {
-          "text": "We provide a full range of digital fabrication and engineering services, including:",
+          "description": "We provide a full range of digital fabrication and engineering services, including:",
           "list": [
             "Custom Machines design and toolheads for industrial purposes",
             "Hardware product design",
