@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { useCarousel } from "./carousel-provider";
 import { CarouselSlide } from "@/lib/carousel";
 import { useTranslations } from "next-intl";
-import AnimatedTitle from "../animated-title";
-import AnimatedParagraph from "../animated-paragraph";
+import AnimatedTitle from "../../animated-title";
+import AnimatedParagraph from "../../animated-paragraph";
 import { VideoLink } from "./video-link";
 
 interface CarouselSlideItemProps {
@@ -28,7 +28,7 @@ export function CarouselSlideItem({ slide, index }: CarouselSlideItemProps) {
           src={slide.image}
           alt={t(`${slide.id}.img-alt`)}
           fill
-          className="object-cover brightness-50"
+          className="object-cover brightness-90"
           priority={index === 0}
           aria-hidden="true"
         />
