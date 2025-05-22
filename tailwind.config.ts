@@ -89,6 +89,7 @@ export default {
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
+        ibm_plex_mono: ["var(--font-ibm_plex_mono)", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

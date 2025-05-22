@@ -71,6 +71,13 @@
         "img-alt": "Printed item parts",
         "cta": "Check out"
       }
+    },
+    "whoarewe": {
+      "title": "Who <br></br>we are ?",
+      "l-description": "We specialize <underline>in the design and development</underline> of <underline>custom machines</underline>, <underline>automation systems</underline>, and <underline>smart products</underline> that bridge the gap between innovation and industrial performance.",
+      "rt-description": "Whether it's <underline>CNC custom machinery</underline>, <underline>IoT-enabled devices</underline>, <underline>PCB boards</underline>, <underline>Digital manufacturing</underline>  or <underline>workshops training programs</underline>, we deliver practical, scalable technologies that drive real-world impact and measurable results.",
+      "rb-description": "Our multidisciplinary team brings together expertise in <underline>mechanical engineering</underline>, <underline>electronics</underline>, <underline>machine software</underline>, and <underline>digital fabrication</underline> to deliver end-to-end solutions—from concept and prototyping to production and integration.",
+      "learn-more": "Learn More"
     }
   },
   "about": {

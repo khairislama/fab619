@@ -14,24 +14,26 @@ function DesktopNavbar() {
       {/* Nav Links */}
       <div className="-mt-20">
         <DesktopNavigation />
-        <div className="w-full mt-8 -ml-3 text-xl">
-          <NavLanguage />
-        </div>
       </div>
       {/* Social Icons */}
-      <div className="flex space-x-4 my-8">
-        {SOCIAL.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sm:hover:text-card-foreground/60 transition-colors duration-200 ease-in-out"
-          >
-            <item.icon className="w-6 h-6" />
-            <span className="sr-only">{item.name}</span>
-          </Link>
-        ))}
+      <div>
+        <div className="w-full text-lg">
+          <NavLanguage />
+        </div>
+        <div className="flex space-x-4 my-8">
+          {SOCIAL.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sm:hover:text-card-foreground/60 transition-colors duration-200 ease-in-out"
+            >
+              <item.icon className="w-6 h-6" />
+              <span className="sr-only">{item.name}</span>
+            </Link>
+          ))}
+        </div>
       </div>
     </aside>
   );

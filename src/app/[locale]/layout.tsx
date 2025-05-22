@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { IBM_Plex_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -19,6 +19,12 @@ type Props = {
 
 const poppins = Poppins({
   variable: "--font-poppins",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const ibm_plex_mono = IBM_Plex_Mono({
+  variable: "--font-ibm_plex_mono",
   weight: "400",
   subsets: ["latin"],
 });
@@ -100,7 +106,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <body
-        className={`${poppins.variable} bg-background font-sans antialiased debug-screens`}
+        className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased debug-screens`}
       >
         <NextIntlClientProvider messages={messages}>
           <main className="relative font-poppins">{children}</main>
