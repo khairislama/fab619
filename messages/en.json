@@ -84,7 +84,18 @@
     },
     "projects": {
       "title": "Our <br></br>Projects",
-      "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
+      "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations.",
+      "explore": "Explore"
+    },
+    "clients": {
+      "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
+      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
+    },
+    "press": {
+      "title": "Press",
+      "subtitle": "Insights, updates, and stories — <br></br>explore our latest events, projects, and innovative solutions.",
+      "explore-aria": "Explore all press content",
+      "explore": "Explore"
     }
   },
   "about": {
