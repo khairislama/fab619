@@ -78,6 +78,13 @@
       "rt-description": "Whether it's <underline>CNC custom machinery</underline>, <underline>IoT-enabled devices</underline>, <underline>PCB boards</underline>, <underline>Digital manufacturing</underline>  or <underline>workshops training programs</underline>, we deliver practical, scalable technologies that drive real-world impact and measurable results.",
       "rb-description": "Our multidisciplinary team brings together expertise in <underline>mechanical engineering</underline>, <underline>electronics</underline>, <underline>machine software</underline>, and <underline>digital fabrication</underline> to deliver end-to-end solutions—from concept and prototyping to production and integration.",
       "learn-more": "Learn More"
+    },
+    "services": {
+      "title": ""
+    },
+    "projects": {
+      "title": "Our <br></br>Projects",
+      "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
     }
   },
   "about": {
