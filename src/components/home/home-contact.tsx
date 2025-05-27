@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function ContactSection() {
+  const t = useTranslations("home.contact");
   return (
     <section className="w-full py-12 bg-white">
       <div className="container px-4 md:px-6 mx-auto">
@@ -9,32 +12,36 @@ export default function ContactSection() {
           {/* Header */}
           <div className="space-y-2">
             <h1 className="text-5xl font-bold tracking-tighter text-gray-900">
-              CONTACT US
+              {t("title")}
             </h1>
-            <p className="text-gray-600 max-w-3xl">
-              If you would like to find out more about what{" "}
-              <span className="font-semibold">
-                FAB619 - On demand Fabrication
-              </span>{" "}
-              can do for your business or to receive a project quote, don&apos;t
-              hesitate to contact us.
+            <p className="text-gray-700 max-w-3xl">
+              {t.rich("subtitle", {
+                semibold: (chunk) => (
+                  <span className="font-semibold">{chunk}</span>
+                ),
+              })}
             </p>
           </div>
 
           {/* Contact Information Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
             {/* Phone Numbers */}
-            <div className="bg-gray-100 p-6 rounded-lg relative overflow-hidden">
-              <div className="absolute top-6 left-6 bg-white p-3 rounded-full">
-                <Phone className="h-6 w-6 text-gray-900" />
-              </div>
-              <div className="pt-16">
-                <h3 className="text-sm font-semibold mb-4 uppercase">
-                  CONTACT US
+            <div className="p-6 rounded-lg relative overflow-hidden text-white">
+              <Image
+                src="/images/contact-background.webp"
+                alt="contact information background"
+                fill
+                className="object-cover brightness-[0.35]"
+                sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+              />
+              <div className="absolute inset-0 p-6 lg:p-10 flex flex-col justify-center items-center">
+                <Phone className="h-10 w-10 mb-4" />
+                <h3 className="text-xs font-light mb-4 uppercase">
+                  {t("title")}
                 </h3>
                 <div className="space-y-2">
-                  <p className="text-xl font-semibold">+216 55 336 659</p>
-                  <p className="text-xl font-semibold">+216 54 544 731</p>
+                  <p className="text-xl font-light">+216 55 336 659</p>
+                  <p className="text-xl font-light">+216 54 544 731</p>
                 </div>
               </div>
             </div>
@@ -44,16 +51,15 @@ export default function ContactSection() {
               <div className="flex items-start gap-4">
                 <MapPin className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">DROP ON IN</h3>
-                  <p className="text-gray-600">
-                    FE/AR 03, Neotex, Fabrique entreprenariale, Monastir,
-                    Tunisia
-                  </p>
+                  <h3 className="text-xl font-semibold">
+                    {t("location.title")}
+                  </h3>
+                  <p className="text-gray-600">{t("location.monastir")}</p>
                   <Link
                     href="https://maps.google.com"
                     className="inline-block bg-gray-900 text-white py-2 px-4 text-sm text-center w-full"
                   >
-                    Find us on google maps
+                    {t("location.find")}
                   </Link>
                 </div>
               </div>
@@ -61,14 +67,12 @@ export default function ContactSection() {
               <div className="flex items-start gap-4">
                 <div className="h-6 w-6 flex-shrink-0" />
                 <div className="space-y-2">
-                  <p className="text-gray-600">
-                    A8-8, Golden Towers, Centre Urbain Nord, Tunis, Tunisia
-                  </p>
+                  <p className="text-gray-600">{t("location.tunis")}</p>
                   <Link
                     href="https://maps.google.com"
                     className="inline-block bg-gray-900 text-white py-2 px-4 text-sm text-center w-full"
                   >
-                    Find us on google maps
+                    {t("location.find")}
                   </Link>
                 </div>
               </div>
@@ -80,12 +84,14 @@ export default function ContactSection() {
                 <Mail className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold">SEND US A MESSAGE</h3>
+                    <h3 className="text-xl font-semibold">
+                      {t("send-message")}
+                    </h3>
                   </div>
 
                   <div>
                     <p className="text-sm font-semibold text-gray-600">
-                      FOR NEW PROJECTS
+                      {t("projects")}
                     </p>
                     <Link
                       href="mailto:alilakais@fab619.tn"
@@ -97,7 +103,7 @@ export default function ContactSection() {
 
                   <div>
                     <p className="text-sm font-semibold text-gray-600">
-                      FOR 3D PRINT SERVICES
+                      {t("print")}
                     </p>
                     <Link
                       href="mailto:3dprint@fab619.tn"
@@ -109,7 +115,7 @@ export default function ContactSection() {
 
                   <div>
                     <p className="text-sm font-semibold text-gray-600">
-                      QUESTIONS & SUPPORT
+                      {t("questions")}
                     </p>
                     <Link
                       href="mailto:contact@fab619.tn"
