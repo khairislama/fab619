@@ -1,39 +1,28 @@
 import Image from "next/image";
 import React from "react";
 import ServiceCard from "./services-card";
-import {
-  Code2,
-  Cpu,
-  GraduationCap,
-  Ruler,
-  Settings,
-  Torus,
-} from "lucide-react";
+import { useTranslations } from "next-intl";
 
 function HomeServices() {
+  const t = useTranslations("home.services");
   return (
     <section className="relative container mx-auto my-28">
       <div className="relative w-full h-[200px] lg:h-[250px] overflow-hidden">
-        <Image
+        {/* <Image
           src="/images/placeholder-1920x1080.webp"
           alt="Blueprint background"
           fill
           className="object-cover"
-        />
+        /> */}
         <div className="absolute inset-0 flex items-center">
           <div className="container px-4 md:px-6 lg:px-8">
             <div className="max-w-md md:max-w-lg">
-              <p className="text-lg md:text-xl font-medium">
-                We offer a <span className="font-bold">wide range</span> of
-              </p>
-              <p className="text-lg md:text-xl font-medium">
-                innovative{" "}
-                <span className="font-bold">Manufacturing services</span>
-              </p>
-              <p className="text-lg md:text-xl font-medium">
-                from <span className="font-bold">concept</span> to{" "}
-                <span className="font-bold">final product</span>.
-              </p>
+              <h2 className="text-lg md:text-xl font-medium">
+                {t.rich("title", {
+                  bold: (chunk) => <span className="font-bold">{chunk}</span>,
+                  br: () => <br></br>,
+                })}
+              </h2>
             </div>
           </div>
         </div>

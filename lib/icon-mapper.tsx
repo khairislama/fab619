@@ -1,9 +1,12 @@
 import { IconMapping } from "@/src/sanity/lib/types";
-import { PenToolIcon as Tool, Calendar, Settings } from "lucide-react";
+import { Calendar, Settings, DraftingCompass } from "lucide-react";
+import Image from "next/image";
 
 // Map icon types from Sanity to Lucide React icons
 export const iconMap: IconMapping = {
-  workshop: <Tool className="h-5 w-5" />,
+  workshop: (
+    <Image src="/icons/workshop.svg" alt="workshop" width={20} height={20} />
+  ),
   event: <Calendar className="h-5 w-5" />,
   machine: <Settings className="h-5 w-5" />,
 };
