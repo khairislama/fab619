@@ -1,6 +1,6 @@
 "use client";
 
-import { GetProjectsQueryResult } from "@/sanity.types";
+import { GetProjectsQueryResult, Project } from "@/sanity.types";
 import { getProjects } from "@/src/sanity/lib/project/getProjects";
 import {
   createContext,
@@ -15,8 +15,8 @@ interface GridContextType {
   activeFilter: string;
   visibleItems: number;
   columnsPerRow: number;
-  filteredWorks: GetProjectsQueryResult;
-  works: GetProjectsQueryResult;
+  filteredWorks: Project[];
+  works: Project[];
   isLoading: boolean;
   handleFilterClick: (filter: string) => void;
   handleLoadMore: () => void;
@@ -46,7 +46,7 @@ export function GridProvider({
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [visibleItems, setVisibleItems] = useState<number>(initialVisibleItems);
   const [columnsPerRow, setColumnsPerRow] = useState<number>(3);
-  const [works, setWorks] = useState<GetProjectsQueryResult>([]);
+  const [works, setWorks] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Fetch projects on component mount

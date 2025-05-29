@@ -22,7 +22,7 @@ export function GridFilterButtons() {
               ? "bg-black text-white dark:bg-white dark:text-black"
               : "hover:bg-black/5 dark:hover:bg-white/10"
           }`}
-          onClick={() => handleFilterClick(filter.id)}
+          onClick={() => handleFilterClick(filter.id!)}
           role="tab"
           aria-selected={activeFilter === filter.id}
           aria-controls={`panel-${filter.id}`}
