@@ -8,7 +8,7 @@ export default function NotFound() {
       <p className="text-xl text-muted-foreground mb-8">
         Sorry, we couldn&apos;t find the project you&apos;re looking for.
       </p>
-      <Link href="/maintenance/preview/portfolio">
+      <Link href="/projects">
         <Button>Return to Portfolio</Button>
       </Link>
     </div>

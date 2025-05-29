@@ -10,24 +10,24 @@ export interface CarouselSlide {
 export const SlidesData: CarouselSlide[] = [
   {
     id: 1,
-    buttonLink: "/maintenance/preview/about",
+    buttonLink: "/about",
     image: "/images/slideshow/slide-1.png",
     video:
       "https://drive.google.com/file/d/1cJ-xOlPOU9Z9yQPAgOHhBApSjisZlKSC/view",
   },
   {
     id: 2,
-    buttonLink: "/maintenance/preview/services",
+    buttonLink: "/services",
     image: "/images/slideshow/slide-2.png",
   },
   {
     id: 3,
-    buttonLink: "/maintenance/preview/portfolio",
+    buttonLink: "/projects",
     image: "/images/slideshow/slide-3.png",
   },
   {
     id: 4,
-    buttonLink: "/maintenance/preview/contact",
+    buttonLink: "/contact",
     image: "/images/slideshow/slide-4.png",
   },
 ];

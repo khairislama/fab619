@@ -39,7 +39,7 @@ function WhoWeAre() {
               })}
             </AnimatedParagraph>
             <Link
-              href="/maintenance/preview/about"
+              href="/about"
               className="inline-flex items-center mt-8 text-xl font-medium text-gray-800 group"
             >
               {t("learn-more")}

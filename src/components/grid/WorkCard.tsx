@@ -20,7 +20,7 @@ export function WorkCard({
   return (
     <Link
       href={{
-        pathname: "/maintenance/preview/projects/[projectSlug]",
+        pathname: "/projects/[projectSlug]",
         params: { projectSlug: slug! },
       }}
     >

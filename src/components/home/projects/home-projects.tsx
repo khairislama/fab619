@@ -18,7 +18,7 @@ function HomeProjects() {
             {t("subtitle")}
           </AnimatedParagraph>
           <Link
-            href="/maintenance/preview/portfolio"
+            href="/projects"
             aria-describedby={`portfolio`}
             className="inline-flex items-center text-gray-900 group text-xl font-medium"
           >

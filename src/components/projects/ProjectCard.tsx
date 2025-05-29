@@ -11,7 +11,7 @@ function ProjectCard({ slug, image, title }: Props) {
   return (
     <Link
       href={{
-        pathname: "/maintenance/preview/projects/[projectSlug]",
+        pathname: "/projects/[projectSlug]",
         params: { projectSlug: slug },
       }}
     >

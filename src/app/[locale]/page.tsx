@@ -1,6 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import Maintenance from "@/src/components/Maintenance";
 import { CarouselProvider } from "@/src/components/home/carousel/carousel-provider";
 import { CarouselWrapper } from "@/src/components/home/carousel/carousel-wrapper";
 import { SlidesData } from "@/lib/carousel";

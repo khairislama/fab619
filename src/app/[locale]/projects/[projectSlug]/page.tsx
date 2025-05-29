@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
-      <Link href="/maintenance/preview/portfolio" className="inline-block mb-8">
+      <Link href="/projects" className="inline-block mb-8">
         <Button variant="ghost" className="gap-2">
           <ArrowLeft className="h-4 w-4" />
           Back to Portfolio
@@ -123,9 +123,9 @@ export default async function ProjectPage({ params }: Props) {
               technologies and design tools. This project demonstrates our
               commitment to precision, innovation, and technical excellence in
               the field of
-              {project.tag === "product design"
+              {project.tag === "custom machinery"
                 ? " digital fabrication and custom machine design."
-                : project.tag === "brand identity"
+                : project.tag === "digital fabrication"
                   ? " visual communication and brand development."
                   : " software development and digital solutions."}
             </p>
@@ -134,7 +134,7 @@ export default async function ProjectPage({ params }: Props) {
           <div>
             <h2 className="text-xl font-semibold mb-4">Technologies Used</h2>
             <div className="flex flex-wrap gap-2">
-              {project.tag === "product design" && (
+              {project.tag === "custom machinery" && (
                 <>
                   <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
                     3D Printing
@@ -150,7 +150,7 @@ export default async function ProjectPage({ params }: Props) {
                   </span>
                 </>
               )}
-              {project.tag === "brand identity" && (
+              {project.tag === "digital fabrication" && (
                 <>
                   <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
                     Visual Design
@@ -166,7 +166,7 @@ export default async function ProjectPage({ params }: Props) {
                   </span>
                 </>
               )}
-              {project.tag === "digital solutions" && (
+              {project.tag === "hardware design" && (
                 <>
                   <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
                     Web Development
