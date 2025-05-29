@@ -888,15 +888,23 @@
           "of": [
             {
               "type": "string",
-              "value": "product design"
+              "value": "custom machinery"
             },
             {
               "type": "string",
-              "value": "brand identity"
+              "value": "digital fabrication"
             },
             {
               "type": "string",
-              "value": "digital solutions"
+              "value": "iot and Electronics"
+            },
+            {
+              "type": "string",
+              "value": "hardware design"
+            },
+            {
+              "type": "string",
+              "value": "machine software"
             }
           ]
         },

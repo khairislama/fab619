@@ -3,13 +3,21 @@ import { client } from "../client";
 import { PressItem } from "@/sanity.types";
 
 export async function getPressItems(limit?: number) {
-  // Build the query string with optional limit
-  const getPressItemsQuery = defineQuery(`*[_type == "pressItem"] {
-    ...,
-    "slug": slug.current,
-  } | order(date desc)${limit ? `[0..${limit - 1}]` : ""}`);
+  let query = `*[_type == "pressItem"] {
+      ...,
+      "slug": slug.current,
+    } | order(date desc)`;
 
-  const pressItems: PressItem[] = await client.fetch(getPressItemsQuery);
+  // Append limit slice if provided
+  if (limit) {
+    query += `[0..${limit - 1}]`;
+  }
+
+  // Define the query using defineQuery (optional, can be omitted if query is dynamic)
+  const getPressItemsQuery = defineQuery(query);
+
+  // Fetch the press items with type safety
+  const pressItems = await client.fetch<PressItem[]>(getPressItemsQuery);
 
   return pressItems;
 }

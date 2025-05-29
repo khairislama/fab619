@@ -9,10 +9,12 @@ import HomeProjects from "@/src/components/home/projects/home-projects";
 import HomeServices from "@/src/components/home/services";
 import WhoWeAre from "@/src/components/home/who-we-are";
 import { getPressItems } from "@/src/sanity/lib/press/getPressItems";
+import { getProjects } from "@/src/sanity/lib/project/getProjects";
 
 export default async function MaintenancePage() {
   // Fetch press items from Sanity
   const pressItems = await getPressItems(3);
+  const projectItems = await getProjects(5);
 
   return (
     <main>
@@ -23,7 +25,7 @@ export default async function MaintenancePage() {
       </CarouselProvider>
       <WhoWeAre />
       <HomeServices />
-      <HomeProjects />
+      <HomeProjects projectItems={projectItems} />
       <HomeClients />
       <div className="container mx-auto py-20">
         <HomePressHeader />

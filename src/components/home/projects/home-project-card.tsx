@@ -1,25 +1,26 @@
 import { Eye } from "lucide-react";
 import Image from "next/image";
 import AnimatedCard from "../../animated-card";
+import { Project } from "@/sanity.types";
+import { urlFor } from "@/src/sanity/lib/image";
 import Link from "next/link";
 
 function HomeProjectCard({
   project,
+  index,
 }: {
-  project: {
-    id: number;
-    title: string;
-    image: string;
-    hasViewButton?: boolean;
-  };
+  project: Project;
+  index: number;
 }) {
+  // Generate the image URL using Sanity's image URL builder
+  const imageUrl = urlFor(project.image!).width(800).url();
   return (
-    <AnimatedCard index={project.id} className="group relative">
-      <Link href="#">
+    <AnimatedCard index={index} className="group relative">
+      <Link href={"#"}>
         <div className="relative h-64 w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
           <Image
-            src={project.image}
-            alt={project.title}
+            src={imageUrl}
+            alt={project.image?.alt || project.title!}
             fill
             quality={80}
             sizes="(max-width: 1023px) 100vw, 33vw"

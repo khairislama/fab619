@@ -3,8 +3,13 @@ import AnimatedTitle from "../../animated-title";
 import { useTranslations } from "next-intl";
 import AnimatedParagraph from "../../animated-paragraph";
 import { Link } from "@/src/i18n/navigation";
+import { Project } from "@/sanity.types";
 
-function HomeProjects() {
+interface HomeProjectProps {
+  projectItems: Project[];
+}
+
+function HomeProjects({ projectItems }: HomeProjectProps) {
   const t = useTranslations("home.projects");
   const projects = [
     {
@@ -67,8 +72,8 @@ function HomeProjects() {
           </Link>
         </div>
 
-        {projects.slice(0, 5).map((project) => (
-          <HomeProjectCard key={project.id} project={project} />
+        {projectItems.map((project, index) => (
+          <HomeProjectCard key={project._id} project={project} index={index} />
         ))}
       </div>
     </section>

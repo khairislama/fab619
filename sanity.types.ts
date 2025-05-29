@@ -146,7 +146,7 @@ export type Project = {
     alt?: string;
     _type: "image";
   };
-  tag?: "product design" | "brand identity" | "digital solutions";
+  tag?: "custom machinery" | "digital fabrication" | "iot and Electronics" | "hardware design" | "machine software";
   description?: string;
   client?: string;
   year?: string;
@@ -281,7 +281,7 @@ export type GetPressItemBySlugQueryResult = {
 
 // Source: ./src/sanity/lib/press/getPressItems.ts
 // Variable: getPressItemsQuery
-// Query: *[_type == "pressItem"] {    ...,    "slug": slug.current,  } | order(date desc)
+// Query: *[_type == "pressItem"] {      ...,      "slug": slug.current,    } | order(date desc)
 export type GetPressItemsQueryResult = Array<{
   _id: string;
   _type: "pressItem";
@@ -363,7 +363,7 @@ export type GetProjectBySlugQueryResult = {
     alt?: string;
     _type: "image";
   };
-  tag?: "brand identity" | "digital solutions" | "product design";
+  tag?: "custom machinery" | "digital fabrication" | "hardware design" | "iot and Electronics" | "machine software";
   description?: string;
   client?: string;
   year?: string;
@@ -373,7 +373,7 @@ export type GetProjectBySlugQueryResult = {
 
 // Source: ./src/sanity/lib/project/getProjects.ts
 // Variable: getProjectsQuery
-// Query: *[_type == "project"] {        ...,        "slug": slug.current,      } | order(createdAt desc)
+// Query: *[_type == "project"] {    ...,    "slug": slug.current,  } | order(createdAt desc)
 export type GetProjectsQueryResult = Array<{
   _id: string;
   _type: "project";
@@ -395,7 +395,7 @@ export type GetProjectsQueryResult = Array<{
     alt?: string;
     _type: "image";
   };
-  tag?: "brand identity" | "digital solutions" | "product design";
+  tag?: "custom machinery" | "digital fabrication" | "hardware design" | "iot and Electronics" | "machine software";
   description?: string;
   client?: string;
   year?: string;
@@ -408,8 +408,8 @@ import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
     "*[_type == \"pressItem\" && slug.current == $slug][0] {\n        ...,\n        \"slug\": slug.current,\n  }": GetPressItemBySlugQueryResult;
-    "*[_type == \"pressItem\"] {\n    ...,\n    \"slug\": slug.current,\n  } | order(date desc)": GetPressItemsQueryResult;
+    "*[_type == \"pressItem\"] {\n      ...,\n      \"slug\": slug.current,\n    } | order(date desc)": GetPressItemsQueryResult;
     "*[_type == \"project\" && slug.current == $slug][0] {\n        ...,\n        \"slug\": slug.current,\n  }": GetProjectBySlugQueryResult;
-    "*[_type == \"project\"] {\n        ...,\n        \"slug\": slug.current,\n      } | order(createdAt desc)": GetProjectsQueryResult;
+    "*[_type == \"project\"] {\n    ...,\n    \"slug\": slug.current,\n  } | order(createdAt desc)": GetProjectsQueryResult;
   }
 }

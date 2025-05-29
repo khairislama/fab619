@@ -1,20 +1,29 @@
 import { defineQuery } from "next-sanity";
 import { client } from "../client";
+import { Project } from "@/sanity.types";
 
 export const filters = [
   { id: "all", label: "View All" },
-  { id: "product design", label: "Product Design" },
-  { id: "brand identity", label: "Brand Identity" },
-  { id: "digital solutions", label: "Digital Solutions" },
+  { title: "Custom Machinery", value: "custom machinery" },
+  { title: "Digital Fabrication", value: "digital fabrication" },
+  { title: "IOT & Electronics", value: "iot and Electronics" },
+  { title: "Hardware Design", value: "hardware design" },
+  { title: "Machine Software", value: "machine software" },
 ];
 
-export async function getProjects() {
-  const getProjectsQuery = defineQuery(`*[_type == "project"] {
-        ...,
-        "slug": slug.current,
-      } | order(createdAt desc)`);
+export async function getProjects(limit?: number) {
+  let query = `*[_type == "project"] {
+    ...,
+    "slug": slug.current,
+  } | order(createdAt desc)`;
 
-  const projects = await client.fetch(getProjectsQuery);
+  if (limit) {
+    query += `[0..${limit - 1}]`;
+  }
+
+  const getProjectsQuery = defineQuery(query);
+
+  const projects = await client.fetch<Project[]>(getProjectsQuery);
 
   return projects;
 }
