@@ -2,10 +2,10 @@
   "Navigation": {
     "home": "Home",
     "about": "About",
-    "portfolio": "Portfolio",
     "services": "Services",
-    "contact": "Contact",
-    "preview": "Preview"
+    "projects": "Projects",
+    "press": "Press",
+    "contact": "Contact"
   },
   "Maintenance": {
     "title": "Under construction",

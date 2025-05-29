@@ -1,43 +1,11 @@
-import HomeProjectCard from "./home-project-card";
 import AnimatedTitle from "../../animated-title";
 import { useTranslations } from "next-intl";
 import AnimatedParagraph from "../../animated-paragraph";
 import { Link } from "@/src/i18n/navigation";
-import { Project } from "@/sanity.types";
+import HomeProjectCardWrapper from "./home-project-card-wrapper";
 
-interface HomeProjectProps {
-  projectItems: Project[];
-}
-
-function HomeProjects({ projectItems }: HomeProjectProps) {
+function HomeProjects() {
   const t = useTranslations("home.projects");
-  const projects = [
-    {
-      id: 1,
-      title: "ADM IDEX - Dispensing machine",
-      image: "/images/projects/adm-idex.webp",
-    },
-    {
-      id: 2,
-      title: "JellyEdge - 4.00 TRINNING MODELS",
-      image: "/images/projects/jelly-edge.webp",
-    },
-    {
-      id: 3,
-      title: "Desktop CNC -V2 Kit machine",
-      image: "/images/projects/desktop-cnc.webp",
-    },
-    {
-      id: 4,
-      title: "Rumba 3D - SPLink controller",
-      image: "/images/projects/rumba-3d.webp",
-    },
-    {
-      id: 5,
-      title: "AFP - Programming Software",
-      image: "/images/projects/afp.webp",
-    },
-  ];
 
   return (
     <section className="py-12 container mx-auto">
@@ -72,9 +40,7 @@ function HomeProjects({ projectItems }: HomeProjectProps) {
           </Link>
         </div>
 
-        {projectItems.map((project, index) => (
-          <HomeProjectCard key={project._id} project={project} index={index} />
-        ))}
+        <HomeProjectCardWrapper />
       </div>
     </section>
   );

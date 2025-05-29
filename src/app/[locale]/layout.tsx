@@ -11,6 +11,8 @@ import { Locale, routing } from "@/src/i18n/routing";
 import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import Head from "next/head";
+import { AppSidebar } from "@/src/components/sidebar";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   children: ReactNode;
@@ -109,7 +111,15 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased debug-screens`}
       >
         <NextIntlClientProvider messages={messages}>
-          <main className="relative font-poppins">{children}</main>
+          <main className="relative font-poppins">
+            <AppSidebar />
+            <div className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-15rem)]">
+              <div className="scrollbar-hide overflow-y-auto h-screen">
+                {children}
+                <Footer />
+              </div>
+            </div>
+          </main>
           <Toaster />
         </NextIntlClientProvider>
       </body>

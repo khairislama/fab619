@@ -2,51 +2,43 @@ import { Facebook } from "@/src/components/SocialIcons/Facebook";
 import { Github } from "@/src/components/SocialIcons/Github";
 import { Instagram } from "@/src/components/SocialIcons/Instagram";
 import { LinkedIn } from "@/src/components/SocialIcons/LinkedIn";
-import { Goal, Home, Presentation, Send, Users } from "lucide-react";
 
 // Define allowed URL paths
 export type UrlPath =
   | "/"
-  | "/maintenance/preview/about"
-  | "/maintenance/preview/portfolio"
-  | "/maintenance/preview/services"
-  | "/maintenance/preview/contact"
-  | "/maintenance/preview";
+  | "/about"
+  | "/services"
+  | "/projects"
+  | "/press"
+  | "/contact";
 
 export const NAVIGATION: {
   title: string;
   url: UrlPath;
-  icon: React.ComponentType;
 }[] = [
   {
     title: "home",
     url: "/",
-    icon: Home,
   },
   {
     title: "about",
-    url: "/maintenance/preview/about",
-    icon: Users,
-  },
-  {
-    title: "portfolio",
-    url: "/maintenance/preview/portfolio",
-    icon: Presentation,
+    url: "/about",
   },
   {
     title: "services",
-    url: "/maintenance/preview/services",
-    icon: Goal,
+    url: "/services",
+  },
+  {
+    title: "projects",
+    url: "/projects",
+  },
+  {
+    title: "press",
+    url: "/press",
   },
   {
     title: "contact",
-    url: "/maintenance/preview/contact",
-    icon: Send,
-  },
-  {
-    title: "preview",
-    url: "/maintenance/preview",
-    icon: Send,
+    url: "/contact",
   },
 ];
 

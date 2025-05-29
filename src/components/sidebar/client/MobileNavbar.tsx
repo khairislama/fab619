@@ -19,7 +19,7 @@ export default function MobileNavbar() {
         {/* Burger Button */}
         <button onClick={() => setIsOpen(true)}>
           <div className="flex items-center justify-center gap-3 text-xl sm:hover:text-card-foreground/60 transition-colors duration-500 ease-in-out">
-            <Menu className="w-8 h-8" /> <span>Menu</span>
+            <Menu className="w-8 h-8" />
           </div>
         </button>
         {/* Logo */}
