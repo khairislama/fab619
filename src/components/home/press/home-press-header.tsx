@@ -8,7 +8,7 @@ export default function HomePressHeader() {
     <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 pt-6">
       <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
         <h1 className="text-5xl font-bold tracking-tighter">{t("title")}</h1>
-        <p className="text-base md:text-lg max-w-2xl font-ibm_plex_mono">
+        <p className="text-base md:text-lg max-w-2xl font-ibm_plex_mono xl:ml-10">
           {t.rich("subtitle", { br: () => <br></br> })}
         </p>
       </div>

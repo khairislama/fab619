@@ -10,11 +10,11 @@ export default function ContactSection() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="space-y-8">
           {/* Header */}
-          <div className="space-y-2">
+          <div className="flex flex-col xl:flex-row items-center justify-between">
             <h1 className="text-5xl font-bold tracking-tighter text-gray-900">
               {t("title")}
             </h1>
-            <p className="text-gray-700 max-w-3xl">
+            <p className="text-gray-700 text-center xl:text-justify max-w-xl 2xl:max-w-4xl font-ibm_plex_mono">
               {t.rich("subtitle", {
                 semibold: (chunk) => (
                   <span className="font-semibold">{chunk}</span>
@@ -26,7 +26,7 @@ export default function ContactSection() {
           {/* Contact Information Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
             {/* Phone Numbers */}
-            <div className="p-6 rounded-lg relative overflow-hidden text-white">
+            <div className="p-6 rounded-lg relative overflow-hidden text-white h-[250px]">
               <Image
                 src="/images/contact-background.webp"
                 alt="contact information background"
@@ -64,7 +64,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-start justify-center gap-4">
                 <div className="h-6 w-6 flex-shrink-0" />
                 <div className="space-y-2">
                   <p className="text-gray-600">{t("location.tunis")}</p>
@@ -80,9 +80,9 @@ export default function ContactSection() {
 
             {/* Email Addresses */}
             <div className="space-y-6">
-              <div className="flex items-start justify-end gap-4">
+              <div className="flex items-start justify-center md:justify-end gap-4">
                 <Mail className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
-                <div className="space-y-6 w-full">
+                <div className="space-y-6 md:w-full">
                   <div>
                     <h3 className="text-xl font-semibold">
                       {t("send-message")}
