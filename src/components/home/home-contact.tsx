@@ -48,7 +48,7 @@ export default function ContactSection() {
 
             {/* Locations */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start justify-center gap-4">
                 <MapPin className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold">
@@ -80,9 +80,9 @@ export default function ContactSection() {
 
             {/* Email Addresses */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start justify-end gap-4">
                 <Mail className="h-6 w-6 text-gray-900 flex-shrink-0 mt-1" />
-                <div className="space-y-6">
+                <div className="space-y-6 w-full">
                   <div>
                     <h3 className="text-xl font-semibold">
                       {t("send-message")}
@@ -130,7 +130,7 @@ export default function ContactSection() {
           </div>
 
           {/* Social Media Links */}
-          <div className="flex flex-wrap gap-8 pt-8 border-t border-gray-200">
+          <div className="flex flex-wrap gap-8 pt-8 border-t border-gray-200 justify-between max-w-4xl mx-auto">
             <Link
               href="https://linkedin.com"
               className="flex items-center gap-2 text-gray-600 hover:text-gray-900"

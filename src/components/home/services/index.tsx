@@ -7,17 +7,22 @@ function HomeServices() {
   const t = useTranslations("home.services");
   return (
     <section className="relative container mx-auto my-28">
-      <div className="relative w-full h-[200px] lg:h-[250px] overflow-hidden">
-        {/* <Image
-          src="/images/placeholder-1920x1080.webp"
-          alt="Blueprint background"
-          fill
-          className="object-cover"
-        /> */}
+      <div className="relative w-full h-[150px] overflow-hidden">
+        <div className="md:w-2/3 h-full absolute right-0 hidden sm:block">
+          <Image
+            src="/images/services/services-bg.webp"
+            alt="Blueprint background"
+            width={1118}
+            height={187}
+            quality={50}
+            className="opacity-20 h-full w-auto"
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+          />
+        </div>
         <div className="absolute inset-0 flex items-center">
           <div className="container px-4 md:px-6 lg:px-8">
             <div className="max-w-md md:max-w-lg">
-              <h2 className="text-lg md:text-xl font-medium">
+              <h2 className="text-sm sm:text-lg md:text-xl font-medium">
                 {t.rich("title", {
                   bold: (chunk) => <span className="font-bold">{chunk}</span>,
                   br: () => <br></br>,
@@ -35,7 +40,7 @@ function HomeServices() {
           icon={"/icons/settings.svg"}
           title="Custom Machinery"
           description="Machinery development / Automation Systems / Advanced Robotics"
-          backgroundImage="/images/placeholder-800x800.webp"
+          backgroundImage="/images/services/custom-machine.webp"
         />
 
         {/* 3D Printing & CNC */}
@@ -43,7 +48,7 @@ function HomeServices() {
           icon={"/icons/printer3d.svg"}
           title="3D printing & CNC machining"
           description="On-Demand Manufacturing / rapid prototyping / customized production"
-          backgroundImage="/images/placeholder-800x800.webp"
+          backgroundImage="/images/services/printing.webp"
         />
 
         {/* IOT & Electronics */}
@@ -51,7 +56,7 @@ function HomeServices() {
           icon={"/icons/electronics.svg"}
           title="IOT & Electronics"
           description="Electronic circuits /PCB Design & IOT integration / Embedded Software"
-          backgroundImage="/images/placeholder-800x800.webp"
+          backgroundImage="/images/services/electronics.webp"
         />
 
         {/* Hardware Design */}
@@ -59,7 +64,7 @@ function HomeServices() {
           icon={"/icons/design.svg"}
           title="Hardware design"
           description="Product design / Hardware Engineering / Prototyping / Electronic integration"
-          backgroundImage="/images/placeholder-800x800.webp"
+          backgroundImage="/images/services/design.webp"
         />
 
         {/* Machine Software */}
@@ -67,7 +72,7 @@ function HomeServices() {
           icon={"/icons/software.svg"}
           title="Machine Software"
           description="Machine Control Algorithms, Real-time system Monitoring & Custom Software"
-          backgroundImage="/images/placeholder-800x800.webp"
+          backgroundImage="/images/services/machine-software.webp"
         />
 
         {/* Workshop & Training */}
@@ -75,7 +80,7 @@ function HomeServices() {
           icon={"/icons/workshop.svg"}
           title="Workshop & Training"
           description="Technical Documentation / Hands-On Workshops / Training sessions"
-          backgroundImage="/images/placeholder-800x800.webp"
+          backgroundImage="/images/services/workshop.webp"
         />
       </div>
     </section>

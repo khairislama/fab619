@@ -20,7 +20,7 @@ export default function ServiceCard({
         src={backgroundImage}
         alt={title}
         fill
-        className="object-cover brightness-[0.6] group-hover:scale-105 transition-transform duration-300"
+        className="object-cover brightness-[0.4] group-hover:scale-105 transition-transform duration-300"
       />
       <div className="absolute inset-0 p-6 lg:p-10 flex flex-col justify-between">
         <div className="bg-white/90 backdrop-blur-sm p-2 rounded-md w-fit">

@@ -46,9 +46,11 @@ export const projectType = defineType({
       type: "string",
       options: {
         list: [
-          { title: "Product Design", value: "product design" },
-          { title: "Brand Identity", value: "brand identity" },
-          { title: "Digital Solutions", value: "digital solutions" },
+          { title: "Custom Machinery", value: "custom machinery" },
+          { title: "Digital Fabrication", value: "digital fabrication" },
+          { title: "IOT & Electronics", value: "iot and Electronics" },
+          { title: "Hardware Design", value: "hardware design" },
+          { title: "Machine Software", value: "machine software" },
         ],
       },
       validation: (rule) => rule.required(),

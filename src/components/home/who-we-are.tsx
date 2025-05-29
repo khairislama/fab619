@@ -51,7 +51,7 @@ function WhoWeAre() {
         {/* Right Section with Two-toned Background */}
         <div className="flex flex-col col-span-2">
           {/* Top Dark Section */}
-          <div className="relative bg-gray-950 p-8 md:p-12 overflow-hidden h-[300px] lg:h-[400px]">
+          <div className="relative bg-gray-950 p-8 md:p-12 overflow-hidden sm:h-[300px] lg:h-[400px]">
             <div className="absolute inset-0 z-0 opacity-25">
               <Image
                 src="/images/whoarewe/right-top.webp"
@@ -62,10 +62,10 @@ function WhoWeAre() {
                 sizes="(max-width: 1023px) 100vw, 33vw"
               />
             </div>
-            <div className="relative z-10 flex h-full items-end">
+            <div className="relative z-10 flex h-full sm:items-end">
               <AnimatedParagraph
                 delay={0.4}
-                className="text-lg text-white font-ibm_plex_mono"
+                className="sm:text-lg text-white font-ibm_plex_mono"
               >
                 {t.rich("rt-description", {
                   underline: (chunk) => (
@@ -77,7 +77,7 @@ function WhoWeAre() {
           </div>
 
           {/* Bottom Yellow Section */}
-          <div className="relative bg-[#FDF81A] p-8 md:p-12 overflow-hidden h-[200px] lg:h-[300px]">
+          <div className="relative bg-[#FDF81A] p-8 md:p-12 overflow-hidden lg:h-[300px]">
             <div className="absolute inset-0 z-0 opacity-35">
               <Image
                 src="/images/whoarewe/right-bottom.webp"
@@ -88,10 +88,10 @@ function WhoWeAre() {
                 sizes="(max-width: 1023px) 100vw, 33vw"
               />
             </div>
-            <div className="relative z-10 flex h-full items-end">
+            <div className="relative z-10 flex h-full sm:items-end">
               <AnimatedParagraph
                 delay={0.6}
-                className="text-gray-900 text-lg font-ibm_plex_mono"
+                className="text-gray-900 sm:text-lg font-ibm_plex_mono"
               >
                 {t.rich("rb-description", {
                   underline: (chunk) => (
