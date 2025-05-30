@@ -76,68 +76,15 @@
       "l-description": "We specialize <underline>in the design and development</underline> of <underline>custom machines</underline>, <underline>automation systems</underline>, and <underline>smart products</underline> that bridge the gap between innovation and industrial performance.",
       "rt-description": "Whether it's <underline>CNC custom machinery</underline>, <underline>IoT-enabled devices</underline>, <underline>PCB boards</underline>, <underline>Digital manufacturing</underline>  or <underline>workshops training programs</underline>, we deliver practical, scalable technologies that drive real-world impact and measurable results.",
       "rb-description": "Our multidisciplinary team brings together expertise in <underline>mechanical engineering</underline>, <underline>electronics</underline>, <underline>machine software</underline>, and <underline>digital fabrication</underline> to deliver end-to-end solutions—from concept and prototyping to production and integration.",
-      "learn-more": "Learn More",
-      "learn-more-sr": "Learn more about who we are",
-      "capabilities-section-label": "Our capabilities and expertise",
-      "capabilities-description-label": "Description of our technical capabilities",
-      "collaboration-section-label": "Our collaborative approach",
-      "collaboration-description-label": "Description of our collaboration methods"
+      "learn-more": "Learn More"
     },
     "services": {
-      "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
-      "background-image-alt": "Technical blueprint and engineering drawings background",
-      "services-grid-label": "Available manufacturing services",
-      "learn-more": "Learn More",
-      "learn-more-sr": "Learn more about {service} service ({position} of {total})",
-      "service-card-context": "Service {position} of {total}",
-
-      "custom-machinery": {
-        "title": "Custom Machinery",
-        "description": "Machinery development / Automation Systems / Advanced Robotics",
-        "icon-alt": "Custom machinery and automation settings icon",
-        "image-alt": "Close-up of a 3D printing machine head in operation, demonstrating precision manufacturing technology"
-      },
-
-      "3d-printing-cnc": {
-        "title": "3D printing & CNC machining",
-        "description": "On-Demand Manufacturing / rapid prototyping / customized production",
-        "icon-alt": "3D printer and CNC machining equipment icon",
-        "image-alt": "Detailed view of precision-engineered machine parts and components arranged together"
-      },
-
-      "iot-electronics": {
-        "title": "IOT & Electronics",
-        "description": "Electronic circuits /PCB Design & IOT integration / Embedded Software",
-        "icon-alt": "IoT devices and electronic circuits icon",
-        "image-alt": "Human hand carefully wiring and connecting components on an electronic circuit board marked with 'MP'"
-      },
-
-      "hardware-design": {
-        "title": "Hardware design",
-        "description": "Product design / Hardware Engineering / Prototyping / Electronic integration",
-        "icon-alt": "Hardware design and engineering tools icon",
-        "image-alt": "Collection of various precision-manufactured machine parts and components displayed in an organized frame"
-      },
-
-      "machine-software": {
-        "title": "Machine Software",
-        "description": "Machine Control Algorithms, Real-time system Monitoring & Custom Software",
-        "icon-alt": "Machine control software and programming icon",
-        "image-alt": "Industrial control machine with computer-like interface, representing advanced manufacturing automation technology"
-      },
-
-      "workshop-training": {
-        "title": "Workshop & Training",
-        "description": "Technical Documentation / Hands-On Workshops / Training sessions",
-        "icon-alt": "Workshop tools and training materials icon",
-        "image-alt": "Team of engineers and technicians gathered together in close discussion during a collaborative workshop meeting"
-      }
+      "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>"
     },
     "projects": {
       "title": "Our <br></br>Projects",
       "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations.",
-      "explore": "Explore",
-      "learn-more-sr": "Learn more about our projects"
+      "explore": "Explore"
     },
     "clients": {
       "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
