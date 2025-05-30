@@ -1,11 +1,13 @@
 {
-  "Navigation": {
-    "home": "Home",
-    "about": "About",
-    "services": "Services",
-    "projects": "Projects",
-    "press": "Press",
-    "contact": "Contact"
+  "Common": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "press": "Press",
+      "contact": "Contact"
+    }
   },
   "Maintenance": {
     "title": "Under construction",
@@ -27,20 +29,17 @@
       "5": "Software & Machine Control Algorithms"
     }
   },
-  "home-Metadata": {
-    "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
-    "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
-    "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation",
-    "ogTitle": "FAB619 - Engineering & Innovation",
-    "ogDescription": "FAB619 delivers cutting-edge solutions in electronics, robotics, and 3D printing. Engineering excellence for modern industries.",
-    "twitterTitle": "FAB619 | Engineering & Robotics Solutions",
-    "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."
-  },
   "home": {
-    "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
-    "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
+    "metadata": {
+      "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
+      "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
+      "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation"
+    },
     "carousel": {
       "aria-label": "Featured content carousel",
+      "slide-label": "Slide {current} of {total}",
+      "video-link-label": "Play video for {title}",
+      "cta-screen-reader-text": "Learn more about {title}",
       "next-slide": "Next slide",
       "previous-slide": "Previous slide",
       "navigation": "Carousel navigation",
@@ -48,25 +47,25 @@
       "video-aria": "Watch video",
       "video-link": "Video link",
       "1": {
-        "title": "Welcome to <br></br> FAB619 - On demand Fabrication",
+        "title": "Welcome to FAB619 - On demand Fabrication",
         "description": "An engineering design office (EDO) specialized in advanced machinery, automation systems, and digital fabrication. From concept to prototype, we ensure efficient, tested solutions for  optimized for productivity, quality, and industrial scalability.",
         "img-alt": "ADM IDEX machine close up",
         "cta": "Check out"
       },
       "2": {
-        "title": "Custom Engineering<br></br> &  Design Solutions",
+        "title": "Custom Engineering & Design Solutions",
         "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
         "img-alt": "ADM IDEX machine parts",
         "cta": "Check out"
       },
       "3": {
-        "title": "Hardware<br></br> & Product  Design",
+        "title": "Hardware & Product  Design",
         "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
         "img-alt": "Hardware machine parts",
         "cta": "Check out"
       },
       "4": {
-        "title": "Digital fabrication<br></br> 3D printing, CNC machining",
+        "title": "Digital fabrication 3D printing, CNC machining",
         "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
         "img-alt": "Printed item parts",
         "cta": "Check out"
