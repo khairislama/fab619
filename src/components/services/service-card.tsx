@@ -1,4 +1,5 @@
 import { ServiceSection } from "@/lib/services";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 interface ServiceCardProps {
@@ -7,6 +8,7 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, index }: ServiceCardProps) {
+  const t = useTranslations(`ServicesPage.${service.id}`);
   const isEven = index % 2 === 0;
   return (
     <section
@@ -29,25 +31,31 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
               id={`${service.id}-heading`}
               className="text-2xl lg:text-3xl font-bold text-gray-900"
             >
-              {service.title}
+              {t("title")}
             </h2>
-            <p className="text-sm text-gray-600 mt-1">{service.subtitle}</p>
+            <p className="text-sm text-gray-600 mt-1 max-w-sm">
+              {t("subtitle")}
+            </p>
           </div>
         </div>
 
-        <p className="text-gray-700 leading-relaxed text-lg">
-          {service.description}
+        <p className="text-gray-700 leading-tight text-lg font-ibm_plex_mono">
+          {t.rich("description", {
+            focus: (chunk) => (
+              <span className="underline font-semibold">{chunk}</span>
+            ),
+          })}
         </p>
       </div>
 
       {/* Image Section */}
       <div className={`${isEven ? "" : "lg:col-start-1 lg:row-start-1"}`}>
-        <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+        <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
           <Image
             src={service.imageUrl}
             alt={service.imageAlt}
             fill
-            className="object-cover"
+            className="object-scale-down"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
             priority={index < 2}
           />

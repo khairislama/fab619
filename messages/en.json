@@ -114,6 +114,44 @@
       "questions": "QUESTIONS & SUPPORT"
     }
   },
+  "ServicesPage": {
+    "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
+    "custom-machinery": {
+      "title": "Custom Machinery",
+      "subtitle": "Custom CNC Machinery & Automation for Technical Textile and Automotive Industries",
+      "description": "We develop advanced <focus>CNC-controlled machinery</focus> and <focus>automation systems</focus> designed to meet the complex demands of the <focus>technical textile</focus> and <focus>automotive sectors</focus>. Our solutions integrate advanced robotics, precision mechanics, and intelligent control systems to ensure high performance, reliability, and adaptability. From concept and prototyping to fully operational systems, we <focus>deliver machines optimized for productivity, quality, and industrial scalability.</focus>"
+    },
+    "3d-printing": {
+      "title": "3D printing & CNC machining",
+      "subtitle": "On-Demand Manufacturing / rapid prototyping / automated production",
+      "description": "We offer <focus>on-demand manufacturing services</focus> combining high-precision CNC machining and advanced 3D printing technologies. From rapid prototyping to automated small-batch production, we deliver fast, reliable, and cost-effective solutions to your design and functional requirements. Ideal for accelerating product development and reducing time to market."
+    },
+    "iot-electronics": {
+      "title": "IoT & Electronics Development",
+      "subtitle": "Electronic circuits /PCB Design & IoT Integration Embedded Software",
+      "description": "We design and develop custom <focus>electronic circuits</focus>, <focus>PCB layouts</focus>, and <focus>embedded software</focus> for smart, connected systems. Our expertise in IoT integration enables <focus>real-time monitoring</focus>, <focus>automation</focus>, and <focus>data-driven control</focus> across various applications. From concept to fully functional prototypes, we deliver robust and scalable electronic solutions tailored to your needs."
+    },
+    "hardware-engineering": {
+      "title": "Hardware & Product Engineering",
+      "subtitle": "Hardware Engineering & Functional Prototyping",
+      "description": "We provide <focus>end-to-end hardware development services</focus>, from product design and <focus>mechanical engineering</focus> to <focus>electronic integration and prototyping</focus>. Our multidisciplinary approach ensures seamless coordination between form, function, and manufacturability—delivering innovative, reliable, and ready-to-produce hardware solutions."
+    },
+    "machine-software": {
+      "title": "Machine Software & Control Systems",
+      "subtitle": "Machine Control Algorithms, Real-time System Monitoring & Custom software",
+      "description": "We develop <focus>custom software for machine control, real-time system monitoring, and process automation.</focus> Our solutions include advanced control algorithms, tailored user interfaces, and robust firmware designed to ensure precision, reliability, and adaptability in industrial environments. From embedded programming to full-stack system integration, we bridge hardware and software for smarter machines."
+    },
+    "workshops-training": {
+      "title": "Workshops & Technical Training",
+      "subtitle": "Technical Documentation / Hands-On Workshops / Training sessions",
+      "description": "We offer <focus>hands-on workshops</focus> and <focus>customized training sessions</focus> focused on digital fabrication, automation, and embedded systems. Backed by clear technical documentation, our programs empower teams and individuals to master practical skills, understand complex systems, and accelerate innovation across industrial and educational settings."
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Contact us to discuss your manufacturing and engineering needs",
+      "button": "Get in Touch"
+    }
+  },
   "about": {
     "title": "About FAB619",
     "card": {
