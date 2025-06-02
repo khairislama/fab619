@@ -152,6 +152,10 @@
       "button": "Get in Touch"
     }
   },
+  "ProjectsPage": {
+    "page-name": "Projects",
+    "title": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
+  },
   "about": {
     "title": "About FAB619",
     "card": {
