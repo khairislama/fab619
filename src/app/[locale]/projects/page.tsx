@@ -37,7 +37,7 @@ export default function PortfolioPage({ params }: Props) {
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-8">
+      <div className="flex flex-col sm:flex-row items-center justify-between">
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
             {t("page-name")}
@@ -45,7 +45,7 @@ export default function PortfolioPage({ params }: Props) {
         </div>
         <ContactInfo />
       </div>
-      <div className="relative w-full overflow-hidden mt-20">
+      <div className="relative w-full overflow-hidden mt-10">
         <div className="w-full">
           <Image
             src="/images/projects-header.webp"
