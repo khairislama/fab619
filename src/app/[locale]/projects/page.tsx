@@ -1,7 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
-import PageHeader from "@/src/components/page-header";
 import { GridProvider } from "@/src/components/grid/GridContext";
 import { GridFilterButtons } from "@/src/components/grid/GridFilterButtons";
 import { GridWrapper } from "@/src/components/grid/GridWrapper";

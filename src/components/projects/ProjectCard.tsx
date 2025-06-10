@@ -1,8 +1,9 @@
+import { Slug } from "@/sanity.types";
 import { Link } from "@/src/i18n/navigation";
 import Image from "next/image";
 
 interface Props {
-  slug: string;
+  slug: Slug;
   image: string;
   title: string;
 }
@@ -12,7 +13,7 @@ function ProjectCard({ slug, image, title }: Props) {
     <Link
       href={{
         pathname: "/projects/[projectSlug]",
-        params: { projectSlug: slug },
+        params: { projectSlug: String(slug) },
       }}
     >
       <div className="group relative overflow-hidden aspect-[4/3] rounded-lg">

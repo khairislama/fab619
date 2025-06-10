@@ -1,5 +1,5 @@
 import { IconMapping } from "@/src/sanity/lib/types";
-import { Calendar, Settings, DraftingCompass } from "lucide-react";
+import { Calendar, Settings } from "lucide-react";
 import Image from "next/image";
 
 // Map icon types from Sanity to Lucide React icons

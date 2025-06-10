@@ -8,9 +8,6 @@ import { Locale } from "@/src/i18n/routing";
 import { getProjectBySlug } from "@/src/sanity/lib/project/getProjectBySlug";
 import { urlFor } from "@/src/sanity/lib/image";
 import { getProjects } from "@/src/sanity/lib/project/getProjects";
-import ProjectCard from "@/src/components/projects/ProjectCard";
-import { use } from "react";
-import { setRequestLocale } from "next-intl/server";
 import Recommendation from "@/src/components/projects/Recommendation";
 
 type Props = {
@@ -186,7 +183,7 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         </div>
       </div>
-      <Recommendation slug={project.slug || ""} />
+      <Recommendation slug={project.slug!} />
     </main>
   );
 }

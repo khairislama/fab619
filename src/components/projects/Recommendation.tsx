@@ -2,8 +2,9 @@ import ProjectCard from "./ProjectCard";
 import { getProjects } from "@/src/sanity/lib/project/getProjects";
 import { urlFor } from "@/src/sanity/lib/image";
 import { getTranslations } from "next-intl/server";
+import { Slug } from "@/sanity.types";
 
-export default async function Recommendation({ slug }: { slug: string }) {
+export default async function Recommendation({ slug }: { slug: Slug }) {
   const translation = await getTranslations("portfolio");
 
   const projects = await getProjects();

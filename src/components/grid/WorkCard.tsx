@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link } from "@/src/i18n/navigation";
 import { filters } from "@/src/sanity/lib/project/getProjects";
-import { GetProjectsQueryResult } from "@/sanity.types";
+import { Project } from "@/sanity.types";
 import { urlFor } from "@/src/sanity/lib/image";
 
 export function WorkCard({
@@ -14,14 +14,14 @@ export function WorkCard({
   description,
   image,
   tag,
-}: Partial<GetProjectsQueryResult[number]>) {
+}: Partial<Project>) {
   const filterLabel = filters.find((f) => f.id === tag)?.label || tag;
 
   return (
     <Link
       href={{
         pathname: "/projects/[projectSlug]",
-        params: { projectSlug: slug! },
+        params: { projectSlug: String(slug) },
       }}
     >
       <motion.div

@@ -4,8 +4,6 @@ import Printer3dSvgIcon from "@/src/components/icons/printer3d";
 import { SettingsSvgIcon } from "@/src/components/icons/settings";
 import { SoftwareSvgIcon } from "@/src/components/icons/software";
 import { WorkshopSvgIcon } from "@/src/components/icons/workshop";
-import { Cog, Cpu, Printer, Settings, Users, Wrench } from "lucide-react";
-import Image from "next/image";
 
 export interface ServiceSection {
   id: string;

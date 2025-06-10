@@ -40,7 +40,12 @@ export function CarouselWrapper({ slides }: CarouselWrapperProps) {
     >
       <CarouselContent className="h-[600px] md:h-[800px] xl:h-[900px]">
         {slides.map((slide, index) => (
-          <CarouselSlideItem key={slide.id} slide={slide} index={index} />
+          <CarouselSlideItem
+            key={slide.id}
+            slide={slide}
+            index={index}
+            totalSlides={4}
+          />
         ))}
       </CarouselContent>
       <CarouselNavigation />

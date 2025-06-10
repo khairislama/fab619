@@ -130,7 +130,7 @@ export default function ContactSection() {
           </div>
 
           {/* Social Media Links */}
-          <div className="flex flex-wrap gap-8 pt-8 border-t border-gray-200 justify-between max-w-4xl mx-auto">
+          <div className="flex flex-wrap gap-8 pt-8 justify-between max-w-4xl mx-auto">
             <Link
               href="https://linkedin.com"
               className="flex items-center gap-2 text-gray-600 hover:text-gray-900"

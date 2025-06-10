@@ -2,7 +2,6 @@ import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import PageHeader from "@/src/components/page-header";
 import ServiceCard from "@/src/components/services/service-card";
-import ServiceTitle from "@/src/components/services/service-title";
 import ServiceFooter from "@/src/components/services/service-footer";
 import { services } from "@/lib/services";
 import Image from "next/image";

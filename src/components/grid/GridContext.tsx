@@ -1,6 +1,6 @@
 "use client";
 
-import { GetProjectsQueryResult, Project } from "@/sanity.types";
+import { Project } from "@/sanity.types";
 import { getProjects } from "@/src/sanity/lib/project/getProjects";
 import {
   createContext,

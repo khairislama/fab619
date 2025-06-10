@@ -1,5 +1,6 @@
 import { defineQuery } from "next-sanity";
 import { client } from "../client";
+import { Project } from "@/sanity.types";
 
 export async function getProjectBySlug(slug: string) {
   const lowerCaseSlug = slug.toLowerCase();
@@ -9,7 +10,7 @@ export async function getProjectBySlug(slug: string) {
         "slug": slug.current,
   }`);
 
-  const project = await client.fetch(getProjectBySlugQuery, {
+  const project = await client.fetch<Project>(getProjectBySlugQuery, {
     slug: lowerCaseSlug,
   });
 

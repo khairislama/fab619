@@ -1,7 +1,7 @@
-import { defineField } from "sanity";
+import { defineField, defineType } from "sanity";
 
 // This file would be used in your Sanity Studio setup
-export default {
+export const pressItemType = defineType({
   name: "pressItem",
   title: "Press Item",
   type: "document",
@@ -91,4 +91,4 @@ export default {
       media: "mainImage",
     },
   },
-};
+});
