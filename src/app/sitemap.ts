@@ -6,11 +6,11 @@ import { host } from "../config";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...getEntries("/"),
-    ...getEntries("/maintenance/preview/about"),
-    ...getEntries("/maintenance/preview/portfolio"),
-    ...getEntries("/maintenance/preview/services"),
-    ...getEntries("/maintenance/preview/contact"),
-    ...getEntries("/maintenance/preview"),
+    ...getEntries("/about"),
+    ...getEntries("/services"),
+    ...getEntries("/projects"),
+    ...getEntries("/press"),
+    ...getEntries("/contact"),
   ];
 }
 

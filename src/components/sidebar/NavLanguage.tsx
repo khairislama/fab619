@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -46,11 +47,18 @@ export default function NavLanguage() {
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger
         aria-label="Open language menu"
-        className="flex items-center px-2 focus:border-0 w-36"
+        className="flex items-center px-2 focus:border-0 w-44"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="w-12">{currentLang}</span>
-        <ChevronDown className="h-4 w-4 ml-8" />
+        <Image
+          src={"/language-icon.svg"}
+          alt="language icon"
+          width={38}
+          height={19}
+          className="w-8 mr-2"
+        />
+        {currentLang}
+        <ChevronDown className="h-4 w-4 ml-2" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-card ml-6 shadow-lg">
         <DropdownMenuLabel className="text-lg">Language</DropdownMenuLabel>

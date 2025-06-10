@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { IBM_Plex_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -11,6 +11,8 @@ import { Locale, routing } from "@/src/i18n/routing";
 import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import Head from "next/head";
+import { AppSidebar } from "@/src/components/sidebar";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   children: ReactNode;
@@ -23,6 +25,12 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+const ibm_plex_mono = IBM_Plex_Mono({
+  variable: "--font-ibm_plex_mono",
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -30,7 +38,7 @@ export function generateStaticParams() {
 export async function generateMetadata(props: Omit<Props, "children">) {
   const { locale } = await props.params;
 
-  const t = await getTranslations({ locale, namespace: "home-Metadata" });
+  const t = await getTranslations({ locale, namespace: "home.metadata" });
 
   return {
     title: t("title"),
@@ -100,10 +108,18 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <body
-        className={`${poppins.variable} bg-background font-sans antialiased debug-screens`}
+        className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased debug-screens`}
       >
         <NextIntlClientProvider messages={messages}>
-          <main className="relative font-poppins">{children}</main>
+          <main className="relative font-poppins">
+            <AppSidebar />
+            <div className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-255px)]">
+              <div className="scrollbar-hide h-screen">
+                {children}
+                <Footer />
+              </div>
+            </div>
+          </main>
           <Toaster />
         </NextIntlClientProvider>
       </body>

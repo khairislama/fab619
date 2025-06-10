@@ -5,29 +5,33 @@ export const routing = defineRouting({
   defaultLocale: "en",
   pathnames: {
     "/": "/",
-    "/maintenance/preview/about": {
-      en: "/maintenance/preview/about",
-      fr: "/maintenance/preview/about",
+    "/about": {
+      en: "/about",
+      fr: "/about",
     },
-    "/maintenance/preview/portfolio": {
-      en: "/maintenance/preview/portfolio",
-      fr: "/maintenance/preview/portfolio",
+    "/services": {
+      en: "/services",
+      fr: "/services",
     },
-    "/maintenance/preview/services": {
-      en: "/maintenance/preview/services",
-      fr: "/maintenance/preview/services",
+    "/projects": {
+      en: "/projects",
+      fr: "/projects",
     },
-    "/maintenance/preview/contact": {
-      en: "/maintenance/preview/contact",
-      fr: "/maintenance/preview/contact",
+    "/projects/[projectSlug]": {
+      en: "/projects/[projectSlug]",
+      fr: "/projects/[projectSlug]",
     },
-    "/maintenance/preview": {
-      en: "/maintenance/preview",
-      fr: "/maintenance/preview",
+    "/press": {
+      en: "/press",
+      fr: "/press",
     },
-    "/maintenance/preview/projects/[projectSlug]": {
-      en: "/maintenance/preview/projects/[projectSlug]",
-      fr: "/maintenance/preview/projects/[projectSlug]",
+    "/press/[pressSlug]": {
+      en: "/press/[pressSlug]",
+      fr: "/press/[pressSlug]",
+    },
+    "/contact": {
+      en: "/contact",
+      fr: "/contact",
     },
   },
 });

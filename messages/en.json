@@ -1,21 +1,23 @@
 {
-  "Navigation": {
-    "home": "Home",
-    "about": "About",
-    "portfolio": "Portfolio",
-    "services": "Services",
-    "contact": "Contact",
-    "preview": "Preview"
+  "Common": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "press": "Press",
+      "contact": "Contact"
+    }
   },
   "Maintenance": {
     "title": "Under construction",
     "contact": {
-    "title": "Contact Us",
-    "description": "Please fill out the form below and we will get back to you shortly.",
-    "email": "your email address",
-    "phone": "your phone number",
-    "message": "Leave a message and we will contact you later",
-    "submit": "Send Message"
+      "title": "Contact Us",
+      "description": "Please fill out the form below and we will get back to you shortly.",
+      "email": "your email address",
+      "phone": "your phone number",
+      "message": "Leave a message and we will contact you later",
+      "submit": "Send Message"
     },
     "message": "Our team is currently updating the website to provide you with an enhanced user experience. Feel free to contact us directly for any immediate assistance or inquiries.",
     "copyrights": "© Copyrights FAB619-On demand fabrication | All Rights Reserved",
@@ -27,47 +29,271 @@
       "5": "Software & Machine Control Algorithms"
     }
   },
-  "home-Metadata": {
-    "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
-    "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
-    "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation",
-    "ogTitle": "FAB619 - Engineering & Innovation",
-    "ogDescription": "FAB619 delivers cutting-edge solutions in electronics, robotics, and 3D printing. Engineering excellence for modern industries.",
-    "twitterTitle": "FAB619 | Engineering & Robotics Solutions",
-    "twitterDescription": "Engineering, robotics, and 3D printing solutions tailored for industrial needs."  
-  },
   "home": {
-    "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
-    "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
-    "slideshow": [
-      {
-        "title": "Innovating Electronics for Tomorrow",
-        "text": "Advanced electronic solutions tailored for modern industries."
+    "metadata": {
+      "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
+      "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
+      "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation"
+    },
+    "carousel": {
+      "aria-label": "Featured content carousel",
+      "slide-label": "Slide {current} of {total}",
+      "video-link-label": "Play video for {title}",
+      "cta-screen-reader-text": "Learn more about {title}",
+      "next-slide": "Next slide",
+      "previous-slide": "Previous slide",
+      "navigation": "Carousel navigation",
+      "goto": "Go to slide ${index}",
+      "video-aria": "Watch video",
+      "video-link": "Video link",
+      "1": {
+        "title": "Welcome to FAB619 - On demand Fabrication",
+        "description": "An engineering design office (EDO) specialized in advanced machinery, automation systems, and digital fabrication. From concept to prototype, we ensure efficient, tested solutions for  optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "ADM IDEX machine close up",
+        "cta": "Check out"
       },
-      {
-        "title": "Robotics That Transforms Industries",
-        "text": "Intelligent automation for a smarter, more efficient future."
+      "2": {
+        "title": "Custom Engineering & Design Solutions",
+        "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "ADM IDEX machine parts",
+        "cta": "Check out"
       },
-      {
-        "title": "Precision 3D Printing & Prototyping",
-        "text": "Rapid prototyping with cutting-edge 3D printing technology."
+      "3": {
+        "title": "Hardware & Product  Design",
+        "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "Hardware machine parts",
+        "cta": "Check out"
       },
-      {
-        "title": "Engineering Excellence, Designed for You",
-        "text": "Custom solutions to bring your ideas to reality."
+      "4": {
+        "title": "Digital fabrication 3D printing, CNC machining",
+        "description": "Improve, automate or create custom machinery solutions optimized for productivity, quality, and industrial scalability.",
+        "img-alt": "Printed item parts",
+        "cta": "Check out"
       }
-    ]
+    },
+    "whoarewe": {
+      "title": "Who <br></br>we are ?",
+      "l-description": "We specialize <underline>in the design and development</underline> of <underline>custom machines</underline>, <underline>automation systems</underline>, and <underline>smart products</underline> that bridge the gap between innovation and industrial performance.",
+      "rt-description": "Whether it's <underline>CNC custom machinery</underline>, <underline>IoT-enabled devices</underline>, <underline>PCB boards</underline>, <underline>Digital manufacturing</underline>  or <underline>workshops training programs</underline>, we deliver practical, scalable technologies that drive real-world impact and measurable results.",
+      "rb-description": "Our multidisciplinary team brings together expertise in <underline>mechanical engineering</underline>, <underline>electronics</underline>, <underline>machine software</underline>, and <underline>digital fabrication</underline> to deliver end-to-end solutions—from concept and prototyping to production and integration.",
+      "learn-more": "Learn More"
+    },
+    "services": {
+      "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>"
+    },
+    "projects": {
+      "title": "Our <br></br>Projects",
+      "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations.",
+      "explore": "Explore"
+    },
+    "clients": {
+      "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
+      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
+    },
+    "press": {
+      "title": "Press",
+      "subtitle": "Insights, updates, and stories — <br></br>explore our latest events, projects, and innovative solutions.",
+      "explore-aria": "Explore all press content",
+      "explore": "Explore",
+      "machine": "Custom Machines",
+      "event": "Events",
+      "workshop": "Workshop"
+    },
+    "contact": {
+      "title": "CONTACT US",
+      "subtitle": "If you would like to find out more about what <semibold>FAB619 - On demand Fabrication</semibold> can do for your business or to receive a project quote, don't hesitate to contact us.",
+      "location": {
+        "title": "DROP ON IN",
+        "monastir": "FE/AR 03, Neotex,Fabrique entreprenariale, Monastir , Tunisia",
+        "tunis": "A8-8 , Golden Towers, Centre Urbain Nord, Tunis , Tunisia",
+        "find": "Find us on google maps"
+      },
+      "send-message": "SEND US A MESSAGE",
+      "projects": "FOR NEW PROJECTS",
+      "print": "FOR 3D PRINT SERVICES",
+      "questions": "QUESTIONS & SUPPORT"
+    }
+  },
+  "ServicesPage": {
+    "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
+    "custom-machinery": {
+      "title": "Custom Machinery",
+      "subtitle": "Custom CNC Machinery & Automation for Technical Textile and Automotive Industries",
+      "description": "We develop advanced <focus>CNC-controlled machinery</focus> and <focus>automation systems</focus> designed to meet the complex demands of the <focus>technical textile</focus> and <focus>automotive sectors</focus>. Our solutions integrate advanced robotics, precision mechanics, and intelligent control systems to ensure high performance, reliability, and adaptability. From concept and prototyping to fully operational systems, we <focus>deliver machines optimized for productivity, quality, and industrial scalability.</focus>"
+    },
+    "3d-printing": {
+      "title": "3D printing & CNC machining",
+      "subtitle": "On-Demand Manufacturing / rapid prototyping / automated production",
+      "description": "We offer <focus>on-demand manufacturing services</focus> combining high-precision CNC machining and advanced 3D printing technologies. From rapid prototyping to automated small-batch production, we deliver fast, reliable, and cost-effective solutions to your design and functional requirements. Ideal for accelerating product development and reducing time to market."
+    },
+    "iot-electronics": {
+      "title": "IoT & Electronics Development",
+      "subtitle": "Electronic circuits /PCB Design & IoT Integration Embedded Software",
+      "description": "We design and develop custom <focus>electronic circuits</focus>, <focus>PCB layouts</focus>, and <focus>embedded software</focus> for smart, connected systems. Our expertise in IoT integration enables <focus>real-time monitoring</focus>, <focus>automation</focus>, and <focus>data-driven control</focus> across various applications. From concept to fully functional prototypes, we deliver robust and scalable electronic solutions tailored to your needs."
+    },
+    "hardware-engineering": {
+      "title": "Hardware & Product Engineering",
+      "subtitle": "Hardware Engineering & Functional Prototyping",
+      "description": "We provide <focus>end-to-end hardware development services</focus>, from product design and <focus>mechanical engineering</focus> to <focus>electronic integration and prototyping</focus>. Our multidisciplinary approach ensures seamless coordination between form, function, and manufacturability—delivering innovative, reliable, and ready-to-produce hardware solutions."
+    },
+    "machine-software": {
+      "title": "Machine Software & Control Systems",
+      "subtitle": "Machine Control Algorithms, Real-time System Monitoring & Custom software",
+      "description": "We develop <focus>custom software for machine control, real-time system monitoring, and process automation.</focus> Our solutions include advanced control algorithms, tailored user interfaces, and robust firmware designed to ensure precision, reliability, and adaptability in industrial environments. From embedded programming to full-stack system integration, we bridge hardware and software for smarter machines."
+    },
+    "workshops-training": {
+      "title": "Workshops & Technical Training",
+      "subtitle": "Technical Documentation / Hands-On Workshops / Training sessions",
+      "description": "We offer <focus>hands-on workshops</focus> and <focus>customized training sessions</focus> focused on digital fabrication, automation, and embedded systems. Backed by clear technical documentation, our programs empower teams and individuals to master practical skills, understand complex systems, and accelerate innovation across industrial and educational settings."
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Contact us to discuss your manufacturing and engineering needs",
+      "button": "Get in Touch"
+    }
+  },
+  "ProjectsPage": {
+    "page-name": "Projects",
+    "title": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
   },
   "about": {
-    "title": "About FAB619 - Engineering & Innovation",
-    "description": "At FAB619, we blend engineering expertise with creative design to deliver cutting-edge solutions in electronics, robotics, and 3D printing. With a passion for innovation, our team works closely with clients to turn ideas into reality, from prototyping to full-scale production."
-  },
-  "services": {
-    "title": "Our Services",
-    "description": "We offer a comprehensive range of digital fabrication and custom machine design services. From concept to creation, our team of experts will help bring your ideas to life with precision and innovation."
+    "title": "About FAB619",
+    "card": {
+      "title": "Who We Are & What We Do",
+      "description-1": "We are a dynamic engineering design office specializing in digital fabrication and custom machine design. Our team of experts combines innovative technologies with solutions to bring your ideas to life.",
+      "description-2": "From CAD & CAM to 3D scanning, reverse engineering, and custom machine design, we offer comprehensive services to meet the diverse needs of our clients across various industries."
+    },
+    "stats": {
+      "experience": "Years of Experience",
+      "specialists": "Brilliant Specialists",
+      "projects": "Projects",
+      "awards": "Industry Awards"
+    },
+    "workspace": "Our Workspace",
+    "equipments": {
+      "title": "Our Manufacturing Equipment",
+      "description": "We have a comprehensive range of manufacturing equipment to bring your ideas to life"
+    }
   },
   "portfolio": {
-    "title": "Our Portfolio",
-    "description": "Explore our completed projects showcasing our expertise in digital fabrication, custom machine design, and innovative engineering solutions. Each project represents our commitment to precision, creativity, and technical excellence."
+    "title": "Portfolio",
+    "recommendation": "Other Projects"
+  },
+  "services": {
+    "title": "Services",
+    "list": [
+      {
+        "title": "Industrial Design",
+        "description": "We turn ideas into manufacturable solutions...",
+        "icon": "Cpu"
+      },
+      {
+        "title": "Electronics Prototyping",
+        "description": "Rapid prototyping of electronic boards...",
+        "icon": "Activity"
+      },
+      {
+        "title": "Mechanical Engineering",
+        "description": "From CAD to manufacturing...",
+        "icon": "Settings"
+      },
+      {
+        "title": "Open-source Hardware",
+        "description": "We contribute to open hardware...",
+        "icon": "Share"
+      },
+      {
+        "title": "Educational Workshops",
+        "description": "Hands-on learning experiences...",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Research & Innovation",
+        "description": "Collaboration with institutions...",
+        "icon": "FlaskConical"
+      }
+    ],
+    "clients": {
+      "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
+      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "contact-us": "contact us",
+    "address": "address",
+    "request": "Request Information",
+    "form": {
+      "name": "name",
+      "company": "your company",
+      "email": "Email",
+      "phone-number": "Phone number",
+      "your-request": "Your Request",
+      "send": "Send",
+      "sent": "Sent!",
+      "retry": "Retry",
+      "sending": "Sending..."
+    },
+    "faqTitle": "FAQ",
+    "faqSubtitle": "Frequently Asked Questions",
+    "faqList": [
+      {
+        "question": "1. What services do you offer?",
+        "response": {
+          "description": "We provide a full range of digital fabrication and engineering services, including:",
+          "list": [
+            "Custom Machines design and toolheads for industrial purposes",
+            "Hardware product design",
+            "On-demand prototyping and small-batch manufacturing",
+            "3D printing (filament and pellet-based)",
+            "CNC machining and laser cutting",
+            "PCB design, IoT integration, and embedded systems",
+            "Training, workshops, and consulting for digital fabrication"
+          ]
+        }
+      },
+      {
+        "question": "2. Do you develop custom solutions for specific industries?",
+        "response": {
+          "text": "Yes! We specialize in tailor-made solutions for industries like aerospace, nautical, furniture, education, and prototyping labs. We can design and build machines, control systems, or custom toolheads like our PelloBot extruder, based on your unique requirements."
+        }
+      },
+      {
+        "question": "3. Can I request a custom machine or fabrication setup?",
+        "response": {
+          "text": "Absolutely. Our team works closely with you to understand your workflow, production goals, and constraints, then proposes a custom machine or system (gantry, robot arm, toolhead, etc.) built to your specs."
+        }
+      },
+      {
+        "question": "4. How does your on-demand manufacturing service work?",
+        "response": {
+          "text": "You send us your 3D model or design brief, and we take care of the rest — from slicing and material prep to printing or machining. We offer rapid prototyping, small batch runs, and large-format prints with our own hardware."
+        }
+      },
+      {
+        "question": "5. What is your turnaround time?",
+        "response": {
+          "text": "Turnaround depends on the complexity and volume of your request. Prototypes are typically delivered within 3–7 working days, while custom machines or systems may take 2–6 weeks. We'll always provide an estimated delivery date upfront."
+        }
+      },
+      {
+        "question": "6. Can I visit your workshop or schedule a consultation?",
+        "response": {
+          "text": "Yes! We welcome visits by appointment and offer both in-person and virtual consultations. Contact us to schedule a tour or meeting to explore how we can help."
+        }
+      },
+      {
+        "question": "7. Do you provide training or workshops?",
+        "response": {
+          "text": "Yes, we offer hands-on workshops for 3D printing, CNC, machine building, and digital fabrication tools. We also provide custom training sessions for teams, schools, and technical centers."
+        }
+      },
+      {
+        "question": "8. Do you ship internationally?",
+        "response": {
+          "text": "We currently offer custom machines and kits primarily in Tunisia but are expanding our shipping and support network to serve international clients. Reach out to discuss delivery options for your region."
+        }
+      }
+    ]
   }
 }

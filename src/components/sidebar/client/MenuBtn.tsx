@@ -17,7 +17,7 @@ interface Props {
 export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
   const pathname = usePathname();
 
-  const t = useTranslations("Navigation");
+  const t = useTranslations("Common.navigation");
   // Normalize pathname by removing "/en" or "/fr"
   const normalizedPath = pathname.replace(/^\/(en|fr)/, "");
   const normalizedUrl = item.url === "/" ? "" : item.url;

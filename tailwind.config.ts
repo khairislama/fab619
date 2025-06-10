@@ -6,6 +6,18 @@ export default {
   content: ["./components/**/*.{ts,tsx}", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "3rem",
+        screens: {
+          DEFAULT: "100%",
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1500px",
+        },
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -67,9 +79,49 @@ export default {
         bounceSlow: "bounce 4s infinite",
         bounceFast: "bounce 1s infinite",
         spin: "spin 2s linear infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "marquee-rtl": "marquee-rtl 15s linear infinite",
+        "marquee-ltr": "marquee-ltr 30s linear infinite",
+        "animate-marquee-slow": "marquee-ltr 40s linear infinite",
+        "animate-marquee-medium": "marquee-ltr 25s linear infinite",
+        "animate-marquee-fast": "marquee-ltr 12s linear infinite",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", "sans-serif"],
+        ibm_plex_mono: ["var(--font-ibm_plex_mono)", "sans-serif"],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+        "marquee-rtl": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-ltr": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+      screens: {
+        "2k": "1920px", // Full HD (common desktop)
+        "2.5k": "2560px", // QHD / WQHD (1440p)
+        "4k": "3840px", // UHD
+        "5k": "5120px", // iMac 27", ultra-wide monitors
       },
     },
   },

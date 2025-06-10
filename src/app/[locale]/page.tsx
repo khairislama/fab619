@@ -1,6 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import Maintenance from "@/src/components/Maintenance";
+import { CarouselProvider } from "@/src/components/home/carousel/carousel-provider";
+import { CarouselWrapper } from "@/src/components/home/carousel/carousel-wrapper";
+import { SlidesData } from "@/lib/carousel";
+import WhoWeAre from "@/src/components/home/who-we-are";
+import HomeServices from "@/src/components/home/services";
+import HomeProjects from "@/src/components/home/projects/home-projects";
+import HomeClients from "@/src/components/home/home-clients";
+import HomePressHeader from "@/src/components/home/press/home-press-header";
+import HomePressGrid from "@/src/components/home/press/home-press-grid";
+import ContactSection from "@/src/components/home/home-contact";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,5 +21,22 @@ export default function HomePage({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale);
 
-  return <Maintenance locale={locale} />;
+  return (
+    <main>
+      <CarouselProvider>
+        <div className="relative w-full">
+          <CarouselWrapper slides={SlidesData} />
+        </div>
+      </CarouselProvider>
+      <WhoWeAre />
+      <HomeServices />
+      <HomeProjects />
+      <HomeClients />
+      <div className="container mx-auto py-20">
+        <HomePressHeader />
+        <HomePressGrid />
+      </div>
+      <ContactSection />
+    </main>
+  );
 }

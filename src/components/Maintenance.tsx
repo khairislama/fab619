@@ -24,7 +24,7 @@ function Maintenance({ locale }: { locale: string }) {
       />
       <div className="absolute inset-0 bg-foreground/90 -z-10" />
       <div className="h-screen overflow-y-auto scrollbar-hide">
-        <div className="container mx-auto flex flex-col items-center p-4 text-card relative mb-24">
+        <div className="container flex flex-col items-center text-card relative mb-24">
           <Image
             src="/logo/fab-619-logo-white-min.svg"
             alt="Logo"

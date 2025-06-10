@@ -1,15 +1,17 @@
 "use server";
 
-import { formSchema } from "@/src/components/ContactForm";
+import { formSchema } from "@/src/components/contact/RequestForm";
 import nodemailer from "nodemailer";
 import * as v from "valibot";
 
 export async function handleContact(values: v.InferOutput<typeof formSchema>) {
+  const name = values.name;
   const email = values.email;
   const phone = values.phone;
-  const message = values.message;
+  const company = values.company;
+  const request = values.request;
 
-  if (!phone || !email || !message) {
+  if (!name || !phone || !email || !company || !request) {
     return { success: false, error: "All fields are required." };
   }
 
@@ -29,11 +31,13 @@ export async function handleContact(values: v.InferOutput<typeof formSchema>) {
     from: "contact@fab619.tn", // Your email (sender)
     to: "contact@fab619.tn", // Your email (receiver)
     subject: `New Contact from ${email}`,
-    text: `Email: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+    text: `Email: ${email}\nName: ${name}\nPhone: ${phone}\nCompany: ${company}\nRequest: ${request}`,
     html: `
       <p><strong>Email:</strong> ${email}</p><br/>
+      <p><strong>Name:</strong> ${name}</p><br/>
       <p><strong>Phone:</strong> ${phone}</p><br/>
-      <p><strong>Message:</strong> ${message}</p>
+      <p><strong>Company:</strong> ${company}</p><br/>
+      <p><strong>Request:</strong> ${request}</p><br/>
     `,
   };
 
