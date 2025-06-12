@@ -14,18 +14,16 @@ export default function MobileNavbar() {
 
   return (
     <>
-      {/* Top Navbar for Mobile */}
-      <header className="xl:hidden fixed top-0 left-0 w-full bg-card text-card-foreground flex justify-between p-4 items-center h-24 z-50">
-        {/* Burger Button */}
-        <button onClick={() => setIsOpen(true)}>
+      <header className="xl:hidden fixed top-0 left-0 w-full bg-background flex justify-between p-4 items-center h-24 z-50">
+        <button onClick={() => setIsOpen(true)} className="z-10">
           <div className="flex items-center justify-center gap-3 text-xl sm:hover:text-card-foreground/60 transition-colors duration-500 ease-in-out">
             <Menu className="w-8 h-8" />
           </div>
         </button>
-        {/* Logo */}
-        <Logo />
-        {/* Social Icons */}
-        <div className="flex justify-center space-x-4">
+        <div className="absolute left-1/2 -translate-x-1/2 z-0">
+          <Logo />
+        </div>
+        <div className="flex justify-center space-x-4 z-10">
           {SOCIAL.map((item) => (
             <Link
               key={item.name}
@@ -41,20 +39,16 @@ export default function MobileNavbar() {
         </div>
       </header>
 
-      {/* Mobile Sidebar */}
-      {/* AnimatePresence ensures exit animations work */}
       <AnimatePresence>
         {isOpen && (
           <div className="fixed inset-0 z-50 xl:hidden">
             <MotionDiv>
-              {/* Close Button */}
               <button
                 className="absolute top-4 right-4 sm:hover:text-card-foreground/60 transition-colors duration-200 ease-in-out"
                 onClick={() => setIsOpen(false)}
               >
                 <X className="w-8 h-8" />
               </button>
-              {/* Nav Links */}
               <nav className="flex flex-col gap-6 mt-24 ml-2">
                 {NAVIGATION.map((item) => (
                   <MenuBtn key={item.title} item={item} setIsOpen={setIsOpen} />

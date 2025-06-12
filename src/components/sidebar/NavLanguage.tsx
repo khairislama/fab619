@@ -47,7 +47,7 @@ export default function NavLanguage() {
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger
         aria-label="Open language menu"
-        className="flex items-center px-2 focus:border-0 w-44"
+        className="flex items-center px-2 focus:border-0"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image
