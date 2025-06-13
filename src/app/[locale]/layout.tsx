@@ -12,7 +12,6 @@ import { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import Head from "next/head";
 import { AppSidebar } from "@/src/components/sidebar";
-import Footer from "@/src/components/Footer";
 
 type Props = {
   children: ReactNode;

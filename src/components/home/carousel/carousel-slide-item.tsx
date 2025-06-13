@@ -32,9 +32,6 @@ export function CarouselSlideItem({
   const slideNumber = index + 1;
   const slideAriaLabel = `${t(`${slide.id}.title`)} - ${t("slide-label", { current: slideNumber, total: totalSlides })}`;
 
-  // Load video for first slide immediately, others when they become active
-  const shouldLoadVideo = slide.video && isActive;
-
   // Handle video play/pause based on slide visibility
   useEffect(() => {
     const video = videoRef.current;
