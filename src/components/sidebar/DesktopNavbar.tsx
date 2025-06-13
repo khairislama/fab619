@@ -6,18 +6,15 @@ import NavLanguage from "./NavLanguage";
 
 function DesktopNavbar() {
   return (
-    <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-60 bg-card text-card-foreground p-6 flex-col z-50 items-center justify-between">
-      {/* Logo */}
-      <div className="mt-8 self-start">
+    <aside className="hidden xl:flex fixed left-0 top-0 h-screen w-60 p-6 flex-col z-50 items-center justify-between">
+      <div className="mt-8">
         <Logo />
       </div>
-      {/* Nav Links */}
       <div className="-mt-20">
         <DesktopNavigation />
       </div>
-      {/* Social Icons */}
-      <div>
-        <div className="w-full text-lg">
+      <div className="flex flex-col items-center">
+        <div className="w-full text-lg text-center">
           <NavLanguage />
         </div>
         <div className="flex space-x-4 my-8">

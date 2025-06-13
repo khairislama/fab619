@@ -9,7 +9,7 @@ import { CarouselSlide } from "@/lib/carousel";
 import { useTranslations } from "next-intl";
 import AnimatedTitle from "../../animated-title";
 import AnimatedParagraph from "../../animated-paragraph";
-import { VideoLink } from "./video-link";
+import { useEffect, useRef, useState } from "react";
 
 interface CarouselSlideItemProps {
   slide: CarouselSlide;
@@ -25,9 +25,93 @@ export function CarouselSlideItem({
   const t = useTranslations("home.carousel");
   const { current } = useCarousel();
   const isActive = current === index;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   const slideNumber = index + 1;
   const slideAriaLabel = `${t(`${slide.id}.title`)} - ${t("slide-label", { current: slideNumber, total: totalSlides })}`;
+
+  // Handle video play/pause based on slide visibility
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || videoError || !slide.video) return;
+
+    const tryPlay = () => {
+      video
+        .play()
+        .then(() => {
+          setIsVideoLoaded(true);
+        })
+        .catch((err) => {
+          console.error("Video play failed", err);
+        });
+    };
+
+    if (isActive) {
+      tryPlay();
+    } else {
+      video.pause();
+    }
+  }, [isActive, videoError, slide.video]);
+
+  const handleVideoError = () => {
+    console.error("Video failed to load for slide:", slide.id);
+    setVideoError(true);
+    setIsVideoLoaded(false);
+  };
+
+  const renderMedia = () => {
+    if (slide.video) {
+      return (
+        <>
+          {/* Poster always visible */}
+          <Image
+            src={slide.video.poster.url}
+            alt={slide.video.poster.alt}
+            fill
+            className={`object-cover brightness-90 transition-opacity duration-500 ${
+              isVideoLoaded && !videoError ? "opacity-0" : "opacity-100"
+            }`}
+            quality={90}
+            sizes="(max-width: 768px) 100vw, 1280px"
+            priority={index === 0}
+          />
+
+          {/* Video always rendered */}
+          <video
+            ref={videoRef}
+            className="absolute inset-0 w-full h-full object-cover brightness-90 transition-opacity duration-500"
+            loop
+            muted
+            playsInline
+            poster={slide.video.poster.url}
+            onError={handleVideoError}
+          >
+            <source src={slide.video.sources.mp4} type="video/mp4" />
+            <source src={slide.video.sources.webm} type="video/webm" />
+          </video>
+        </>
+      );
+    }
+
+    if (slide.image) {
+      return (
+        <Image
+          src={slide.image}
+          alt={t(`${slide.id}.img-alt`)}
+          fill
+          className="object-cover brightness-90"
+          aria-hidden="true"
+          quality={85}
+          sizes="(max-width: 1023px) 100vw, 65vw"
+          priority={index === 0}
+        />
+      );
+    }
+
+    return null;
+  };
 
   return (
     <CarouselItem
@@ -38,21 +122,8 @@ export function CarouselSlideItem({
       aria-current={isActive ? "true" : "false"}
       data-slide-index={index}
     >
-      <div
-        className="relative h-full w-full"
-        tabIndex={isActive ? 0 : -1}
-        aria-hidden={!isActive}
-      >
-        <Image
-          src={slide.image}
-          alt={t(`${slide.id}.img-alt`)}
-          fill
-          className="object-cover brightness-90"
-          priority={index === 0}
-          aria-hidden="true"
-          quality={85}
-          sizes="(max-width: 1023px) 100vw, 65vw"
-        />
+      <div className="relative h-full w-full" tabIndex={isActive ? 0 : -1}>
+        {renderMedia()}
 
         {/* Gradient overlay for better text contrast */}
         <div
@@ -65,16 +136,6 @@ export function CarouselSlideItem({
           aria-hidden={!isActive}
         >
           <div className="max-w-5xl">
-            {slide.video && (
-              <div className="mb-4">
-                <VideoLink
-                  url={slide.video}
-                  aria-label={t("video-link-label", {
-                    title: t(`${slide.id}.title`),
-                  })}
-                />
-              </div>
-            )}
             <AnimatedTitle
               id={`slide-${slide.id}-title`}
               className="mb-4"

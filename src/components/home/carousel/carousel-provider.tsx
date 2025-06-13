@@ -11,8 +11,6 @@ interface CarouselContextType {
   count: number;
   setCount: React.Dispatch<React.SetStateAction<number>>;
   scrollTo: (index: number) => void;
-  isPlaying: boolean;
-  toggleAutoplay: () => void;
 }
 
 const CarouselContext = React.createContext<CarouselContextType | undefined>(
@@ -23,8 +21,6 @@ export function CarouselProvider({ children }: { children: React.ReactNode }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
-  const [isPlaying, setIsPlaying] = React.useState(true);
-  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
 
   React.useEffect(() => {
     if (!api) {
@@ -39,42 +35,12 @@ export function CarouselProvider({ children }: { children: React.ReactNode }) {
     });
   }, [api]);
 
-  // Handle autoplay functionality
-  React.useEffect(() => {
-    if (!api || !isPlaying) {
-      // Clear interval if autoplay is disabled or API is not available
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-      return;
-    }
-
-    // Set up interval for auto-advancing slides every 30 seconds
-    intervalRef.current = setInterval(() => {
-      api.scrollNext();
-    }, 8000); // 8 seconds
-
-    // Cleanup function to clear interval when component unmounts or dependencies change
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-    };
-  }, [api, isPlaying]);
-
   const scrollTo = React.useCallback(
     (index: number) => {
       api?.scrollTo(index);
     },
     [api]
   );
-
-  // Function to toggle autoplay on/off
-  const toggleAutoplay = React.useCallback(() => {
-    setIsPlaying((prev) => !prev);
-  }, []);
 
   const value = React.useMemo(
     () => ({
@@ -85,10 +51,8 @@ export function CarouselProvider({ children }: { children: React.ReactNode }) {
       count,
       setCount,
       scrollTo,
-      isPlaying,
-      toggleAutoplay,
     }),
-    [api, current, count, scrollTo, isPlaying, toggleAutoplay]
+    [api, current, count, scrollTo]
   );
 
   return (

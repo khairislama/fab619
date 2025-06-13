@@ -2,13 +2,17 @@ import Link from "next/link";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Footer from "../Footer";
 
 export default function ContactSection() {
   const t = useTranslations("home.contact");
   return (
-    <section className="w-full py-12 bg-white">
-      <div className="container px-4 md:px-6 mx-auto">
-        <div className="space-y-8">
+    <section
+      id="contact"
+      className="relative snap-center min-h-screen flex items-center justify-center"
+    >
+      <div className="container mx-auto py-24 lg:py-12 min-h-screen flex flex-col justify-between">
+        <div className="xl:mt-12">
           {/* Header */}
           <div className="flex flex-col xl:flex-row items-center justify-between">
             <h1 className="text-5xl font-bold tracking-tighter text-gray-900">
@@ -169,6 +173,7 @@ export default function ContactSection() {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
     </section>
   );

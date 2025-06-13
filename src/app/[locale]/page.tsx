@@ -22,20 +22,27 @@ export default function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main>
-      <CarouselProvider>
-        <div className="relative w-full">
-          <CarouselWrapper slides={SlidesData} />
-        </div>
-      </CarouselProvider>
+    <main className="lg:snap-y snap-mandatory h-screen overflow-y-scroll scrollbar-hide">
+      <section id="carousel" className="snap-center">
+        <CarouselProvider>
+          <div className="relative w-full">
+            <CarouselWrapper slides={SlidesData} />
+          </div>
+        </CarouselProvider>
+      </section>
       <WhoWeAre />
       <HomeServices />
       <HomeProjects />
       <HomeClients />
-      <div className="container mx-auto py-20">
-        <HomePressHeader />
-        <HomePressGrid />
-      </div>
+      <section
+        id="press"
+        className="relative snap-center min-h-screen flex items-center justify-center"
+      >
+        <div className="container mx-auto py-24 lg:py-12">
+          <HomePressHeader />
+          <HomePressGrid />
+        </div>
+      </section>
       <ContactSection />
     </main>
   );

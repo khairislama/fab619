@@ -1,6 +1,5 @@
 "use client";
 
-import { UrlPath } from "@/settings/navigation";
 import { cn } from "@/lib/utils";
 import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
@@ -9,7 +8,7 @@ import { usePathname } from "next/navigation";
 interface Props {
   item: {
     title: string;
-    url: UrlPath;
+    url: string;
   };
   setIsOpen?: (isOpen: boolean) => void;
 }
@@ -23,7 +22,10 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
   const normalizedUrl = item.url === "/" ? "" : item.url;
   return (
     <Link
-      href={item.url}
+      href={{
+        pathname: "/",
+        hash: item.url,
+      }}
       className={cn(
         "text-2xl capitalize transition-all duration-300 ease-in-out",
         normalizedPath === normalizedUrl
