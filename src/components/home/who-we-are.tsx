@@ -11,7 +11,7 @@ function WhoWeAre() {
 
   return (
     <section
-      id="who-we-are"
+      id="about"
       className="relative snap-center min-h-screen flex items-center justify-center"
     >
       <div className="container mx-auto py-24 lg:py-12">

@@ -14,31 +14,31 @@ export type UrlPath =
 
 export const NAVIGATION: {
   title: string;
-  url: UrlPath;
+  url: string;
 }[] = [
   {
     title: "home",
-    url: "/",
+    url: "carousel",
   },
   {
     title: "about",
-    url: "/about",
+    url: "about",
   },
   {
     title: "services",
-    url: "/services",
+    url: "services",
   },
   {
     title: "projects",
-    url: "/projects",
+    url: "projects",
   },
   {
     title: "press",
-    url: "/press",
+    url: "press",
   },
   {
     title: "contact",
-    url: "/contact",
+    url: "contact",
   },
 ];
 
