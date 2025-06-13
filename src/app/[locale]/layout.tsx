@@ -114,10 +114,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main className="relative font-poppins">
             <AppSidebar />
             <div className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-255px)]">
-              <div className="scrollbar-hide h-screen">
-                {children}
-                <Footer />
-              </div>
+              <div className="scrollbar-hide h-screen">{children}</div>
             </div>
           </main>
           <Toaster />

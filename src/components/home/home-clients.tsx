@@ -10,7 +10,7 @@ import {
 function HomeClients() {
   const t = useTranslations("home.clients");
   return (
-    <div className="container mx-auto my-20">
+    <section id="clients" className="container mx-auto my-20 snap-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-center">
         <div className="order-2 md:order-1">
           <Image
@@ -67,7 +67,7 @@ function HomeClients() {
           CLIENTS_LOGOS={CLIENTS_LOGOS_INDUS}
         />
       </div>
-    </div>
+    </section>
   );
 }
 

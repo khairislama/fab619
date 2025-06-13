@@ -6,7 +6,10 @@ import { useTranslations } from "next-intl";
 function HomeServices() {
   const t = useTranslations("home.services");
   return (
-    <section className="relative container mx-auto my-28">
+    <section
+      id="services"
+      className="relative container mx-auto my-28 snap-center"
+    >
       <div className="relative w-full h-[150px] overflow-hidden">
         <div className="md:w-2/3 h-full absolute right-0 hidden sm:block">
           <Image

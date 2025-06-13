@@ -8,7 +8,7 @@ function HomeProjects() {
   const t = useTranslations("home.projects");
 
   return (
-    <section className="py-12 container mx-auto">
+    <section id="projects" className="py-12 container mx-auto snap-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
           <AnimatedTitle className="text-5xl font-extrabold tracking-tight text-gray-900 mb-4 uppercase">

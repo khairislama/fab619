@@ -10,7 +10,10 @@ function WhoWeAre() {
   const t = useTranslations("home.whoarewe");
 
   return (
-    <section className="relative container mx-auto my-28">
+    <section
+      id="who-we-are"
+      className="relative container mx-auto my-28 snap-center"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:h-[700px]">
         {/* Left Section with Semi-transparent Overlay */}
         <div className="relative overflow-hidden h-[500px] lg:h-[700px]">
