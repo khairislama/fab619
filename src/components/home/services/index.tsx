@@ -12,7 +12,7 @@ function HomeServices() {
     >
       <div className="container mx-auto py-24 lg:py-12">
         <div className="relative w-full h-[150px] overflow-hidden bg-card">
-          <div className="md:w-full h-full absolute right-0 hidden sm:block">
+          <div className="md:w-full h-full absolute right-0 hidden md:block">
             <Image
               src="/images/services/services-bg.webp"
               alt="Blueprint background"
@@ -41,6 +41,7 @@ function HomeServices() {
         <div className="grid grid-cols-1 gap-2 md:gap-0 md:grid-cols-2 lg:grid-cols-3 w-full mt-8">
           {/* Custom Machinery */}
           <ServiceCard
+            id="custom-machinery"
             icon={"/icons/settings.svg"}
             title="Custom Machinery"
             description="Machinery development / Automation Systems / Advanced Robotics"
@@ -49,6 +50,7 @@ function HomeServices() {
 
           {/* 3D Printing & CNC */}
           <ServiceCard
+            id="3d-printing"
             icon={"/icons/printer3d.svg"}
             title="3D printing & CNC machining"
             description="On-Demand Manufacturing / rapid prototyping / customized production"
@@ -57,6 +59,7 @@ function HomeServices() {
 
           {/* IOT & Electronics */}
           <ServiceCard
+            id="iot-electronics"
             icon={"/icons/electronics.svg"}
             title="IOT & Electronics"
             description="Electronic circuits /PCB Design & IOT integration / Embedded Software"
@@ -65,6 +68,7 @@ function HomeServices() {
 
           {/* Hardware Design */}
           <ServiceCard
+            id="hardware-engineering"
             icon={"/icons/design.svg"}
             title="Hardware design"
             description="Product design / Hardware Engineering / Prototyping / Electronic integration"
@@ -73,6 +77,7 @@ function HomeServices() {
 
           {/* Machine Software */}
           <ServiceCard
+            id="machine-software"
             icon={"/icons/software.svg"}
             title="Machine Software"
             description="Machine Control Algorithms, Real-time system Monitoring & Custom Software"
@@ -81,6 +86,7 @@ function HomeServices() {
 
           {/* Workshop & Training */}
           <ServiceCard
+            id="workshops-training"
             icon={"/icons/workshop.svg"}
             title="Workshop & Training"
             description="Technical Documentation / Hands-On Workshops / Training sessions"

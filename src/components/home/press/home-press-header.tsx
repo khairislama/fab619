@@ -7,14 +7,14 @@ export default function HomePressHeader() {
   return (
     <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 pt-6">
       <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-        <h1 className="text-5xl font-bold tracking-tighter">{t("title")}</h1>
+        <h2 className="text-5xl font-bold tracking-tighter">{t("title")}</h2>
         <p className="text-base md:text-lg max-w-2xl font-ibm_plex_mono xl:ml-10">
           {t.rich("subtitle", { br: () => <br></br> })}
         </p>
       </div>
       <Link
         href="/explore"
-        className="flex items-center mt-4 md:mt-0 text-lg font-medium group"
+        className="flex items-center mt-4 md:mt-0 text-lg font-medium group animate-bounce"
         aria-label={t("explore-aria")}
       >
         {t("explore")}

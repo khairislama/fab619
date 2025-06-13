@@ -12,6 +12,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   const isEven = index % 2 === 0;
   return (
     <section
+      id={service.id}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
         isEven ? "" : "lg:grid-flow-col-dense"
       }`}

@@ -15,9 +15,9 @@ export default function ContactSection() {
         <div className="xl:mt-12">
           {/* Header */}
           <div className="flex flex-col xl:flex-row items-center justify-between">
-            <h1 className="text-5xl font-bold tracking-tighter text-gray-900">
+            <h2 className="text-5xl font-bold tracking-tighter text-gray-900">
               {t("title")}
-            </h1>
+            </h2>
             <p className="text-gray-700 text-center xl:text-justify max-w-xl 2xl:max-w-4xl font-ibm_plex_mono">
               {t.rich("subtitle", {
                 semibold: (chunk) => (

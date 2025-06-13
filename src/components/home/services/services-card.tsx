@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "@/src/i18n/navigation";
 import Image from "next/image";
 
 interface ServiceCardProps {
+  id: string;
   icon: string;
   title: string;
   description: string;
@@ -9,6 +11,7 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({
+  id,
   icon,
   title,
   description,
@@ -38,7 +41,9 @@ export default function ServiceCard({
           variant="outline"
           className="bg-white/90 backdrop-blur-sm hover:bg-white/80 border-white/20"
         >
-          Learn More
+          <Link href={{ pathname: "/services", hash: id }} className="w-full">
+            Learn More
+          </Link>
         </Button>
       </div>
     </div>

@@ -24,7 +24,7 @@ function HomeProjects() {
             <Link
               href="/projects"
               aria-describedby={`portfolio`}
-              className="inline-flex items-center text-gray-900 group text-xl font-medium"
+              className="inline-flex items-center text-gray-900 group text-xl font-medium animate-bounce"
             >
               {t("explore")}
               <svg
