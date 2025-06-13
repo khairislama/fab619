@@ -14,16 +14,7 @@ interface CarouselWrapperProps {
 
 export function CarouselWrapper({ slides }: CarouselWrapperProps) {
   const t = useTranslations("home.carousel");
-  const { setApi, toggleAutoplay } = useCarousel();
-
-  // Handlers for pausing autoplay on interaction
-  const handleMouseEnter = React.useCallback(() => {
-    toggleAutoplay(); // Pause on hover
-  }, [toggleAutoplay]);
-
-  const handleMouseLeave = React.useCallback(() => {
-    toggleAutoplay(); // Resume on mouse leave
-  }, [toggleAutoplay]);
+  const { setApi } = useCarousel();
 
   return (
     <Carousel
@@ -33,10 +24,6 @@ export function CarouselWrapper({ slides }: CarouselWrapperProps) {
         loop: true,
       }}
       aria-label={t("aria-label")}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onFocus={handleMouseEnter}
-      onBlur={handleMouseLeave}
     >
       <CarouselContent className="h-[90vh] xl:h-screen">
         {slides.map((slide, index) => (
