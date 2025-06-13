@@ -36,10 +36,12 @@ export default function HomePage({ params }: Props) {
       <HomeClients />
       <section
         id="press"
-        className="container mx-auto py-20 snap-center overflow-y-auto"
+        className="relative snap-center min-h-screen flex items-center justify-center"
       >
-        <HomePressHeader />
-        <HomePressGrid />
+        <div className="container mx-auto py-24 lg:py-12">
+          <HomePressHeader />
+          <HomePressGrid />
+        </div>
       </section>
       <ContactSection />
     </main>

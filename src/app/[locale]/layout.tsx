@@ -43,45 +43,18 @@ export async function generateMetadata(props: Omit<Props, "children">) {
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    // openGraph: {
-    //   type: "website",
-    //   url: "https://fab619.tn",
-    //   title: t("ogTitle"),
-    //   description: t("ogDescription"),
-    //   images: [
-    //     {
-    //       url: "/logo/fab-619-logo.png",
-    //       width: 1200,
-    //       height: 630,
-    //       alt: t("ogTitle"),
-    //     },
-    //   ],
-    // },
-    // twitter: {
-    //   handle: "@fab619",
-    //   site: "@fab619",
-    //   cardType: "summary_large_image",
-    //   image: "/logo/fab-619-logo.png",
-    //   title: t("twitterTitle"),
-    //   description: t("twitterDescription"),
-    //   creator: "@fab619",
-    // },
   };
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -110,12 +83,19 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased debug-screens`}
       >
         <NextIntlClientProvider messages={messages}>
-          <main className="relative font-poppins">
-            <AppSidebar />
-            <div className="mt-24 xl:mt-0 xl:ml-60 xl:w-[calc(100vw-255px)]">
-              <div className="scrollbar-hide h-screen">{children}</div>
+          <div className="flex h-screen overflow-hidden font-poppins">
+            {/* Sidebar/Navbar - responsive positioning */}
+            <div className="fixed top-0 left-0 right-0 z-50 h-16 xl:relative xl:h-full xl:w-60 xl:flex-shrink-0">
+              <AppSidebar />
             </div>
-          </main>
+
+            {/* Main content area */}
+            <main className="flex-1 flex flex-col min-w-0 pt-16 xl:pt-0">
+              <div className="flex-1 overflow-auto scrollbar-hide">
+                {children}
+              </div>
+            </main>
+          </div>
           <Toaster />
         </NextIntlClientProvider>
       </body>
