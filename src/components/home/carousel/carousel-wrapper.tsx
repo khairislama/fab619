@@ -38,7 +38,7 @@ export function CarouselWrapper({ slides }: CarouselWrapperProps) {
       onFocus={handleMouseEnter}
       onBlur={handleMouseLeave}
     >
-      <CarouselContent className="h-[600px] md:h-[800px] xl:h-[900px]">
+      <CarouselContent className="h-[90vh] xl:h-screen">
         {slides.map((slide, index) => (
           <CarouselSlideItem
             key={slide.id}

@@ -10,7 +10,10 @@ function Footer() {
           <Link href="mailto:contact@fab619.tn" className="hover:underline">
             contact@fab619.tn
           </Link>{" "}
-          | tel. 54 544 731
+          |{" "}
+          <Link href="tef:+21654544731" className="hover:underline">
+            tel. 54 544 731
+          </Link>
         </p>
       </div>
     </div>
