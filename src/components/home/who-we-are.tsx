@@ -15,7 +15,7 @@ function WhoWeAre() {
       className="relative snap-center min-h-screen flex items-center justify-center"
     >
       <div className="container mx-auto py-24 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:h-[700px]">
+        <div className="grid grid-cols-1 gap-y-4 lg:gap-0 lg:grid-cols-3 lg:h-[700px]">
           {/* Left Section with Semi-transparent Overlay */}
           <div className="relative overflow-hidden h-fit lg:h-[700px]">
             <div className="absolute inset-0 z-0">
@@ -24,7 +24,7 @@ function WhoWeAre() {
                 alt="Manufacturing machinery background"
                 fill
                 quality={80}
-                className="object-cover"
+                className="object-cover blur-[2px]"
                 sizes="(max-width: 1023px) 100vw, 33vw"
               />
             </div>
@@ -53,7 +53,7 @@ function WhoWeAre() {
           </div>
 
           {/* Right Section with Two-toned Background */}
-          <div className="flex flex-col col-span-2">
+          <div className="flex flex-col col-span-2 gap-4 lg:gap-0">
             {/* Top Dark Section */}
             <div className="relative bg-gray-950 p-8 md:p-12 overflow-hidden sm:h-[300px] lg:h-[400px]">
               <div className="absolute inset-0 z-0 opacity-25">
@@ -62,7 +62,7 @@ function WhoWeAre() {
                   alt="Electronics and machinery"
                   fill
                   quality={80}
-                  className="object-cover"
+                  className="object-cover blur-[2px]"
                   sizes="(max-width: 1023px) 100vw, 33vw"
                 />
               </div>
@@ -88,7 +88,7 @@ function WhoWeAre() {
                   alt="working together and planning"
                   fill
                   quality={80}
-                  className="object-cover"
+                  className="object-cover blur-[2px]"
                   sizes="(max-width: 1023px) 100vw, 33vw"
                 />
               </div>

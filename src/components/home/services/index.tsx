@@ -11,15 +11,15 @@ function HomeServices() {
       className="relative snap-center min-h-screen flex items-center justify-center"
     >
       <div className="container mx-auto py-24 lg:py-12">
-        <div className="relative w-full h-[150px] overflow-hidden">
-          <div className="md:w-2/3 h-full absolute right-0 hidden sm:block">
+        <div className="relative w-full h-[150px] overflow-hidden bg-card">
+          <div className="md:w-full h-full absolute right-0 hidden sm:block">
             <Image
               src="/images/services/services-bg.webp"
               alt="Blueprint background"
-              width={1118}
-              height={187}
+              width={1009}
+              height={247}
               quality={50}
-              className="opacity-20 h-full w-auto"
+              className="opacity-20 w-full "
               sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             />
           </div>
@@ -38,7 +38,7 @@ function HomeServices() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mt-2">
+        <div className="grid grid-cols-1 gap-2 md:gap-0 md:grid-cols-2 lg:grid-cols-3 w-full mt-8">
           {/* Custom Machinery */}
           <ServiceCard
             icon={"/icons/settings.svg"}

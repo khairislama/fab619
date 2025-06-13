@@ -1,6 +1,5 @@
 "use client";
 
-import { UrlPath } from "@/settings/navigation";
 import { cn } from "@/lib/utils";
 import { Link } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";

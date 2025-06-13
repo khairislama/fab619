@@ -22,7 +22,7 @@ export default function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-y-scroll scrollbar-hide">
+    <main className="lg:snap-y snap-mandatory h-screen overflow-y-scroll scrollbar-hide">
       <section id="carousel" className="snap-center">
         <CarouselProvider>
           <div className="relative w-full">
