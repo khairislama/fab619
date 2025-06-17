@@ -3,8 +3,9 @@ import { MapPin, Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Footer from "../Footer";
+import { PhoneSvgIcon } from "../icons/phone";
 
-export default function ContactSection() {
+export default function ContactSectionContext() {
   const t = useTranslations("home.contact");
   return (
     <section
@@ -39,7 +40,7 @@ export default function ContactSection() {
                 sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
               />
               <div className="absolute inset-0 p-6 lg:p-10 flex flex-col justify-center items-center">
-                <Phone className="h-10 w-10 mb-4" />
+                <PhoneSvgIcon className="h-10 w-10 mb-4" />
                 <h3 className="text-xs font-light mb-4 uppercase">
                   {t("title")}
                 </h3>

@@ -9,7 +9,9 @@ import HomeProjects from "@/src/components/home/projects/home-projects";
 import HomeClients from "@/src/components/home/home-clients";
 import HomePressHeader from "@/src/components/home/press/home-press-header";
 import HomePressGrid from "@/src/components/home/press/home-press-grid";
-import ContactSection from "@/src/components/home/home-contact";
+import ContactSection from "@/src/components/home/contact/home-contact";
+import { Button } from "@/components/ui/button";
+import { Link } from "@/src/i18n/navigation";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -36,12 +38,20 @@ export default function HomePage({ params }: Props) {
       <HomeClients />
       <section
         id="press"
-        className="relative snap-center min-h-screen flex items-center justify-center"
+        className="relative snap-center min-h-screen flex flex-col items-center justify-center"
       >
-        <div className="container mx-auto py-24 lg:py-12">
+        <div className="container mx-auto py-24 lg:py-10">
           <HomePressHeader />
           <HomePressGrid />
         </div>
+        <Button
+          size={"lg"}
+          className="bg-gray-900 text-white px-20 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+        >
+          <Link href="/press" className="w-full">
+            EXPLORE
+          </Link>
+        </Button>
       </section>
       <ContactSection />
     </main>
