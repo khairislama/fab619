@@ -8,6 +8,7 @@ import { EquipmentShowcase } from "@/src/components/about/EquipmentShowcase";
 import ImageGalleryWrapper from "@/src/components/about/ImageGalleryWrapper";
 import EquipmentsWrapper from "@/src/components/about/EquipmentsWrapper";
 import OverlappingCircles from "@/src/components/about/OverlappingCircles";
+import Maintenance from "@/src/components/Maintenance";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,6 +19,7 @@ export default function AboutPage({ params }: Props) {
 
   // Enable static rendering
   setRequestLocale(locale);
+  return <Maintenance locale="en" />;
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">

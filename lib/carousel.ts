@@ -1,8 +1,6 @@
-import { UrlPath } from "@/settings/navigation";
-
 export interface CarouselSlide {
   id: number;
-  buttonLink: UrlPath;
+  buttonLink: string;
   image?: string;
   video?: {
     sources: {
@@ -19,7 +17,7 @@ export interface CarouselSlide {
 export const SlidesData: CarouselSlide[] = [
   {
     id: 1,
-    buttonLink: "/about",
+    buttonLink: "about",
     video: {
       sources: {
         mp4: "/videos/hero-video.mp4", // Optimized MP4 file
@@ -33,17 +31,17 @@ export const SlidesData: CarouselSlide[] = [
   },
   {
     id: 2,
-    buttonLink: "/services",
+    buttonLink: "services",
     image: "/images/slideshow/slide-2.webp",
   },
   {
     id: 3,
-    buttonLink: "/projects",
+    buttonLink: "projects",
     image: "/images/slideshow/slide-3.webp",
   },
   {
     id: 4,
-    buttonLink: "/contact",
+    buttonLink: "contact",
     image: "/images/slideshow/slide-4.webp",
   },
 ];

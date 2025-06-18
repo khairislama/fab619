@@ -11,6 +11,8 @@ export default function OverlappingCircles() {
             alt="Large circle image"
             fill
             className="object-cover"
+            quality={80}
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
       </div>
@@ -23,6 +25,8 @@ export default function OverlappingCircles() {
             alt="Small circle image 1"
             fill
             className="object-cover"
+            quality={80}
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
       </div>
@@ -35,6 +39,8 @@ export default function OverlappingCircles() {
             alt="Small circle image 2"
             fill
             className="object-cover"
+            quality={80}
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
       </div>

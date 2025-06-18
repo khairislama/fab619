@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { useCarousel } from "./carousel-provider";
@@ -10,6 +9,7 @@ import { useTranslations } from "next-intl";
 import AnimatedTitle from "../../animated-title";
 import AnimatedParagraph from "../../animated-paragraph";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "@/src/i18n/navigation";
 
 interface CarouselSlideItemProps {
   slide: CarouselSlide;
@@ -74,7 +74,7 @@ export function CarouselSlideItem({
               isVideoLoaded && !videoError ? "opacity-0" : "opacity-100"
             }`}
             quality={90}
-            sizes="(max-width: 768px) 100vw, 1280px"
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             priority={index === 0}
           />
 
@@ -104,7 +104,7 @@ export function CarouselSlideItem({
           className="object-cover brightness-90"
           aria-hidden="true"
           quality={85}
-          sizes="(max-width: 1023px) 100vw, 65vw"
+          sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           priority={index === 0}
         />
       );
@@ -157,7 +157,10 @@ export function CarouselSlideItem({
               className="bg-white/20 text-white hover:bg-white hover:text-black transition-colors duration-300 ease-in-out mb-10 group"
             >
               <Link
-                href={slide.buttonLink}
+                href={{
+                  pathname: "/",
+                  hash: slide.buttonLink,
+                }}
                 aria-describedby={`slide-${slide.id}-title slide-${slide.id}-description`}
                 className="inline-flex items-center gap-2 no-underline focus:outline-none"
                 tabIndex={isActive ? 0 : -1}

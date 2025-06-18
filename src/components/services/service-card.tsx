@@ -12,6 +12,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   const isEven = index % 2 === 0;
   return (
     <section
+      id={service.id}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
         isEven ? "" : "lg:grid-flow-col-dense"
       }`}
@@ -56,7 +57,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
             alt={service.imageAlt}
             fill
             className="object-scale-down"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             priority={index < 2}
           />
         </div>

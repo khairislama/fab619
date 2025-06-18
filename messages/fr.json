@@ -102,13 +102,14 @@
     "contact": {
       "title": "CONTACTEZ-NOUS",
       "subtitle": "Si vous souhaitez en savoir plus sur ce que <semibold>FAB619 - Fabrication sur demande</semibold> peut faire pour votre entreprise ou pour recevoir un devis de projet, n'hésitez pas à nous contacter.",
-      "location": {
-        "title": "PASSEZ NOUS VOIR",
-        "monastir": "FE/AR 03, Neotex, Fabrique entrepreneuriale, Monastir, Tunisie",
-        "tunis": "A8-8, Golden Towers, Centre Urbain Nord, Tunis, Tunisie",
-        "find": "Trouvez-nous sur Google Maps"
+      "workshop": {
+        "title": "adresse de l'atelier",
+        "address": "FE/AR 03, Neotex,Fabrique entreprenariale, Monastir , Tunisia"
       },
-      "send-message": "ENVOYEZ-NOUS UN MESSAGE",
+      "corporate": {
+        "title": "Adresse de l'entreprise",
+        "address": "A8-8 , Golden Towers, Centre Urbain Nord, Tunis , Tunisia"
+      },
       "projects": "POUR LES NOUVEAUX PROJETS",
       "print": "POUR LES SERVICES D'IMPRESSION 3D",
       "questions": "QUESTIONS ET SUPPORT"

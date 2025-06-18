@@ -25,7 +25,7 @@ function WhoWeAre() {
                 fill
                 quality={80}
                 className="object-cover blur-[2px]"
-                sizes="(max-width: 1023px) 100vw, 33vw"
+                sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
               />
             </div>
             <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12 bg-white/70">
@@ -44,7 +44,7 @@ function WhoWeAre() {
               </AnimatedParagraph>
               <Link
                 href="/about"
-                className="inline-flex items-center mt-8 text-xl font-medium text-gray-800 group"
+                className="inline-flex items-center mt-8 text-xl font-medium text-gray-800 group animate-bounce"
               >
                 {t("learn-more")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -63,7 +63,7 @@ function WhoWeAre() {
                   fill
                   quality={80}
                   className="object-cover blur-[2px]"
-                  sizes="(max-width: 1023px) 100vw, 33vw"
+                  sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
                 />
               </div>
               <div className="relative z-10 flex h-full sm:items-end">
@@ -89,7 +89,7 @@ function WhoWeAre() {
                   fill
                   quality={80}
                   className="object-cover blur-[2px]"
-                  sizes="(max-width: 1023px) 100vw, 33vw"
+                  sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
                 />
               </div>
               <div className="relative z-10 flex h-full sm:items-end">

@@ -23,7 +23,7 @@ function HomeProjectCard({
             alt={project.image?.alt || project.title!}
             fill
             quality={80}
-            sizes="(max-width: 1023px) 100vw, 33vw"
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             className="object-cover brightness-75"
           />
           <div className="absolute hidden group-hover:block right-[45%] top-[45%] bg-white rounded-full p-2 shadow-md transition-all duration-300 ease-in-out delay-300">
