@@ -15,7 +15,11 @@ export default function MobileNavbar() {
   return (
     <>
       <header className="xl:hidden fixed top-0 left-0 w-full bg-background flex justify-between p-4 items-center h-24 z-50">
-        <button onClick={() => setIsOpen(true)} className="z-10">
+        <button
+          onClick={() => setIsOpen(true)}
+          className="z-10"
+          aria-label="Burger Menu"
+        >
           <div className="flex items-center justify-center gap-3 text-xl sm:hover:text-card-foreground/60 transition-colors duration-500 ease-in-out">
             <Menu className="w-8 h-8" />
           </div>

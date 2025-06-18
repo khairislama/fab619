@@ -12,6 +12,7 @@ import HomePressGrid from "@/src/components/home/press/home-press-grid";
 import ContactSection from "@/src/components/home/contact/home-contact";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/src/i18n/navigation";
+import ServiceFooter from "@/src/components/services/service-footer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -48,12 +49,11 @@ export default function HomePage({ params }: Props) {
           size={"lg"}
           className="bg-gray-900 text-white px-20 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
         >
-          <Link href="/press" className="w-full">
-            EXPLORE
-          </Link>
+          <Link href="/press">EXPLORE OUR MEDIA</Link>
         </Button>
       </section>
       <ContactSection />
+      <ServiceFooter />
     </main>
   );
 }

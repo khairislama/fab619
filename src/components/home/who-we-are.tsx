@@ -25,7 +25,7 @@ function WhoWeAre() {
                 fill
                 quality={80}
                 className="object-cover blur-[2px]"
-                sizes="(max-width: 1023px) 100vw, 33vw"
+                sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
               />
             </div>
             <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12 bg-white/70">
@@ -63,7 +63,7 @@ function WhoWeAre() {
                   fill
                   quality={80}
                   className="object-cover blur-[2px]"
-                  sizes="(max-width: 1023px) 100vw, 33vw"
+                  sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
                 />
               </div>
               <div className="relative z-10 flex h-full sm:items-end">
@@ -89,7 +89,7 @@ function WhoWeAre() {
                   fill
                   quality={80}
                   className="object-cover blur-[2px]"
-                  sizes="(max-width: 1023px) 100vw, 33vw"
+                  sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
                 />
               </div>
               <div className="relative z-10 flex h-full sm:items-end">

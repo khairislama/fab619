@@ -74,7 +74,7 @@ export function CarouselSlideItem({
               isVideoLoaded && !videoError ? "opacity-0" : "opacity-100"
             }`}
             quality={90}
-            sizes="(max-width: 768px) 100vw, 1280px"
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             priority={index === 0}
           />
 
@@ -104,7 +104,7 @@ export function CarouselSlideItem({
           className="object-cover brightness-90"
           aria-hidden="true"
           quality={85}
-          sizes="(max-width: 1023px) 100vw, 65vw"
+          sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           priority={index === 0}
         />
       );

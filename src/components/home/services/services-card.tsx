@@ -24,6 +24,8 @@ export default function ServiceCard({
         alt={title}
         fill
         className="object-cover brightness-[0.4] group-hover:scale-105 transition-transform duration-300"
+        quality={80}
+        sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
       />
       <div className="absolute inset-0 p-6 lg:p-10 flex flex-col justify-between">
         <div className="bg-white/90 backdrop-blur-sm p-2 rounded-md w-fit">

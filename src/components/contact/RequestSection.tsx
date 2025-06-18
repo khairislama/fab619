@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { ReactNode } from "react";
 
 type Props = {
@@ -19,14 +18,12 @@ export default function RequestSection({ children }: Props) {
       </div>
 
       {/* Image Section */}
-      <div className="relative h-full min-h-[400px]">
-        <Image
-          src="/images/address.webp"
-          alt="Location map"
-          fill
-          className="object-cover"
-          priority
-        />
+      <div className="relative h-full min-h-[400px] w-full">
+        <iframe
+          className="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3239.3917446134!2d10.758278!3d35.71658300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDQyJzU5LjciTiAxMMKwNDUnMjkuOCJF!5e0!3m2!1sfr!2stn!4v1750252443662!5m2!1sfr!2stn"
+          loading="lazy"
+        ></iframe>
       </div>
     </section>
   );

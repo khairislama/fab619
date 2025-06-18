@@ -3,6 +3,8 @@ import HomeContactBoxes from "./home-contact-boxes";
 import HomeContactSocial from "./home-contact-social";
 import Link from "next/link";
 import Printer3dSvgIcon from "../../icons/printer3d";
+import { FilePlusSvgIcon } from "../../icons/file-plus";
+import { QuestionsSvgIcon } from "../../icons/questions";
 
 export default function ContactSection() {
   const t = useTranslations("home.contact");
@@ -30,7 +32,7 @@ export default function ContactSection() {
         <div className="w-full mt-24">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-2">
             <div className="w-full flex items-center justify-center lg:justify-start gap-4">
-              <Printer3dSvgIcon className="h-12 w-12" />
+              <FilePlusSvgIcon className="h-12 w-12" />
               <div>
                 <p className="underline uppercase text-sm">{t("projects")}</p>
                 <Link
@@ -54,7 +56,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div className="w-full flex items-center justify-center lg:justify-end gap-4">
-              <Printer3dSvgIcon className="h-12 w-12" />
+              <QuestionsSvgIcon className="h-12 w-12" />
               <div>
                 <p className="underline uppercase text-sm">{t("questions")}</p>
                 <Link

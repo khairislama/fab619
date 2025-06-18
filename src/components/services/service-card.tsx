@@ -57,7 +57,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
             alt={service.imageAlt}
             fill
             className="object-scale-down"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             priority={index < 2}
           />
         </div>

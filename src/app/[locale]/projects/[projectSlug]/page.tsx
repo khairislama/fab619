@@ -65,6 +65,8 @@ export default async function ProjectPage({ params }: Props) {
             fill
             className="object-cover"
             priority
+            quality={80}
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
 

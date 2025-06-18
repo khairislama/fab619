@@ -3,6 +3,7 @@ import React from "react";
 import { PhoneSvgIcon } from "../../icons/phone";
 import { AddressSvgIcon } from "../../icons/address";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 function HomeContactBoxes() {
   const t = useTranslations("home.contact");
@@ -21,9 +22,14 @@ function HomeContactBoxes() {
           <h3 className="text-base font-light mb-4 uppercase">{t("title")}</h3>
           <div className="space-y-2">
             <p className="text-xl font-extralight">
-              +216 55 336 659
+              <Link href="tel:+21655336659" className="text-xl hover:underline">
+                +216 55 336 659
+              </Link>
+
               <br />
-              +216 54 544 731
+              <Link href="tel:+21654544731" className="text-xl hover:underline">
+                +216 54 544 731
+              </Link>
             </p>
           </div>
         </div>
@@ -42,7 +48,13 @@ function HomeContactBoxes() {
             {t("workshop.title")}
           </h3>
           <div className="space-y-2">
-            <p className="text-sm font-light">{t("workshop.address")}</p>
+            <Link
+              href="https://www.google.com/maps/search/?api=1&query=35.716583,10.758278"
+              className="text-sm font-light text-justify"
+              target="_blank"
+            >
+              {t("workshop.address")}
+            </Link>
           </div>
         </div>
       </div>
@@ -60,7 +72,13 @@ function HomeContactBoxes() {
             {t("corporate.title")}
           </h3>
           <div className="space-y-2">
-            <p className="text-sm font-light">{t("corporate.address")}</p>
+            <Link
+              href="https://www.google.com/maps/search/?api=1&query=36.849250,10.199806"
+              className="text-sm font-light text-justify"
+              target="_blank"
+            >
+              {t("corporate.address")}
+            </Link>
           </div>
         </div>
       </div>
