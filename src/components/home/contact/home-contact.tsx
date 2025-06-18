@@ -1,10 +1,8 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { PhoneSvgIcon } from "../../icons/phone";
-import { AddressSvgIcon } from "../../icons/address";
 import HomeContactBoxes from "./home-contact-boxes";
 import HomeContactSocial from "./home-contact-social";
-import Footer from "../../Footer";
+import Link from "next/link";
+import Printer3dSvgIcon from "../../icons/printer3d";
 
 export default function ContactSection() {
   const t = useTranslations("home.contact");
@@ -28,15 +26,60 @@ export default function ContactSection() {
           </p>
         </div>
         <HomeContactBoxes />
-        <div className="w-full mt-14">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="bg-green-100">H</div>
-            <div className="bg-green-100">E</div>
-            <div className="bg-green-100">E</div>
+        {/* Contact info */}
+        <div className="w-full mt-24">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-2">
+            <div className="w-full flex items-center justify-center lg:justify-start gap-4">
+              <Printer3dSvgIcon className="h-12 w-12" />
+              <div>
+                <p className="underline uppercase text-sm">{t("projects")}</p>
+                <Link
+                  href="mailto:alilakais@fab619.tn"
+                  className="text-xl hover:underline"
+                >
+                  alilakais@fab619.tn
+                </Link>
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-center gap-4">
+              <Printer3dSvgIcon className="h-12 w-12" />
+              <div>
+                <p className="underline uppercase text-sm">{t("print")}</p>
+                <Link
+                  href="mailto:3dprint@fab619.tn"
+                  className="text-xl hover:underline"
+                >
+                  3dprint@fab619.tn
+                </Link>
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-center lg:justify-end gap-4">
+              <Printer3dSvgIcon className="h-12 w-12" />
+              <div>
+                <p className="underline uppercase text-sm">{t("questions")}</p>
+                <Link
+                  href="mailto:contact@fab619.tn"
+                  className="text-xl hover:underline"
+                >
+                  contact@fab619.tn
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <HomeContactSocial />
-        <Footer />
+        <div className="flex items-center justify-between mt-20">
+          <p>All rights reserved 2025 © FAB619 - On demand fabrication</p>
+          <p>
+            <Link href="mailto:contact@fab619.tn" className="hover:underline">
+              contact@fab619.tn
+            </Link>{" "}
+            |{" "}
+            <Link href="tef:+21654544731" className="hover:underline">
+              tel. 54 544 731
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );

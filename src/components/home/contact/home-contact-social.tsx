@@ -3,7 +3,7 @@ import React from "react";
 
 function HomeContactSocial() {
   return (
-    <div className="flex flex-wrap gap-8 pt-8 justify-between max-w-4xl mx-auto">
+    <div className="flex flex-wrap gap-8 pt-16 justify-between max-w-4xl mx-auto">
       <Link
         href="https://linkedin.com"
         className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
