@@ -6,6 +6,7 @@ import ServiceFooter from "@/src/components/services/service-footer";
 import { services } from "@/lib/services";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -56,6 +57,7 @@ export default function ServicesPage({ params }: Props) {
           <ServiceFooter />
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

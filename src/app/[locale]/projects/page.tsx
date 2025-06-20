@@ -8,6 +8,7 @@ import { LoadMoreButton } from "@/src/components/grid/LoadMoreButton";
 import Image from "next/image";
 import ContactInfo from "@/src/components/ContactInfo";
 import { useTranslations } from "next-intl";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -74,6 +75,7 @@ export default function PortfolioPage({ params }: Props) {
           <LoadMoreButton />
         </div>
       </GridProvider>
+      <Footer />
     </main>
   );
 }

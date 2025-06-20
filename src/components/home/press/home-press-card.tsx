@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Eye } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import getIconByType from "@/lib/icon-mapper";
 import { urlFor } from "@/src/sanity/lib/image";
