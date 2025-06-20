@@ -69,6 +69,12 @@ export const projectType = defineType({
       description: "The client of the project",
     }),
     defineField({
+      name: "media",
+      title: "Media Slug",
+      type: "string",
+      description: "The slug to read more about the project",
+    }),
+    defineField({
       name: "year",
       title: "Year",
       type: "string",

@@ -24,7 +24,7 @@ export function WorkCard({ _id, slug, title, image }: Partial<Project>) {
         role="article"
         aria-labelledby={`work-title-${_id}`}
       >
-        <div className="relative h-60 w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
+        <div className="relative h-[80%] w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
           <Image
             src={urlFor(image!).url()}
             alt={`${title} project thumbnail`}

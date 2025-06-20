@@ -9,6 +9,7 @@ import Recommendation from "@/src/components/projects/Recommendation";
 import SingleProjectHeading from "@/src/components/projects/single/single-project-heading";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/src/i18n/navigation";
 
 type Props = {
   params: Promise<{
@@ -114,13 +115,22 @@ export default async function ProjectPage({ params }: Props) {
             </p>
           </div>
 
-          <Button
-            variant="outline"
-            className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-2xl transition-colors"
-            aria-label={t("read-more.aria-label")}
-          >
-            {t("read-more.btn")}
-          </Button>
+          {project.media && (
+            <Button
+              variant="outline"
+              className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-2xl transition-colors"
+              aria-label={t("read-more.aria-label")}
+            >
+              <Link
+                href={{
+                  pathname: "/press/[pressSlug]",
+                  params: { pressSlug: String(project.media) },
+                }}
+              >
+                {t("read-more.btn")}
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
       <Recommendation slug={project.slug!} />
