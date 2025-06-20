@@ -20,7 +20,7 @@ export function WorkCard({ _id, slug, title, image }: Partial<Project>) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         layout
-        className="group relative overflow-hidden bg-gray-50 dark:bg-gray-900 aspect-[4/3] cursor-pointer"
+        className="group relative overflow-hidden bg-gray-50 aspect-[4/3] cursor-pointer"
         role="article"
         aria-labelledby={`work-title-${_id}`}
       >

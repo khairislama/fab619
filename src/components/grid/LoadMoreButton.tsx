@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useGridContext } from "./GridContext";
 import { Button } from "@/components/ui/button";
 
 export function LoadMoreButton() {
   const { hasMoreItems, handleLoadMore } = useGridContext();
+  const t = useTranslations("Common.load-more");
 
   if (!hasMoreItems) return null;
 
@@ -12,11 +14,11 @@ export function LoadMoreButton() {
     <div className="flex justify-center mt-12">
       <Button
         variant="outline"
-        className="px-8 py-2 border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+        className="px-8 py-2 border border-black hover:bg-black hover:text-white transition-colors"
         onClick={handleLoadMore}
-        aria-label="Load more projects"
+        aria-label={t("aria-label")}
       >
-        Load More
+        {t("btn")}
       </Button>
     </div>
   );

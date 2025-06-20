@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/src/i18n/navigation";
 import { Locale } from "@/src/i18n/routing";
 import { getProjectBySlug } from "@/src/sanity/lib/project/getProjectBySlug";
 import { urlFor } from "@/src/sanity/lib/image";
 import { getProjects } from "@/src/sanity/lib/project/getProjects";
 import Recommendation from "@/src/components/projects/Recommendation";
+import SingleProjectHeading from "@/src/components/projects/single/single-project-heading";
+import { getTranslations } from "next-intl/server";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   params: Promise<{
@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectPage({ params }: Props) {
   const resolvedParams = await params;
+  const t = await getTranslations("SingleProjectPage");
 
   const project = await getProjectBySlug(resolvedParams.projectSlug);
 
@@ -50,12 +51,7 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
-      <Link href="/projects" className="inline-block mb-8">
-        <Button variant="ghost" className="gap-2">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Portfolio
-        </Button>
-      </Link>
+      <SingleProjectHeading />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
@@ -79,7 +75,7 @@ export default async function ProjectPage({ params }: Props) {
             {project.client && (
               <div>
                 <h3 className="text-sm font-medium text-muted-foreground">
-                  Client
+                  {t("client")}
                 </h3>
                 <p className="text-lg">{project.client}</p>
               </div>
@@ -88,7 +84,7 @@ export default async function ProjectPage({ params }: Props) {
             {project.year && (
               <div>
                 <h3 className="text-sm font-medium text-muted-foreground">
-                  Year
+                  {t("year")}
                 </h3>
                 <p className="text-lg">{project.year}</p>
               </div>
@@ -97,7 +93,7 @@ export default async function ProjectPage({ params }: Props) {
             {project.location && (
               <div>
                 <h3 className="text-sm font-medium text-muted-foreground">
-                  Location
+                  {t("location")}
                 </h3>
                 <p className="text-lg">{project.location}</p>
               </div>
@@ -105,7 +101,7 @@ export default async function ProjectPage({ params }: Props) {
 
             <div>
               <h3 className="text-sm font-medium text-muted-foreground">
-                Category
+                {t("category")}
               </h3>
               <p className="text-lg capitalize">{project.tag}</p>
             </div>
@@ -116,73 +112,15 @@ export default async function ProjectPage({ params }: Props) {
             <p className="text-lg text-muted-foreground mb-4">
               {project.description}
             </p>
-            <p className="text-lg text-muted-foreground">
-              At FAB619, we specialize in delivering customized solutions from
-              concept to final product, leveraging advanced machining
-              technologies and design tools. This project demonstrates our
-              commitment to precision, innovation, and technical excellence in
-              the field of
-              {project.tag === "custom machinery"
-                ? " digital fabrication and custom machine design."
-                : project.tag === "digital fabrication"
-                  ? " visual communication and brand development."
-                  : " software development and digital solutions."}
-            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Technologies Used</h2>
-            <div className="flex flex-wrap gap-2">
-              {project.tag === "custom machinery" && (
-                <>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    3D Printing
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    CNC Machining
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    CAD Design
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Prototyping
-                  </span>
-                </>
-              )}
-              {project.tag === "digital fabrication" && (
-                <>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Visual Design
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Typography
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Color Theory
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Brand Strategy
-                  </span>
-                </>
-              )}
-              {project.tag === "hardware design" && (
-                <>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Web Development
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    IoT Integration
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    Machine Learning
-                  </span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">
-                    API Development
-                  </span>
-                </>
-              )}
-            </div>
-          </div>
+          <Button
+            variant="outline"
+            className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-2xl transition-colors"
+            aria-label={t("read-more.aria-label")}
+          >
+            {t("read-more.btn")}
+          </Button>
         </div>
       </div>
       <Recommendation slug={project.slug!} />

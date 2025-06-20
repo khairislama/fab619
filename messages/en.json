@@ -7,6 +7,10 @@
       "projects": "Projects",
       "press": "Press",
       "contact": "Contact"
+    },
+    "load-more": {
+      "btn": "Load More",
+      "aria-label": "Load more projects"
     }
   },
   "Maintenance": {
@@ -156,6 +160,17 @@
   "ProjectsPage": {
     "page-name": "Projects",
     "title": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
+  },
+  "SingleProjectPage": {
+    "heading": "Back to Portfolio",
+    "client": "Client",
+    "year": "Year",
+    "location": "Location",
+    "category": "Category",
+    "read-more": {
+      "btn": "Read More",
+      "aria-label": "Read more about this article"
+    }
   },
   "about": {
     "title": "About FAB619",
