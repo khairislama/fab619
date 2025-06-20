@@ -26,8 +26,8 @@ function HomeProjectCard({
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             className="object-cover brightness-75"
           />
-          <div className="absolute hidden group-hover:block right-[45%] top-[45%] bg-white rounded-full p-2 shadow-md transition-all duration-300 ease-in-out delay-300">
-            <Eye className="h-5 w-5 text-gray-900" />
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+            <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>
         <h3 className="mt-2 text-lg text-gray-900 font-medium">

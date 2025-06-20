@@ -3,20 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link } from "@/src/i18n/navigation";
-import { filters } from "@/src/sanity/lib/project/getProjects";
 import { Project } from "@/sanity.types";
 import { urlFor } from "@/src/sanity/lib/image";
+import { Eye } from "lucide-react";
 
-export function WorkCard({
-  _id,
-  slug,
-  title,
-  description,
-  image,
-  tag,
-}: Partial<Project>) {
-  const filterLabel = filters.find((f) => f.id === tag)?.label || tag;
-
+export function WorkCard({ _id, slug, title, image }: Partial<Project>) {
   return (
     <Link
       href={{
@@ -33,29 +24,20 @@ export function WorkCard({
         role="article"
         aria-labelledby={`work-title-${_id}`}
       >
-        <Image
-          src={urlFor(image!).url()}
-          alt={`${title} project thumbnail`}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          quality={80}
-          sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
-        />
-
-        <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-          <span className="text-xs uppercase tracking-wider text-gray-300">
-            {filterLabel}
-          </span>
-          <h3
-            id={`work-title-${_id}`}
-            className="text-xl font-medium text-white mt-1 mb-2"
-          >
-            {title}
-          </h3>
-          <p className="text-sm text-gray-300 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-            {description}
-          </p>
+        <div className="relative h-60 w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
+          <Image
+            src={urlFor(image!).url()}
+            alt={`${title} project thumbnail`}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            quality={80}
+            sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+          />
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+            <Eye className="h-10 w-10 fill-gray-900 text-white" />
+          </div>
         </div>
+        <h3 className="mt-2 text-lg text-gray-900 font-medium">{title}</h3>
       </motion.div>
     </Link>
   );
