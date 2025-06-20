@@ -4,11 +4,11 @@ import { Project } from "@/sanity.types";
 
 export const filters = [
   { id: "all", label: "View All" },
-  { id: "1", label: "Custom Machinery" },
-  { id: "2", label: "Digital Fabrication" },
-  { id: "3", label: "IOT & Electronics" },
-  { id: "4", label: "Hardware Design" },
-  { id: "5", label: "Machine Software" },
+  { id: "custom machinery", label: "Custom Machinery" },
+  { id: "digital fabrication", label: "Digital Fabrication" },
+  { id: "iot and Electronics", label: "IOT & Electronics" },
+  { id: "hardware design", label: "Hardware Design" },
+  { id: "machine software", label: "Machine Software" },
 ];
 
 export async function getProjects(limit?: number) {

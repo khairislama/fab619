@@ -17,10 +17,10 @@ export function GridFilterButtons() {
         <Button
           key={filter.id}
           variant="ghost"
-          className={`px-6 py-2 text-sm font-medium transition-all ${
+          className={`px-6 py-2 text-sm font-medium transition-all rounded-2xl ${
             activeFilter === filter.id
-              ? "bg-black text-white dark:bg-white dark:text-black"
-              : "hover:bg-black/5 dark:hover:bg-white/10"
+              ? "border border-black"
+              : "bg-black text-white hover:bg-black/70 hover:text-white"
           }`}
           onClick={() => handleFilterClick(filter.id!)}
           role="tab"

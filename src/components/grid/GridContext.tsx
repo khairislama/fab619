@@ -81,6 +81,8 @@ export function GridProvider({
   // Handle filter click
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
+    console.log(works[5].tag);
+    console.log(filter);
 
     // Calculate initial items to show based on current column count
     const filtered =
