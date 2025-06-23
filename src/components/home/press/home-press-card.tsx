@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Eye } from "lucide-react";
 import { format } from "date-fns";
 import getIconByType from "@/lib/icon-mapper";
 import { urlFor } from "@/src/sanity/lib/image";
 import { PressItem } from "@/sanity.types";
 import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/navigation";
 
 interface PressCardProps {
   item: PressItem;
@@ -35,7 +35,10 @@ export default function HomePressCard({ item }: PressCardProps) {
       </div>
 
       <Link
-        href={`/press/${item.slug}`}
+        href={{
+          pathname: "/press/[pressSlug]",
+          params: { pressSlug: String(item.slug) },
+        }}
         aria-label={`View details about ${item.title}`}
         className="group"
       >

@@ -172,6 +172,10 @@
       "aria-label": "Read more about this article"
     }
   },
+  "PressPage": {
+    "page-name": "Press & News",
+    "title": "Insights, updates, and stories — explore our latest events, projects, and innovative solutions."
+  },
   "about": {
     "title": "About FAB619",
     "card": {

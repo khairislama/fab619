@@ -2,6 +2,13 @@ import { defineQuery } from "next-sanity";
 import { client } from "../client";
 import { PressItem } from "@/sanity.types";
 
+export const filters = [
+  { id: "all", label: "View All" },
+  { id: "workshop", label: "Workshop" },
+  { id: "event", label: "Event" },
+  { id: "machine", label: "Machine" },
+];
+
 export async function getPressItems(limit?: number) {
   let query = `*[_type == "pressItem"] {
       ...,
