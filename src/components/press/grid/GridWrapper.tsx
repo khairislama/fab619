@@ -1,7 +1,6 @@
 "use client";
 
 import { usePressGridContext } from "./GridContext";
-import { PressItemCard } from "./PressItemCard";
 import { PressItemsSkeleton } from "../press-item-skelettons";
 import HomePressCard from "../../home/press/home-press-card";
 
