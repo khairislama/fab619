@@ -1,8 +1,7 @@
-import ProjectCard from "./ProjectCard";
 import { getProjects } from "@/src/sanity/lib/project/getProjects";
-import { urlFor } from "@/src/sanity/lib/image";
 import { getTranslations } from "next-intl/server";
 import { Slug } from "@/sanity.types";
+import { WorkCard } from "./grid/WorkCard";
 
 export default async function Recommendation({ slug }: { slug: Slug }) {
   const translation = await getTranslations("portfolio");
@@ -18,11 +17,12 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {shuffled.map((project) => (
-          <ProjectCard
+          <WorkCard
             key={project._id}
-            slug={project.slug!}
-            image={urlFor(project.image!).url()}
-            title={project.title!}
+            _id={project._id}
+            slug={project.slug}
+            title={project.title}
+            image={project.image}
           />
         ))}
       </div>

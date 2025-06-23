@@ -56,13 +56,15 @@ export default async function SinglePressPage({ params }: Props) {
   const components = {
     types: {
       image: ({ value }: { value: SanityImageSource & { alt?: string } }) => (
-        <Image
-          src={urlFor(value).url()}
-          alt={value.alt || ""}
-          width={900}
-          height={600}
-          className="rounded-md my-4"
-        />
+        <div className="w-full">
+          <Image
+            src={urlFor(value).url()}
+            alt={value.alt || ""}
+            width={1200}
+            height={750}
+            className="rounded-md my-4 mx-auto"
+          />
+        </div>
       ),
     },
   };
@@ -92,7 +94,7 @@ export default async function SinglePressPage({ params }: Props) {
             height={187}
             priority
             quality={80}
-            className="h-44 object-cover blur-sm"
+            className="h-44 object-cover blur-sm mx-auto"
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
@@ -106,7 +108,7 @@ export default async function SinglePressPage({ params }: Props) {
           </div>
         </div>
       </div>
-      <div className="max-w-4xl mx-auto my-12 text-justify">
+      <div className="max-w-6xl mx-auto my-12 text-justify">
         <PortableText value={item.content ?? []} components={components} />
       </div>
     </main>

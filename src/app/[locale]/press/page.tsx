@@ -54,7 +54,7 @@ export default function PressPage({ params }: Props) {
             height={187}
             priority
             quality={80}
-            className="h-44 object-cover"
+            className="h-44 object-cover mx-auto"
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
