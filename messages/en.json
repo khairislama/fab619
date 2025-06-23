@@ -176,6 +176,10 @@
     "page-name": "Press & News",
     "title": "Insights, updates, and stories — explore our latest events, projects, and innovative solutions."
   },
+  "SinglePressPage": {
+    "page-name": "Press & News",
+    "heading": "Back to Press"
+  },
   "about": {
     "title": "About FAB619",
     "card": {

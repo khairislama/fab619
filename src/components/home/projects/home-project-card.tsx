@@ -3,7 +3,7 @@ import Image from "next/image";
 import AnimatedCard from "../../animated-card";
 import { Project } from "@/sanity.types";
 import { urlFor } from "@/src/sanity/lib/image";
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
 
 function HomeProjectCard({
   project,
@@ -16,7 +16,12 @@ function HomeProjectCard({
   const imageUrl = urlFor(project.image!).width(800).url();
   return (
     <AnimatedCard index={index} className="group relative">
-      <Link href={"#"}>
+      <Link
+        href={{
+          pathname: "/projects/[projectSlug]",
+          params: { projectSlug: String(project.slug) },
+        }}
+      >
         <div className="relative h-64 w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
           <Image
             src={imageUrl}
