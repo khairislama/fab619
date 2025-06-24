@@ -3,10 +3,10 @@ import { client } from "../client";
 import { PressItem } from "@/sanity.types";
 
 export const filters = [
-  { id: "all", label: "View All" },
-  { id: "workshop", label: "Workshop" },
-  { id: "event", label: "Event" },
-  { id: "machine", label: "Machine" },
+  { id: "all" },
+  { id: "workshop" },
+  { id: "event" },
+  { id: "machine" },
 ];
 
 export async function getPressItems(limit?: number) {

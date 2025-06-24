@@ -21,7 +21,7 @@ function WhoWeAre() {
             <div className="absolute inset-0 z-0">
               <Image
                 src="/images/whoarewe/left.webp"
-                alt="Manufacturing machinery background"
+                alt={t("left-alt")}
                 fill
                 quality={80}
                 className="object-cover blur-[2px]"
@@ -59,7 +59,7 @@ function WhoWeAre() {
               <div className="absolute inset-0 z-0 opacity-25">
                 <Image
                   src="/images/whoarewe/right-top.webp"
-                  alt="Electronics and machinery"
+                  alt={t("rt-alt")}
                   fill
                   quality={80}
                   className="object-cover blur-[2px]"
@@ -85,7 +85,7 @@ function WhoWeAre() {
               <div className="absolute inset-0 z-0 opacity-35">
                 <Image
                   src="/images/whoarewe/right-bottom.webp"
-                  alt="working together and planning"
+                  alt={t("rb-alt")}
                   fill
                   quality={80}
                   className="object-cover blur-[2px]"

@@ -3,9 +3,11 @@
 import { Button } from "@/components/ui/button";
 import { useGridContext } from "./GridContext";
 import { filters } from "@/src/sanity/lib/project/getProjects";
+import { useTranslations } from "next-intl";
 
 export function GridFilterButtons() {
   const { activeFilter, handleFilterClick } = useGridContext();
+  const t = useTranslations("ProjectsPage.filters");
 
   return (
     <div
@@ -28,7 +30,7 @@ export function GridFilterButtons() {
           aria-controls={`panel-${filter.id}`}
           id={`tab-${filter.id}`}
         >
-          {filter.label}
+          {t(filter.id)}
         </Button>
       ))}
     </div>

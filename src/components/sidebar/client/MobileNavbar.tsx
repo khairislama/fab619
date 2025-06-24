@@ -27,7 +27,7 @@ export default function MobileNavbar() {
         <div className="absolute left-1/2 -translate-x-1/2 z-0">
           <Logo />
         </div>
-        <div className="flex justify-center space-x-4 z-10">
+        <div className="flex justify-center space-x-2 md:space-x-3 z-10">
           {SOCIAL.map((item) => (
             <Link
               key={item.name}
@@ -36,7 +36,7 @@ export default function MobileNavbar() {
               rel="noopener noreferrer"
               className="sm:hover:text-card-foreground/60 transition-colors duration-200 ease-in-out"
             >
-              <item.icon className="w-6 h-6" />
+              <item.icon className="w-5 h-5 md:w-6 md:h-6" />
               <span className="sr-only">{item.name}</span>
             </Link>
           ))}

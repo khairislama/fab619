@@ -6,7 +6,7 @@ import { PressItemCard } from "./grid/PressItemCard";
 import { getPressItems } from "@/src/sanity/lib/press/getPressItems";
 
 export default async function PressRecommendation({ slug }: { slug: Slug }) {
-  const translation = await getTranslations("SinglePressPage");
+  const t = await getTranslations("SinglePressPage");
 
   const pressItems = await getPressItems();
 
@@ -43,7 +43,7 @@ export default async function PressRecommendation({ slug }: { slug: Slug }) {
         >
           <div className="flex w-full justify-start gap-2">
             <ArrowLeft className="h-6 w-6" />
-            <span className="font-semibold">Previous Post</span>
+            <span className="font-semibold">{t("previous")}</span>
           </div>
           {prevItem.title}
         </Link>
@@ -55,7 +55,7 @@ export default async function PressRecommendation({ slug }: { slug: Slug }) {
           className="flex flex-col items-center gap-2"
         >
           <div className="flex w-full justify-end gap-2">
-            <span className="font-semibold">Next Post</span>
+            <span className="font-semibold">{t("next")}</span>
             <ArrowRight className="h-6 w-6" />
           </div>
           {nextItem.title}
@@ -63,7 +63,7 @@ export default async function PressRecommendation({ slug }: { slug: Slug }) {
       </div>
       <div className="flex items-center mb-8">
         <ChevronRight className="h-10 w-10" />
-        <h2 className="text-2xl font-bold">{translation("recommendation")}</h2>
+        <h2 className="text-2xl font-bold">{t("recommendation")}</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {shuffled.map((item) => (

@@ -116,7 +116,7 @@ export default async function SinglePressPage({ params }: Props) {
         </div>
         <PressRecommendation slug={item.slug!} />
       </main>
-      <Footer />
+      <Footer className="mb-12" />
     </>
   );
 }
@@ -125,7 +125,7 @@ export async function generateStaticParams() {
   const locales: Locale[] = ["en", "fr"]; // Your supported locales
   const pressItems = await getPressItems();
 
-  // Generate params for each locale and project slug combination
+  // Generate params for each locale and press slug combination
   return locales.flatMap((locale) =>
     pressItems.map((item) => ({
       locale,

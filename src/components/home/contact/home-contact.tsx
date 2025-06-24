@@ -71,14 +71,14 @@ export default function ContactSection() {
         </div>
         <HomeContactSocial />
         <div className="flex items-center justify-between mt-20">
-          <p>All rights reserved 2025 © FAB619 - On demand fabrication</p>
+          <p>{t("rights")}</p>
           <p>
             <Link href="mailto:contact@fab619.tn" className="hover:underline">
               contact@fab619.tn
             </Link>{" "}
             |{" "}
             <Link href="tef:+21654544731" className="hover:underline">
-              tel. 54 544 731
+              {t("tel")}. 54 544 731
             </Link>
           </p>
         </div>
