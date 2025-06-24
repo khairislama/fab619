@@ -60,18 +60,18 @@ export default function NavLanguage() {
         {currentLang}
         <ChevronDown className="h-4 w-4 ml-2" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-card ml-6 shadow-lg">
+      <DropdownMenuContent className="ml-6 shadow-lg">
         <DropdownMenuLabel className="text-lg">Language</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem
-            className="hover:bg-primary hover:text-primary-foreground transition duration-200 ease-out text-lg"
+            className="transition duration-200 ease-out text-lg hover:cursor-pointer"
             onClick={() => changeLanguage("en")}
           >
             EN
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="hover:bg-primary hover:text-primary-foreground transition duration-200 ease-out text-lg"
+            className="transition duration-200 ease-out text-lg hover:cursor-pointer"
             onClick={() => changeLanguage("fr")}
           >
             FR
