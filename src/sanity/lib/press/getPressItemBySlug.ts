@@ -1,5 +1,6 @@
 import { defineQuery } from "next-sanity";
 import { client } from "../client";
+import { PressItem } from "@/sanity.types";
 
 export async function getPressItemBySlug(slug: string) {
   const lowerCaseSlug = slug.toLowerCase();
@@ -9,7 +10,7 @@ export async function getPressItemBySlug(slug: string) {
         "slug": slug.current,
   }`);
 
-  const pressItem = await client.fetch(getPressItemBySlugQuery, {
+  const pressItem = await client.fetch<PressItem>(getPressItemBySlugQuery, {
     slug: lowerCaseSlug,
   });
 

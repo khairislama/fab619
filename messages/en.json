@@ -170,7 +170,8 @@
     "read-more": {
       "btn": "Read More",
       "aria-label": "Read more about this article"
-    }
+    },
+    "recommendation": "You Might Also See"
   },
   "PressPage": {
     "page-name": "Press & News",
@@ -178,7 +179,8 @@
   },
   "SinglePressPage": {
     "page-name": "Press & News",
-    "heading": "Back to Press"
+    "heading": "Back to Press",
+    "recommendation": "You Might Also Like"
   },
   "about": {
     "title": "About FAB619",
@@ -198,10 +200,6 @@
       "title": "Our Manufacturing Equipment",
       "description": "We have a comprehensive range of manufacturing equipment to bring your ideas to life"
     }
-  },
-  "portfolio": {
-    "title": "Portfolio",
-    "recommendation": "Other Projects"
   },
   "services": {
     "title": "Services",

@@ -1,32 +1,32 @@
-import { getProjects } from "@/src/sanity/lib/project/getProjects";
 import { getTranslations } from "next-intl/server";
 import { Slug } from "@/sanity.types";
-import { WorkCard } from "./grid/WorkCard";
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "@/src/i18n/navigation";
+import { PressItemCard } from "./grid/PressItemCard";
+import { getPressItems } from "@/src/sanity/lib/press/getPressItems";
 
-export default async function Recommendation({ slug }: { slug: Slug }) {
-  const translation = await getTranslations("SingleProjectPage");
+export default async function PressRecommendation({ slug }: { slug: Slug }) {
+  const translation = await getTranslations("SinglePressPage");
 
-  const projects = await getProjects();
+  const pressItems = await getPressItems();
 
-  const sortedProjects = [...projects].sort((a, b) =>
-    new Date(a.createdAt!) > new Date(b.createdAt!) ? 1 : -1
+  const sortedPressItems = [...pressItems].sort((a, b) =>
+    new Date(a.date!) > new Date(b.date!) ? 1 : -1
   );
 
-  const currentIndex = sortedProjects.findIndex((p) => p.slug === slug);
+  const currentIndex = sortedPressItems.findIndex((p) => p.slug === slug);
   // Next = current + 1 or 0 if last
-  const nextProject =
-    sortedProjects[(currentIndex + 1) % sortedProjects.length];
+  const nextItem =
+    sortedPressItems[(currentIndex + 1) % sortedPressItems.length];
 
   // Prev = current - 1 or last if first
-  const prevProject =
-    sortedProjects[
-      (currentIndex - 1 + sortedProjects.length) % sortedProjects.length
+  const prevItem =
+    sortedPressItems[
+      (currentIndex - 1 + sortedPressItems.length) % sortedPressItems.length
     ];
   // Randoms excluding current, next, prev
-  const excludedSlugs = [slug, nextProject.slug, prevProject.slug];
-  const shuffled = sortedProjects
+  const excludedSlugs = [slug, nextItem.slug, prevItem.slug];
+  const shuffled = sortedPressItems
     .filter((p) => !excludedSlugs.includes(p.slug))
     .sort(() => 0.5 - Math.random())
     .slice(0, 3);
@@ -36,8 +36,8 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
       <div className="flex items-center justify-between my-10">
         <Link
           href={{
-            pathname: "/projects/[projectSlug]",
-            params: { projectSlug: String(prevProject.slug) },
+            pathname: "/press/[pressSlug]",
+            params: { pressSlug: String(prevItem.slug) },
           }}
           className="flex flex-col items-center gap-2"
         >
@@ -45,12 +45,12 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
             <ArrowLeft className="h-6 w-6" />
             <span className="font-semibold">Previous Post</span>
           </div>
-          {prevProject.title}
+          {prevItem.title}
         </Link>
         <Link
           href={{
-            pathname: "/projects/[projectSlug]",
-            params: { projectSlug: String(nextProject.slug) },
+            pathname: "/press/[pressSlug]",
+            params: { pressSlug: String(nextItem.slug) },
           }}
           className="flex flex-col items-center gap-2"
         >
@@ -58,7 +58,7 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
             <span className="font-semibold">Next Post</span>
             <ArrowRight className="h-6 w-6" />
           </div>
-          {nextProject.title}
+          {nextItem.title}
         </Link>
       </div>
       <div className="flex items-center mb-8">
@@ -66,13 +66,13 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
         <h2 className="text-2xl font-bold">{translation("recommendation")}</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {shuffled.map((project) => (
-          <WorkCard
-            key={project._id}
-            _id={project._id}
-            slug={project.slug}
-            title={project.title}
-            image={project.image}
+        {shuffled.map((item) => (
+          <PressItemCard
+            key={item._id}
+            _id={item._id}
+            slug={item.slug}
+            title={item.title}
+            mainImage={item.mainImage}
           />
         ))}
       </div>
