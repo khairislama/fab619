@@ -924,6 +924,13 @@
         },
         "optional": true
       },
+      "media": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "year": {
         "type": "objectAttribute",
         "value": {

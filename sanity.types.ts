@@ -149,6 +149,7 @@ export type Project = {
   tag?: "custom machinery" | "digital fabrication" | "iot and Electronics" | "hardware design" | "machine software";
   description?: string;
   client?: string;
+  media?: string;
   year?: string;
   location?: string;
   createdAt?: string;
@@ -366,6 +367,7 @@ export type GetProjectBySlugQueryResult = {
   tag?: "custom machinery" | "digital fabrication" | "hardware design" | "iot and Electronics" | "machine software";
   description?: string;
   client?: string;
+  media?: string;
   year?: string;
   location?: string;
   createdAt?: string;
@@ -398,6 +400,7 @@ export type GetProjectsQueryResult = Array<{
   tag?: "custom machinery" | "digital fabrication" | "hardware design" | "iot and Electronics" | "machine software";
   description?: string;
   client?: string;
+  media?: string;
   year?: string;
   location?: string;
   createdAt?: string;

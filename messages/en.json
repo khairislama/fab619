@@ -7,6 +7,10 @@
       "projects": "Projects",
       "press": "Press",
       "contact": "Contact"
+    },
+    "load-more": {
+      "btn": "Load More",
+      "aria-label": "Load more projects"
     }
   },
   "Maintenance": {
@@ -157,6 +161,27 @@
     "page-name": "Projects",
     "title": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
   },
+  "SingleProjectPage": {
+    "heading": "Back to Projects",
+    "client": "Client",
+    "year": "Year",
+    "location": "Location",
+    "category": "Category",
+    "read-more": {
+      "btn": "Read More",
+      "aria-label": "Read more about this article"
+    },
+    "recommendation": "You Might Also See"
+  },
+  "PressPage": {
+    "page-name": "Press & News",
+    "title": "Insights, updates, and stories — explore our latest events, projects, and innovative solutions."
+  },
+  "SinglePressPage": {
+    "page-name": "Press & News",
+    "heading": "Back to Press",
+    "recommendation": "You Might Also Like"
+  },
   "about": {
     "title": "About FAB619",
     "card": {
@@ -175,10 +200,6 @@
       "title": "Our Manufacturing Equipment",
       "description": "We have a comprehensive range of manufacturing equipment to bring your ideas to life"
     }
-  },
-  "portfolio": {
-    "title": "Portfolio",
-    "recommendation": "Other Projects"
   },
   "services": {
     "title": "Services",

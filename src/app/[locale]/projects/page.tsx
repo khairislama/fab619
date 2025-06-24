@@ -1,13 +1,14 @@
 import { setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
-import { GridProvider } from "@/src/components/grid/GridContext";
-import { GridFilterButtons } from "@/src/components/grid/GridFilterButtons";
-import { GridWrapper } from "@/src/components/grid/GridWrapper";
-import { LoadMoreButton } from "@/src/components/grid/LoadMoreButton";
+import { GridProvider } from "@/src/components/projects/grid/GridContext";
+import { GridFilterButtons } from "@/src/components/projects/grid/GridFilterButtons";
+import { GridWrapper } from "@/src/components/projects/grid/GridWrapper";
+import { LoadMoreButton } from "@/src/components/projects/grid/LoadMoreButton";
 import Image from "next/image";
 import ContactInfo from "@/src/components/ContactInfo";
 import { useTranslations } from "next-intl";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -44,7 +45,7 @@ export default function PortfolioPage({ params }: Props) {
         </div>
         <ContactInfo />
       </div>
-      <div className="relative w-full overflow-hidden mt-10">
+      <div className="relative w-full overflow-hidden mt-10 mx-auto">
         <div className="w-full">
           <Image
             src="/images/projects-header.webp"
@@ -53,7 +54,7 @@ export default function PortfolioPage({ params }: Props) {
             height={187}
             priority
             quality={80}
-            className="h-44 object-cover"
+            className="h-44 object-cover mx-auto"
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
@@ -74,6 +75,7 @@ export default function PortfolioPage({ params }: Props) {
           <LoadMoreButton />
         </div>
       </GridProvider>
+      <Footer />
     </main>
   );
 }

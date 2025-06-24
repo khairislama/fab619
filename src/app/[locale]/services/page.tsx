@@ -6,6 +6,7 @@ import ServiceFooter from "@/src/components/services/service-footer";
 import { services } from "@/lib/services";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,7 +30,7 @@ export default function ServicesPage({ params }: Props) {
             width={1118}
             height={187}
             quality={50}
-            className="opacity-20 h-full w-auto"
+            className="opacity-20 h-full w-auto mx-auto"
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
         </div>
@@ -56,6 +57,7 @@ export default function ServicesPage({ params }: Props) {
           <ServiceFooter />
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

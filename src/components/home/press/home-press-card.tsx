@@ -1,12 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Eye } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import getIconByType from "@/lib/icon-mapper";
 import { urlFor } from "@/src/sanity/lib/image";
 import { PressItem } from "@/sanity.types";
 import { useTranslations } from "next-intl";
+import { Link } from "@/src/i18n/navigation";
 
 interface PressCardProps {
   item: PressItem;
@@ -36,7 +35,10 @@ export default function HomePressCard({ item }: PressCardProps) {
       </div>
 
       <Link
-        href={`/press/${item.slug}`}
+        href={{
+          pathname: "/press/[pressSlug]",
+          params: { pressSlug: String(item.slug) },
+        }}
         aria-label={`View details about ${item.title}`}
         className="group"
       >
@@ -54,16 +56,8 @@ export default function HomePressCard({ item }: PressCardProps) {
             height={300}
             className="w-full h-60 object-cover group-hover:brightness-50 transition-all duration-200 ease-in-out"
           />
-          <div className="hidden group-hover:block transition-all duration-200 ease-in-out">
-            <div
-              className={cn(
-                "absolute top-[45%] right-[45%] bg-white/80 rounded-xl p-3",
-                "flex items-center justify-center shadow-md",
-                "transition-transform focus:scale-110 focus:outline-none"
-              )}
-            >
-              <Eye className="h-6 w-6" />
-            </div>
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+            <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>
       </Link>
