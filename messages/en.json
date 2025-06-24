@@ -19,9 +19,9 @@
   },
   "home": {
     "metadata": {
-      "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
-      "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
-      "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation"
+      "title": "FAB619 - Custom Machinery, Automation & Digital Fabrication",
+      "description": "FAB619 is an engineering design office specializing in advanced custom machinery, automation, 3D printing, and IoT solutions. From concept to prototype, we deliver innovative industrial solutions.",
+      "keywords": "custom machinery, automation systems, digital fabrication, 3D printing, CNC machining, robotics, IoT solutions, hardware design, product development, engineering design office, industrial innovation, prototyping, custom manufacturing, FAB619"
     },
     "carousel": {
       "aria-label": "Featured content carousel",
@@ -135,6 +135,11 @@
     }
   },
   "ServicesPage": {
+    "metadata": {
+      "title": "Services - Custom Machinery, 3D Printing & IoT Solutions | FAB619",
+      "description": "Explore FAB619's comprehensive services, including custom machinery development, advanced 3D printing and CNC machining, IoT & electronics, hardware engineering, and machine software solutions.",
+      "keywords": "engineering services, custom machinery, 3D printing services, CNC machining services, IoT development, electronics design, hardware engineering, product prototyping, machine software, automation solutions, industrial services, technical training, FAB619"
+    },
     "title": "Services",
     "subtitle": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
     "custom-machinery": {
@@ -174,6 +179,11 @@
     }
   },
   "ProjectsPage": {
+    "metadata": {
+      "title": "Projects - Custom Engineering & Fabrication Portfolio | FAB619",
+      "description": "Discover FAB619's portfolio of custom-built solutions, showcasing innovative projects in custom machinery, digital fabrication, IoT, and hardware design for various industries.",
+      "keywords": "engineering projects, custom fabrication, industrial solutions, robotics projects, 3D printing projects, CNC projects, IoT projects, hardware design projects, automation case studies, manufacturing portfolio, FAB619"
+    },
     "title": "Projects",
     "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations.",
     "filters": {
@@ -207,6 +217,11 @@
     "recommendation": "You Might Also See"
   },
   "PressPage": {
+    "metadata": {
+      "title": "Press & News - FAB619 Insights, Events & Innovations",
+      "description": "Stay updated with the latest news, events, and insights from FAB619. Explore articles on our innovative projects, workshops, and advancements in engineering and digital fabrication.",
+      "keywords": "press release, company news, industry events, engineering innovation, digital fabrication news, FAB619 updates, workshops, industrial solutions, media coverage, technical articles"
+    },
     "title": "Press & News",
     "subtitle": "Insights, updates, and stories — explore our latest events, projects, and innovative solutions.",
     "filters": {
@@ -230,6 +245,11 @@
     "recommendation": "You Might Also Like"
   },
   "about": {
+    "metadata": {
+      "title": "About FAB619 - Engineering Design Office & Digital Fabrication",
+      "description": "Learn about FAB619, a leading engineering design office specializing in custom machine design, digital fabrication, and innovative solutions. Discover our expertise, team, and commitment to industrial excellence.",
+      "keywords": "about us, FAB619, engineering company, design office, digital fabrication company, custom machine builders, prototyping services, industrial solutions, company profile, our team, manufacturing expertise"
+    },
     "title": "About FAB619",
     "card": {
       "title": "Who We Are & What We Do",
@@ -249,6 +269,11 @@
     }
   },
   "contact": {
+    "metadata": {
+      "title": "Contact FAB619 - Get a Quote & Discuss Your Project",
+      "description": "Get in touch with FAB619 for engineering and fabrication services. Contact us for custom machinery, 3D printing, IoT solutions, or general inquiries. Find our addresses and FAQs.",
+      "keywords": "contact us, FAB619, request a quote, engineering inquiry, custom manufacturing consultation, 3D printing services contact, robotics support, industrial solutions contact, FAQ, Tunisie engineering"
+    },
     "title": "Get in Touch",
     "contact-us": "contact us",
     "address": "address",

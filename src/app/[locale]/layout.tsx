@@ -80,7 +80,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <body
-        className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased debug-screens`}
+        className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <div className="flex h-screen overflow-hidden font-poppins">

@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${item.title} | FAB619 Portfolio`,
+    title: `${item.title} | Press & News - FAB619 Insights, Events & Innovations`,
     description: item.description,
     openGraph: {
       title: item.title,

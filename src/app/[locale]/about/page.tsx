@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import PageHeader from "@/src/components/page-header";
 import { AboutHeroImage } from "@/src/components/about/AboutHeroImage";
@@ -12,6 +12,21 @@ import OverlappingCircles from "@/src/components/about/OverlappingCircles";
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "about.metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+  };
+}
 
 export default function AboutPage({ params }: Props) {
   const { locale } = use(params);

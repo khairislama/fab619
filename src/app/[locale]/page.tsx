@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { CarouselProvider } from "@/src/components/home/carousel/carousel-provider";
 import { CarouselWrapper } from "@/src/components/home/carousel/carousel-wrapper";
@@ -7,17 +7,51 @@ import WhoWeAre from "@/src/components/home/who-we-are";
 import HomeServices from "@/src/components/home/services";
 import HomeProjects from "@/src/components/home/projects/home-projects";
 import HomeClients from "@/src/components/home/home-clients";
-import HomePressHeader from "@/src/components/home/press/home-press-header";
-import HomePressGrid from "@/src/components/home/press/home-press-grid";
 import ContactSection from "@/src/components/home/contact/home-contact";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/src/i18n/navigation";
 import ServiceFooter from "@/src/components/services/service-footer";
 import HomePress from "@/src/components/home/press";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({ locale, namespace: "home.metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: "https://fab619.tn",
+      siteName: "FAB619",
+      images: [
+        {
+          url: "https://fab619.tn/images/og-home.webp",
+          width: 1200,
+          height: 630,
+          alt: "FAB619 Homepage",
+        },
+      ],
+      locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["https://fab619.tn/images/og-home.webp"],
+    },
+    metadataBase: new URL("https://fab619.tn"),
+    alternates: {
+      canonical: "/",
+    },
+  };
+}
 
 export default function HomePage({ params }: Props) {
   const { locale } = use(params);
