@@ -3,12 +3,12 @@ import { client } from "../client";
 import { Project } from "@/sanity.types";
 
 export const filters = [
-  { id: "all", label: "View All" },
-  { id: "custom machinery", label: "Custom Machinery" },
-  { id: "digital fabrication", label: "Digital Fabrication" },
-  { id: "iot and Electronics", label: "IOT & Electronics" },
-  { id: "hardware design", label: "Hardware Design" },
-  { id: "machine software", label: "Machine Software" },
+  { id: "all" },
+  { id: "custom machinery" },
+  { id: "digital fabrication" },
+  { id: "iot and Electronics" },
+  { id: "hardware design" },
+  { id: "machine software" },
 ];
 
 export async function getProjects(limit?: number) {

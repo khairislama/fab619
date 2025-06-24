@@ -1,33 +1,34 @@
-import { setRequestLocale } from "next-intl/server";
-import { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { GridProvider } from "@/src/components/projects/grid/GridContext";
 import { GridFilterButtons } from "@/src/components/projects/grid/GridFilterButtons";
 import { GridWrapper } from "@/src/components/projects/grid/GridWrapper";
 import { LoadMoreButton } from "@/src/components/projects/grid/LoadMoreButton";
 import Image from "next/image";
-import ContactInfo from "@/src/components/ContactInfo";
 import { useTranslations } from "next-intl";
 import Footer from "@/src/components/Footer";
+import PageHeader from "@/src/components/page-header";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export const metadata: Metadata = {
-  title: "Portfolio | FAB619 - Engineering & Design Office",
-  description:
-    "Explore FAB619's portfolio of digital fabrication, custom machine design, and innovative engineering solutions for industries and professionals.",
-  keywords:
-    "digital fabrication, custom machine design, 3D printing, CNC machining, robotics, engineering projects, Tunisia",
-  // openGraph: {
-  //   title: "FAB619 Portfolio - Engineering Excellence & Innovation",
-  //   description: "Discover our cutting-edge projects in digital fabrication, robotics, and custom machine design.",
-  //   images: [{ url: "/images/og-portfolio.jpg", width: 1200, height: 630 }],
-  // },
-};
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
 
-export default function PortfolioPage({ params }: Props) {
+  const t = await getTranslations({
+    locale,
+    namespace: "ProjectsPage.metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+  };
+}
+
+export default function ProjectsPage({ params }: Props) {
   const { locale } = use(params);
 
   // Enable static rendering
@@ -37,15 +38,8 @@ export default function PortfolioPage({ params }: Props) {
 
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
-      <div className="flex flex-col sm:flex-row items-center justify-between">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
-            {t("page-name")}
-          </h1>
-        </div>
-        <ContactInfo />
-      </div>
-      <div className="relative w-full overflow-hidden mt-10 mx-auto">
+      <PageHeader pageName={"ProjectsPage"} />
+      <div className="relative w-full overflow-hidden mx-auto">
         <div className="w-full">
           <Image
             src="/images/projects-header.webp"
@@ -62,7 +56,7 @@ export default function PortfolioPage({ params }: Props) {
           <div className="container px-4 md:px-6 lg:px-8">
             <div className="max-w-md md:max-w-lg">
               <h2 className="text-sm sm:text-lg md:text-xl font-medium">
-                {t("title")}
+                {t("subtitle")}
               </h2>
             </div>
           </div>

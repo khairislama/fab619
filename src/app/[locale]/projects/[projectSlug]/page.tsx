@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} | FAB619 Portfolio`,
+    title: `${project.title} | Projects - Custom Engineering & Fabrication Portfolio | FAB619`,
     description: project.description,
     openGraph: {
       title: project.title,
@@ -111,7 +111,7 @@ export default async function ProjectPage({ params }: Props) {
             </div>
 
             <div className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">Project Overview</h2>
+              <h2 className="text-xl font-semibold mb-4">{t("overview")}</h2>
               <p className="text-lg text-muted-foreground mb-4">
                 {project.description}
               </p>
@@ -137,7 +137,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
         <Recommendation slug={project.slug!} />
       </main>
-      <Footer />
+      <Footer className="mb-12" />
     </>
   );
 }

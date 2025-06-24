@@ -3,15 +3,17 @@
 import { Button } from "@/components/ui/button";
 import { usePressGridContext } from "./GridContext";
 import { filters } from "@/src/sanity/lib/press/getPressItems";
+import { useTranslations } from "next-intl";
 
 export function GridFilterButtons() {
   const { activeFilter, handleFilterClick } = usePressGridContext();
+  const t = useTranslations("PressPage.filters");
 
   return (
     <div
       className="flex flex-wrap gap-2 mb-12 justify-center"
       role="tablist"
-      aria-label="Project filters"
+      aria-label={t("aria-label")}
     >
       {filters.map((filter) => (
         <Button
@@ -28,7 +30,7 @@ export function GridFilterButtons() {
           aria-controls={`panel-${filter.id}`}
           id={`tab-${filter.id}`}
         >
-          {filter.label}
+          {t(filter.id)}
         </Button>
       ))}
     </div>

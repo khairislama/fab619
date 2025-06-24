@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Marquee } from "../Marquee";
+import { Marquee } from "./Marquee";
 import { useTranslations } from "next-intl";
 import {
   CLIENTS_LOGOS_EDUC,
@@ -19,7 +19,7 @@ function HomeClients() {
           <div className="order-2 md:order-1">
             <Image
               src={"/images/clients-and-partners.webp"}
-              alt={"3d printer board"}
+              alt={t("background-alt")}
               width={625}
               height={399}
               className="rounded-lg"

@@ -1,7 +1,7 @@
-import { Facebook } from "@/src/components/SocialIcons/Facebook";
-import { Github } from "@/src/components/SocialIcons/Github";
-import { Instagram } from "@/src/components/SocialIcons/Instagram";
-import { LinkedIn } from "@/src/components/SocialIcons/LinkedIn";
+import { FacebookSvgIcon } from "@/src/components/icons/facebook";
+import { GithubSvgIcon } from "@/src/components/icons/github";
+import { InstagramSvgIcon } from "@/src/components/icons/instagram";
+import { LinkedinSvgIcon } from "@/src/components/icons/linkedIn";
 
 // Define allowed URL paths
 export type UrlPath =
@@ -61,13 +61,17 @@ export const SOCIAL = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/fab619",
-    icon: LinkedIn,
+    icon: LinkedinSvgIcon,
   },
-  { name: "Facebook", href: "https://www.facebook.com/fab619", icon: Facebook },
-  { name: "Github", href: "https://github.com/fab619", icon: Github },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/fab619",
+    icon: FacebookSvgIcon,
+  },
+  { name: "Github", href: "https://github.com/fab619", icon: GithubSvgIcon },
   {
     name: "Instagram",
     href: "https://www.instagram.com/fab_619",
-    icon: Instagram,
+    icon: InstagramSvgIcon,
   },
 ];

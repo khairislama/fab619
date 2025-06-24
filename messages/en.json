@@ -11,33 +11,17 @@
     "load-more": {
       "btn": "Load More",
       "aria-label": "Load more projects"
-    }
-  },
-  "Maintenance": {
-    "title": "Under construction",
-    "contact": {
-      "title": "Contact Us",
-      "description": "Please fill out the form below and we will get back to you shortly.",
-      "email": "your email address",
-      "phone": "your phone number",
-      "message": "Leave a message and we will contact you later",
-      "submit": "Send Message"
     },
-    "message": "Our team is currently updating the website to provide you with an enhanced user experience. Feel free to contact us directly for any immediate assistance or inquiries.",
-    "copyrights": "© Copyrights FAB619-On demand fabrication | All Rights Reserved",
-    "services": {
-      "1": "Digital Fabrication",
-      "2": "Custom CNC Machining",
-      "3": "Hardware Design & Prototyping",
-      "4": "Electronics & Embedded Systems",
-      "5": "Software & Machine Control Algorithms"
+    "Footer": {
+      "rights": "All rights reserved 2025 © FAB619 - On demand fabrication",
+      "tel": "tel"
     }
   },
   "home": {
     "metadata": {
-      "title": "FAB619 - Engineering & Design Office | Robotics & 3D Solutions",
-      "description": "Discover FAB619, a leading engineering and design office specializing in electronics, robotics, and 3D printing. Innovative solutions for industries and professionals.",
-      "keywords": "engineering, design office, robotics, 3D printing, electronics, prototyping, automation, industrial solutions, FAB619, innovation"
+      "title": "FAB619 - Custom Machinery, Automation & Digital Fabrication",
+      "description": "FAB619 is an engineering design office specializing in advanced custom machinery, automation, 3D printing, and IoT solutions. From concept to prototype, we deliver innovative industrial solutions.",
+      "keywords": "custom machinery, automation systems, digital fabrication, 3D printing, CNC machining, robotics, IoT solutions, hardware design, product development, engineering design office, industrial innovation, prototyping, custom manufacturing, FAB619"
     },
     "carousel": {
       "aria-label": "Featured content carousel",
@@ -77,13 +61,41 @@
     },
     "whoarewe": {
       "title": "Who <br></br>we are ?",
+      "left-alt": "Manufacturing machinery background",
+      "rt-alt": "Electronics and machinery",
+      "rb-alt": "working together and planning",
       "l-description": "We specialize <underline>in the design and development</underline> of <underline>custom machines</underline>, <underline>automation systems</underline>, and <underline>smart products</underline> that bridge the gap between innovation and industrial performance.",
       "rt-description": "Whether it's <underline>CNC custom machinery</underline>, <underline>IoT-enabled devices</underline>, <underline>PCB boards</underline>, <underline>Digital manufacturing</underline>  or <underline>workshops training programs</underline>, we deliver practical, scalable technologies that drive real-world impact and measurable results.",
       "rb-description": "Our multidisciplinary team brings together expertise in <underline>mechanical engineering</underline>, <underline>electronics</underline>, <underline>machine software</underline>, and <underline>digital fabrication</underline> to deliver end-to-end solutions—from concept and prototyping to production and integration.",
       "learn-more": "Learn More"
     },
     "services": {
-      "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>"
+      "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
+      "background-alt": "Blueprint machinery",
+      "custom-machinery": {
+        "title": "Custom Machinery",
+        "description": "Machinery development / Automation Systems / Advanced Robotics"
+      },
+      "3d-printing": {
+        "title": "3D printing & CNC machining",
+        "description": "On-Demand Manufacturing / rapid prototyping / customized production"
+      },
+      "iot-electronics": {
+        "title": "IOT & Electronics",
+        "description": "Electronic circuits /PCB Design & IOT integration / Embedded Software"
+      },
+      "hardware-engineering": {
+        "title": "Hardware Design",
+        "description": "Product design / Hardware Engineering / Prototyping / Electronic integration"
+      },
+      "machine-software": {
+        "title": "Machine Software",
+        "description": "Machine Control Algorithms, Real-time system Monitoring & Custom Software"
+      },
+      "workshops-training": {
+        "title": "Workshop & Training",
+        "description": "Technical Documentation / Hands-On Workshops / Training sessions"
+      }
     },
     "projects": {
       "title": "Our <br></br>Projects",
@@ -92,13 +104,14 @@
     },
     "clients": {
       "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
-      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
+      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware.",
+      "background-alt": "3d printer board"
     },
     "press": {
       "title": "Press",
       "subtitle": "Insights, updates, and stories — <br></br>explore our latest events, projects, and innovative solutions.",
       "explore-aria": "Explore all press content",
-      "explore": "Explore",
+      "explore": "EXPLORE OUR MEDIA",
       "machine": "Custom Machines",
       "event": "Events",
       "workshop": "Workshop"
@@ -116,11 +129,19 @@
       },
       "projects": "FOR NEW PROJECTS",
       "print": "FOR 3D PRINT SERVICES",
-      "questions": "QUESTIONS & SUPPORT"
+      "questions": "QUESTIONS & SUPPORT",
+      "rights": "All rights reserved 2025 © FAB619 - On demand fabrication",
+      "tel": "tel"
     }
   },
   "ServicesPage": {
-    "title": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
+    "metadata": {
+      "title": "Services - Custom Machinery, 3D Printing & IoT Solutions | FAB619",
+      "description": "Explore FAB619's comprehensive services, including custom machinery development, advanced 3D printing and CNC machining, IoT & electronics, hardware engineering, and machine software solutions.",
+      "keywords": "engineering services, custom machinery, 3D printing services, CNC machining services, IoT development, electronics design, hardware engineering, product prototyping, machine software, automation solutions, industrial services, technical training, FAB619"
+    },
+    "title": "Services",
+    "subtitle": "We offer a <bold>wide range</bold> of <br></br>innovative <bold>Manufacturing services</bold> <br></br>from <bold>concept</bold> to <bold>final product</bold>",
     "custom-machinery": {
       "title": "Custom Machinery",
       "subtitle": "Custom CNC Machinery & Automation for Technical Textile and Automotive Industries",
@@ -158,8 +179,27 @@
     }
   },
   "ProjectsPage": {
-    "page-name": "Projects",
-    "title": "Discover our custom-built solutions in action — from smart machines to industrial innovations."
+    "metadata": {
+      "title": "Projects - Custom Engineering & Fabrication Portfolio | FAB619",
+      "description": "Discover FAB619's portfolio of custom-built solutions, showcasing innovative projects in custom machinery, digital fabrication, IoT, and hardware design for various industries.",
+      "keywords": "engineering projects, custom fabrication, industrial solutions, robotics projects, 3D printing projects, CNC projects, IoT projects, hardware design projects, automation case studies, manufacturing portfolio, FAB619"
+    },
+    "title": "Projects",
+    "subtitle": "Discover our custom-built solutions in action — from smart machines to industrial innovations.",
+    "filters": {
+      "aria-label": "Project filters",
+      "all": "View All",
+      "custom machinery": "Custom Machinery",
+      "digital fabrication": "Digital Fabrication",
+      "iot and Electronics": "IOT & Electronics",
+      "hardware design": "Hardware Design",
+      "machine software": "Machine Software"
+    },
+    "not-found": {
+      "title": "Project Not Found",
+      "subtitle": "Sorry, we couldn't find the project you're looking for.",
+      "return": "Return to Projects"
+    }
   },
   "SingleProjectPage": {
     "heading": "Back to Projects",
@@ -167,22 +207,49 @@
     "year": "Year",
     "location": "Location",
     "category": "Category",
+    "overview": "Project Overview",
     "read-more": {
       "btn": "Read More",
       "aria-label": "Read more about this article"
     },
+    "previous": "Previous Post",
+    "next": "Next Post",
     "recommendation": "You Might Also See"
   },
   "PressPage": {
-    "page-name": "Press & News",
-    "title": "Insights, updates, and stories — explore our latest events, projects, and innovative solutions."
+    "metadata": {
+      "title": "Press & News - FAB619 Insights, Events & Innovations",
+      "description": "Stay updated with the latest news, events, and insights from FAB619. Explore articles on our innovative projects, workshops, and advancements in engineering and digital fabrication.",
+      "keywords": "press release, company news, industry events, engineering innovation, digital fabrication news, FAB619 updates, workshops, industrial solutions, media coverage, technical articles"
+    },
+    "title": "Press & News",
+    "subtitle": "Insights, updates, and stories — explore our latest events, projects, and innovative solutions.",
+    "filters": {
+      "aria-label": "Press filters",
+      "all": "View All",
+      "workshop": "Workshop",
+      "event": "Event",
+      "machine": "Machine"
+    },
+    "not-found": {
+      "title": "Press article Not Found",
+      "subtitle": "Sorry, we couldn't find the article you're looking for.",
+      "return": "Return to Press & News"
+    }
   },
   "SinglePressPage": {
     "page-name": "Press & News",
     "heading": "Back to Press",
+    "previous": "Previous Post",
+    "next": "Next Post",
     "recommendation": "You Might Also Like"
   },
   "about": {
+    "metadata": {
+      "title": "About FAB619 - Engineering Design Office & Digital Fabrication",
+      "description": "Learn about FAB619, a leading engineering design office specializing in custom machine design, digital fabrication, and innovative solutions. Discover our expertise, team, and commitment to industrial excellence.",
+      "keywords": "about us, FAB619, engineering company, design office, digital fabrication company, custom machine builders, prototyping services, industrial solutions, company profile, our team, manufacturing expertise"
+    },
     "title": "About FAB619",
     "card": {
       "title": "Who We Are & What We Do",
@@ -201,46 +268,12 @@
       "description": "We have a comprehensive range of manufacturing equipment to bring your ideas to life"
     }
   },
-  "services": {
-    "title": "Services",
-    "list": [
-      {
-        "title": "Industrial Design",
-        "description": "We turn ideas into manufacturable solutions...",
-        "icon": "Cpu"
-      },
-      {
-        "title": "Electronics Prototyping",
-        "description": "Rapid prototyping of electronic boards...",
-        "icon": "Activity"
-      },
-      {
-        "title": "Mechanical Engineering",
-        "description": "From CAD to manufacturing...",
-        "icon": "Settings"
-      },
-      {
-        "title": "Open-source Hardware",
-        "description": "We contribute to open hardware...",
-        "icon": "Share"
-      },
-      {
-        "title": "Educational Workshops",
-        "description": "Hands-on learning experiences...",
-        "icon": "GraduationCap"
-      },
-      {
-        "title": "Research & Innovation",
-        "description": "Collaboration with institutions...",
-        "icon": "FlaskConical"
-      }
-    ],
-    "clients": {
-      "title": "<bolder>Clients & Partners</bolder> Collaborating to Build the Future of Manufacturing",
-      "description": "we believe innovation thrives through collaboration. We are proud to work with forward-thinking <underline>industries</underline>, <underline>institutions</underline>, and <underline>organizations</underline> that share our passion for cutting-edge manufacturing solutions, Machinery and open source hardware."
-    }
-  },
   "contact": {
+    "metadata": {
+      "title": "Contact FAB619 - Get a Quote & Discuss Your Project",
+      "description": "Get in touch with FAB619 for engineering and fabrication services. Contact us for custom machinery, 3D printing, IoT solutions, or general inquiries. Find our addresses and FAQs.",
+      "keywords": "contact us, FAB619, request a quote, engineering inquiry, custom manufacturing consultation, 3D printing services contact, robotics support, industrial solutions contact, FAQ, Tunisie engineering"
+    },
     "title": "Get in Touch",
     "contact-us": "contact us",
     "address": "address",

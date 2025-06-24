@@ -7,7 +7,7 @@ export default function PageHeader({ pageName }: { pageName: string }) {
 
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-center justify-between mb-10">
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
             {translation("title")}
@@ -15,11 +15,6 @@ export default function PageHeader({ pageName }: { pageName: string }) {
         </div>
         <ContactInfo />
       </div>
-      {/* <p className="text-xl text-muted-foreground my-6">
-        {translation("description")}
-      </p> */}
-
-      <div className="h-1 w-full bg-foreground my-6 scrollbar-hide"></div>
     </>
   );
 }

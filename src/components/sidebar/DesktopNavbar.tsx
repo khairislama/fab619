@@ -17,7 +17,7 @@ function DesktopNavbar() {
         <div className="w-full text-lg text-center">
           <NavLanguage />
         </div>
-        <div className="flex space-x-4 my-8">
+        <div className="flex space-x-3 my-8">
           {SOCIAL.map((item) => (
             <Link
               key={item.name}

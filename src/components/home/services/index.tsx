@@ -15,7 +15,7 @@ function HomeServices() {
           <div className="md:w-full h-full absolute right-0 hidden md:block">
             <Image
               src="/images/services/services-bg.webp"
-              alt="Blueprint background"
+              alt={t("background-alt")}
               width={1009}
               height={247}
               quality={50}
@@ -43,8 +43,8 @@ function HomeServices() {
           <ServiceCard
             id="custom-machinery"
             icon={"/icons/settings.svg"}
-            title="Custom Machinery"
-            description="Machinery development / Automation Systems / Advanced Robotics"
+            title={t("custom-machinery.title")}
+            description={t("custom-machinery.description")}
             backgroundImage="/images/services/custom-machine.webp"
           />
 
@@ -52,8 +52,8 @@ function HomeServices() {
           <ServiceCard
             id="3d-printing"
             icon={"/icons/printer3d.svg"}
-            title="3D printing & CNC machining"
-            description="On-Demand Manufacturing / rapid prototyping / customized production"
+            title={t("3d-printing.title")}
+            description={t("3d-printing.description")}
             backgroundImage="/images/services/printing.webp"
           />
 
@@ -61,8 +61,8 @@ function HomeServices() {
           <ServiceCard
             id="iot-electronics"
             icon={"/icons/electronics.svg"}
-            title="IOT & Electronics"
-            description="Electronic circuits /PCB Design & IOT integration / Embedded Software"
+            title={t("iot-electronics.title")}
+            description={t("iot-electronics.description")}
             backgroundImage="/images/services/electronics.webp"
           />
 
@@ -70,8 +70,8 @@ function HomeServices() {
           <ServiceCard
             id="hardware-engineering"
             icon={"/icons/design.svg"}
-            title="Hardware design"
-            description="Product design / Hardware Engineering / Prototyping / Electronic integration"
+            title={t("hardware-engineering.title")}
+            description={t("hardware-engineering.description")}
             backgroundImage="/images/services/design.webp"
           />
 
@@ -79,8 +79,8 @@ function HomeServices() {
           <ServiceCard
             id="machine-software"
             icon={"/icons/software.svg"}
-            title="Machine Software"
-            description="Machine Control Algorithms, Real-time system Monitoring & Custom Software"
+            title={t("machine-software.title")}
+            description={t("machine-software.description")}
             backgroundImage="/images/services/machine-software.webp"
           />
 
@@ -88,8 +88,8 @@ function HomeServices() {
           <ServiceCard
             id="workshops-training"
             icon={"/icons/workshop.svg"}
-            title="Workshop & Training"
-            description="Technical Documentation / Hands-On Workshops / Training sessions"
+            title={t("workshops-training.title")}
+            description={t("workshops-training.description")}
             backgroundImage="/images/services/workshop.webp"
           />
         </div>
