@@ -83,7 +83,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${poppins.variable} ${ibm_plex_mono.variable} bg-background font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <div className="flex h-screen overflow-hidden font-poppins">
+          <div className="flex min-h-[100dvh] overflow-hidden font-poppins">
             {/* Sidebar/Navbar - responsive positioning */}
             <div className="fixed top-0 left-0 right-0 z-50 h-16 xl:relative xl:h-full xl:w-60 xl:flex-shrink-0">
               <AppSidebar />
