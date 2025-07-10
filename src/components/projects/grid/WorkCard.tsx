@@ -7,7 +7,7 @@ import { Project } from "@/sanity.types";
 import { urlFor } from "@/src/sanity/lib/image";
 import { Eye } from "lucide-react";
 
-export function WorkCard({ _id, slug, title, image }: Partial<Project>) {
+export function WorkCard({ _id, slug, title, images }: Partial<Project>) {
   return (
     <Link
       href={{
@@ -26,7 +26,7 @@ export function WorkCard({ _id, slug, title, image }: Partial<Project>) {
       >
         <div className="relative h-[80%] w-full overflow-hidden bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
           <Image
-            src={urlFor(image!).url()}
+            src={urlFor(images![0]).url()}
             alt={`${title} project thumbnail`}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"

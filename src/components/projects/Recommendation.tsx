@@ -72,7 +72,7 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
             _id={project._id}
             slug={project.slug}
             title={project.title}
-            image={project.image}
+            images={project.images}
           />
         ))}
       </div>
