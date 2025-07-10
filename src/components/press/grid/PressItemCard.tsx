@@ -38,7 +38,7 @@ export function PressItemCard({
             quality={80}
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
-          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
             <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>
