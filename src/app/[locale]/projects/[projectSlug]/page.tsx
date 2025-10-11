@@ -154,7 +154,7 @@ export default async function ProjectPage({ params }: Props) {
             {project.media && (
               <Button
                 variant="outline"
-                className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-2xl transition-colors"
+                className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-none transition-colors"
                 aria-label={t("read-more.aria-label")}
               >
                 <Link

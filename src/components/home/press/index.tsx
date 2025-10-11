@@ -17,7 +17,7 @@ function HomePress() {
       </div>
       <Button
         size={"lg"}
-        className="bg-gray-900 text-white px-20 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
+        className="bg-gray-900 text-white px-20 rounded-none hover:bg-gray-800 transition-colors tracking-wider"
         aria-label={t("explore-aria")}
       >
         <Link href="/press">{t("explore")}</Link>

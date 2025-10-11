@@ -10,6 +10,7 @@ import HomeClients from "@/src/components/home/home-clients";
 import ContactSection from "@/src/components/home/contact/home-contact";
 import ServiceFooter from "@/src/components/services/service-footer";
 import HomePress from "@/src/components/home/press";
+import Footer from "@/src/components/Footer";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -75,6 +76,7 @@ export default function HomePage({ params }: Props) {
       <HomePress />
       <ContactSection />
       <ServiceFooter />
+      <Footer />
     </main>
   );
 }

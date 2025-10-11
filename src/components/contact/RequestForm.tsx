@@ -95,7 +95,7 @@ export default function RequestForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full capitalize"
+          className="w-full capitalize rounded-none"
         />
       </div>
 
@@ -110,7 +110,7 @@ export default function RequestForm() {
           value={formData.company}
           onChange={handleChange}
           required
-          className="w-full capitalize"
+          className="w-full capitalize rounded-none"
         />
       </div>
 
@@ -125,7 +125,7 @@ export default function RequestForm() {
           placeholder={translation("email") + " *"}
           value={formData.email}
           onChange={handleChange}
-          className="w-full capitalize"
+          className="w-full capitalize rounded-none"
         />
       </div>
 
@@ -140,7 +140,7 @@ export default function RequestForm() {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full capitalize"
+          className="w-full capitalize rounded-none"
         />
       </div>
 
@@ -155,13 +155,13 @@ export default function RequestForm() {
           value={formData.request}
           onChange={handleChange}
           required
-          className="w-full min-h-[120px] capitalize"
+          className="w-full min-h-[120px] capitalize rounded-none"
         />
       </div>
 
       <Button
         type="submit"
-        className="w-full py-3 uppercase font-bold"
+        className="w-full py-3 uppercase font-bold rounded-none"
         disabled={isLoading || sent}
       >
         {isLoading

@@ -70,18 +70,6 @@ export default function ContactSection() {
           </div>
         </div>
         <HomeContactSocial />
-        <div className="flex items-center justify-between mt-20">
-          <p>{t("rights")}</p>
-          <p>
-            <Link href="mailto:contact@fab619.tn" className="hover:underline">
-              contact@fab619.tn
-            </Link>{" "}
-            |{" "}
-            <Link href="tef:+21654544731" className="hover:underline">
-              {t("tel")}. 54 544 731
-            </Link>
-          </p>
-        </div>
       </div>
     </section>
   );

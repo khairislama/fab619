@@ -145,7 +145,7 @@ export function CarouselSlideItem({
             </AnimatedTitle>
             <AnimatedParagraph
               id={`slide-${slide.id}-description`}
-              className="text-sm sm:text-base md:text-lg mb-6 max-w-2xl xl:max-w-3xl text-justify"
+              className="text-sm sm:text-base md:text-lg mb-6 max-w-2xl 2xl:max-w-3xl text-justify"
               aria-labelledby={`slide-${slide.id}-title`}
             >
               {t(`${slide.id}.description`)}
@@ -154,7 +154,7 @@ export function CarouselSlideItem({
               asChild
               variant="default"
               size={"lg"}
-              className="bg-white/20 text-white hover:bg-white hover:text-black transition-colors duration-300 ease-in-out mb-10 group"
+              className="bg-white/20 text-white hover:bg-white hover:text-black transition-colors duration-300 ease-in-out mb-10 group rounded-none"
             >
               <Link
                 href={{

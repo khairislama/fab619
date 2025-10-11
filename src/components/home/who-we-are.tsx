@@ -42,13 +42,13 @@ function WhoWeAre() {
                   ),
                 })}
               </AnimatedParagraph>
-              <Link
+              {/* <Link
                 href="/about"
                 className="inline-flex items-center mt-8 text-xl font-medium text-gray-800 group animate-bounce"
               >
                 {t("learn-more")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

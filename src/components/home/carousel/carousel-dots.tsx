@@ -18,7 +18,7 @@ export function CarouselDots() {
         <button
           key={index}
           className={cn(
-            "h-3.5 w-3.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black",
+            "h-2.5 w-2.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black",
             current === index ? "bg-white" : "bg-white/50 hover:bg-white/75"
           )}
           onClick={() => scrollTo(index)}

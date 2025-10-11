@@ -129,9 +129,7 @@
       },
       "projects": "POUR LES NOUVEAUX PROJETS",
       "print": "POUR LES SERVICES D'IMPRESSION 3D",
-      "questions": "QUESTIONS & SUPPORT",
-      "rights": "Tous droits réservés 2025 © FAB619 - Fabrication à la demande",
-      "tel": "tél"
+      "questions": "QUESTIONS & SUPPORT"
     }
   },
   "ServicesPage": {
@@ -145,7 +143,7 @@
     "custom-machinery": {
       "title": "Machines personnalisées",
       "subtitle": "Machines CNC personnalisées et automatisation pour les industries du textile technique et de l'automobile",
-      "description": "Nous développons des <focus>machines à commande numérique (CNC)</focus> et des <focus>systèmes d'automatisation</focus> avancés conçus pour répondre aux exigences complexes des <focus>secteurs du textile technique</focus> et de l'<focus>automobile</focus>. Nos solutions intègrent la robotique avancée, la mécanique de précision et des systèmes de contrôle intelligents pour garantir des performances, une fiabilité et une adaptabilité élevées. Du concept et du prototypage aux systèmes entièrement opérationnels, nous <focus>livrons des machines optimisées pour la productivité, la qualité et l'évolutivité industrielle.</focus>"
+      "description": "Nous développons des <focus>machines à commande numérique (CNC)</focus> et des <focus>systèmes d'automatisation</focus> avancés conçus pour répondre aux exigences complexes des <focus>secteurs du textile technique</focus> et de l’<focus>automobile</focus>. Nos solutions intègrent la robotique avancée, la mécanique de précision et des systèmes de contrôle intelligents pour garantir des performances, une fiabilité et une adaptabilité élevées. Du concept et du prototypage aux systèmes entièrement opérationnels, nous <focus>livrons des machines optimisées pour la productivité, la qualité et l'évolutivité industrielle.</focus>"
     },
     "3d-printing": {
       "title": "Impression 3D & Usinage CNC",
@@ -175,7 +173,9 @@
     "cta": {
       "title": "Prêt à démarrer votre projet ?",
       "subtitle": "Contactez-nous pour discuter de vos besoins en fabrication et en ingénierie",
-      "button": "Nous contacter"
+      "button": "Nous contacter",
+      "rights": "Tous droits réservés 2025 © FAB619 - Fabrication à la demande",
+      "tel": "tél"
     }
   },
   "ProjectsPage": {

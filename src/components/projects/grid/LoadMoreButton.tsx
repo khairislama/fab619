@@ -14,7 +14,7 @@ export function LoadMoreButton() {
     <div className="flex justify-center mt-12">
       <Button
         variant="outline"
-        className="px-8 py-2 border border-black hover:bg-black hover:text-white transition-colors"
+        className="px-8 py-2 border border-black hover:bg-black hover:text-white transition-colors rounded-none"
         onClick={handleLoadMore}
         aria-label={t("aria-label")}
       >

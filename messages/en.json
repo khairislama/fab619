@@ -129,9 +129,7 @@
       },
       "projects": "FOR NEW PROJECTS",
       "print": "FOR 3D PRINT SERVICES",
-      "questions": "QUESTIONS & SUPPORT",
-      "rights": "All rights reserved 2025 © FAB619 - On demand fabrication",
-      "tel": "tel"
+      "questions": "QUESTIONS & SUPPORT"
     }
   },
   "ServicesPage": {
@@ -175,7 +173,9 @@
     "cta": {
       "title": "Ready to Start Your Project?",
       "subtitle": "Contact us to discuss your manufacturing and engineering needs",
-      "button": "Get in Touch"
+      "button": "Get in Touch",
+      "rights": "All rights reserved 2025 © FAB619 - On demand fabrication",
+      "tel": "tel"
     }
   },
   "ProjectsPage": {
