@@ -11,12 +11,13 @@ import ServiceFooter from "@/src/components/services/service-footer";
 import HomePress from "@/src/components/home/press";
 import Footer from "@/src/components/Footer";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const { locale } = params;
+// Make params a Promise type for TS
+type Props = {
+  params: Promise<{ locale: string }> | { locale: string };
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
 
   const t = await getTranslations({ locale, namespace: "home.metadata" });
 
@@ -53,8 +54,8 @@ export async function generateMetadata({
   };
 }
 
-export default function HomePage({ params }: { params: { locale: string } }) {
-  const { locale } = params;
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
 
   // Enable static rendering
   setRequestLocale(locale);

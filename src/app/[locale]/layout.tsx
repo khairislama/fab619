@@ -15,7 +15,7 @@ import { AppSidebar } from "@/src/components/sidebar";
 
 type Props = {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 const poppins = Poppins({
@@ -35,7 +35,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(props: Omit<Props, "children">) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
 
   const t = await getTranslations({ locale, namespace: "home.metadata" });
 
@@ -47,7 +47,7 @@ export async function generateMetadata(props: Omit<Props, "children">) {
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params;
+  const { locale } = params;
 
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
