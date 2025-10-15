@@ -11,14 +11,12 @@ import ServiceFooter from "@/src/components/services/service-footer";
 import HomePress from "@/src/components/home/press";
 import Footer from "@/src/components/Footer";
 
-// Make params a Promise type for TS
 type Props = {
-  params: Promise<{ locale: string }> | { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-
   const t = await getTranslations({ locale, namespace: "home.metadata" });
 
   return {
@@ -48,16 +46,13 @@ export async function generateMetadata({ params }: Props) {
       images: ["https://fab619.tn/images/og-home.webp"],
     },
     metadataBase: new URL("https://fab619.tn"),
-    alternates: {
-      canonical: "/",
-    },
+    alternates: { canonical: "/" },
   };
 }
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
 
-  // Enable static rendering
   setRequestLocale(locale);
 
   return (
