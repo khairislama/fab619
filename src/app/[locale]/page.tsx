@@ -1,5 +1,4 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { use } from "react";
 import { CarouselProvider } from "@/src/components/home/carousel/carousel-provider";
 import { CarouselWrapper } from "@/src/components/home/carousel/carousel-wrapper";
 import { SlidesData } from "@/lib/carousel";
@@ -12,12 +11,12 @@ import ServiceFooter from "@/src/components/services/service-footer";
 import HomePress from "@/src/components/home/press";
 import Footer from "@/src/components/Footer";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata(props: Omit<Props, "children">) {
-  const { locale } = await props.params;
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = params;
 
   const t = await getTranslations({ locale, namespace: "home.metadata" });
 
@@ -54,8 +53,8 @@ export async function generateMetadata(props: Omit<Props, "children">) {
   };
 }
 
-export default function HomePage({ params }: Props) {
-  const { locale } = use(params);
+export default function HomePage({ params }: { params: { locale: string } }) {
+  const { locale } = params;
 
   // Enable static rendering
   setRequestLocale(locale);

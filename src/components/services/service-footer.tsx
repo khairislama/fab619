@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link as NavLink } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 function ServiceFooter() {
   const t = useTranslations("ServicesPage.cta");
@@ -12,7 +11,7 @@ function ServiceFooter() {
         <p className="text-gray-600 mb-6">{t("subtitle")}</p>
         <Button
           size={"lg"}
-          className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors rounded-none"
+          className="bg-gray-900 text-white px-8 py-3 font-semibold hover:bg-gray-800 transition-colors rounded-none"
         >
           <NavLink href="/contact" className="w-full">
             {t("button")}

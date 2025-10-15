@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import AnimatedTitle from "../animated-title";
 import AnimatedParagraph from "../animated-paragraph";
-import { Link } from "@/src/i18n/navigation";
-import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 function WhoWeAre() {
