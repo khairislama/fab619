@@ -29,24 +29,17 @@ function WhoWeAre() {
             <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12 bg-white/70">
               <AnimatedTitle
                 delay={0.1}
-                className="font-extrabold text-gray-900 leading-tight uppercase text-4xl"
+                className="font-extrabold text-gray-900 leading-tight uppercase"
               >
                 {t.rich("title", { br: () => <br></br> })}
               </AnimatedTitle>
-              <AnimatedParagraph className="text-gray-900 text-lg font-ibm_plex_mono">
+              <AnimatedParagraph className="text-gray-900 font-ibm_plex_mono 2k:text-lg">
                 {t.rich("l-description", {
                   underline: (chunk) => (
                     <span className="underline font-bold">{chunk}</span>
                   ),
                 })}
               </AnimatedParagraph>
-              {/* <Link
-                href="/about"
-                className="inline-flex items-center mt-8 text-xl font-medium text-gray-800 group animate-bounce"
-              >
-                {t("learn-more")}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link> */}
             </div>
           </div>
 
@@ -67,7 +60,7 @@ function WhoWeAre() {
               <div className="relative z-10 flex h-full sm:items-end">
                 <AnimatedParagraph
                   delay={0.4}
-                  className="sm:text-lg text-white font-ibm_plex_mono"
+                  className="2k:text-lg text-white font-ibm_plex_mono"
                 >
                   {t.rich("rt-description", {
                     underline: (chunk) => (
@@ -93,7 +86,7 @@ function WhoWeAre() {
               <div className="relative z-10 flex h-full sm:items-end">
                 <AnimatedParagraph
                   delay={0.6}
-                  className="text-gray-900 sm:text-lg font-ibm_plex_mono"
+                  className="text-gray-900 2k:text-lg font-ibm_plex_mono"
                 >
                   {t.rich("rb-description", {
                     underline: (chunk) => (

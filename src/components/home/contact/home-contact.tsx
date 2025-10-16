@@ -37,7 +37,7 @@ export default function ContactSection() {
                 <p className="underline uppercase text-sm">{t("projects")}</p>
                 <Link
                   href="mailto:alilakais@fab619.tn"
-                  className="text-xl hover:underline"
+                  className="text-lg 2k:text-xl hover:underline"
                 >
                   alilakais@fab619.tn
                 </Link>
@@ -49,7 +49,7 @@ export default function ContactSection() {
                 <p className="underline uppercase text-sm">{t("print")}</p>
                 <Link
                   href="mailto:3dprint@fab619.tn"
-                  className="text-xl hover:underline"
+                  className="text-lg 2k:text-xl hover:underline"
                 >
                   3dprint@fab619.tn
                 </Link>
@@ -61,7 +61,7 @@ export default function ContactSection() {
                 <p className="underline uppercase text-sm">{t("questions")}</p>
                 <Link
                   href="mailto:contact@fab619.tn"
-                  className="text-xl hover:underline"
+                  className="text-lg 2k:text-xl hover:underline"
                 >
                   contact@fab619.tn
                 </Link>

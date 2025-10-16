@@ -71,6 +71,12 @@ export const projectType = defineType({
       description: "The slug to read more about the project",
     }),
     defineField({
+      name: "youtube",
+      title: "Youtube URL",
+      type: "string",
+      description: "The youtube URL for video to learn more about the project",
+    }),
+    defineField({
       name: "year",
       title: "Year",
       type: "string",

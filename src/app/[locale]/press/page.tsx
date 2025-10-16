@@ -39,7 +39,7 @@ export default function PressPage({ params }: Props) {
   return (
     <main className="container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] py-12">
       <PageHeader pageName="PressPage" />
-      <div className="relative w-full overflow-hidden mt-10">
+      <div className="relative w-full overflow-hidden mt-4 sm:mt-10">
         <div className="w-full">
           <Image
             src="/images/press-header.webp"

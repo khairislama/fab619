@@ -9,7 +9,8 @@ import Recommendation from "@/src/components/projects/Recommendation";
 import SingleProjectHeading from "@/src/components/projects/single/single-project-heading";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/src/i18n/navigation";
+import { Link as NavLink } from "@/src/i18n/navigation";
+import Link from "next/link";
 import Footer from "@/src/components/Footer";
 import {
   Carousel,
@@ -66,7 +67,7 @@ export default async function ProjectPage({ params }: Props) {
         <SingleProjectHeading />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {project.images.length === 1 ? (
+          {project.images?.length === 1 ? (
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
               <Image
                 src={urlFor(project.images[0]).url()}
@@ -81,7 +82,7 @@ export default async function ProjectPage({ params }: Props) {
           ) : (
             <Carousel>
               <CarouselContent>
-                {project.images.map((img, i) => (
+                {project.images?.map((img, i) => (
                   <CarouselItem
                     className="relative aspect-[4/3] overflow-hidden rounded-lg w-full"
                     key={i}
@@ -157,13 +158,24 @@ export default async function ProjectPage({ params }: Props) {
                 className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-none transition-colors"
                 aria-label={t("read-more.aria-label")}
               >
-                <Link
+                <NavLink
                   href={{
                     pathname: "/press/[pressSlug]",
                     params: { pressSlug: String(project.media) },
                   }}
                 >
                   {t("read-more.btn")}
+                </NavLink>
+              </Button>
+            )}
+            {project.youtube && (
+              <Button
+                variant="outline"
+                className="px-8 py-2 border bg-[#bf2626] text-white hover:bg-[#90030c] hover:text-white hover:bg-[#90030c]/60 rounded-none transition-colors"
+                aria-label={t("read-more.aria-label")}
+              >
+                <Link href={project.youtube} target="_blank">
+                  Youtube
                 </Link>
               </Button>
             )}

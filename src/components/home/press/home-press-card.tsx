@@ -42,11 +42,13 @@ export default function HomePressCard({ item }: PressCardProps) {
         aria-label={`View details about ${item.title}`}
         className="group"
       >
-        <h2 className="text-xl font-bold mt-4 mb-2 group-hover:underline">
+        <h2 className="text-lg 2k:text-xl font-bold mt-2 2k:mt-4 mb-2 group-hover:underline line-clamp-2">
           {item.title}
         </h2>
 
-        <p className="text-gray-700 mb-6 line-clamp-3">{item.description}</p>
+        <p className="text-gray-700 mb-4 2k:mb-6 line-clamp-3">
+          {item.description}
+        </p>
 
         <div className="relative mt-auto group">
           <Image

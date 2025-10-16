@@ -16,7 +16,7 @@ function HomeProjects() {
       <div className="container mx-auto py-24 lg:pt-12 lg:pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
-            <AnimatedTitle className="text-5xl font-extrabold tracking-tight text-gray-900 mb-4 uppercase">
+            <AnimatedTitle className="text-4xl 2k:text-5xl font-extrabold tracking-tight text-gray-900 mb-4 uppercase">
               {t.rich("title", { br: () => <br></br> })}
             </AnimatedTitle>
             <AnimatedParagraph className="text-gray-800 mb-6 font-ibm_plex_mono">
