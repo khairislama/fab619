@@ -13,7 +13,7 @@ function HomeProjectCard({
   index: number;
 }) {
   // Generate the image URL using Sanity's image URL builder
-  const imageUrl = urlFor(project.image!).width(800).url();
+  const imageUrl = urlFor(project.images![0]).width(800).url();
   return (
     <AnimatedCard index={index} className="group relative">
       <Link
@@ -22,16 +22,16 @@ function HomeProjectCard({
           params: { projectSlug: String(project.slug) },
         }}
       >
-        <div className="relative h-64 w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
+        <div className="relative h-64 w-full overflow-hidden bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
           <Image
             src={imageUrl}
-            alt={project.image?.alt || project.title!}
+            alt={project.images![0].alt || project.title!}
             fill
             quality={80}
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
             className="object-cover brightness-75"
           />
-          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
             <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>

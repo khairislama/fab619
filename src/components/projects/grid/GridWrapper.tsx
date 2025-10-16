@@ -34,7 +34,7 @@ export function GridWrapper() {
           _id={work._id}
           slug={work.slug}
           title={work.title}
-          image={work.image}
+          images={work.images}
         />
       ))}
     </div>

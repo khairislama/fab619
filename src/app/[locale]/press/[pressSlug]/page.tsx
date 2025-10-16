@@ -82,13 +82,13 @@ export default async function SinglePressPage({ params }: Props) {
         </Link>
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase">
+            <h1 className="text-3xl xl:text-4xl 2k:text-5xl font-bold mb-4 uppercase">
               {t("page-name")}
             </h1>
           </div>
           <ContactInfo />
         </div>
-        <div className="relative w-full overflow-hidden mt-10">
+        <div className="relative w-full overflow-hidden mt-4 sm:mt-10">
           <div className="w-full">
             <Image
               src={urlFor(item.mainImage!).url()}
@@ -104,7 +104,7 @@ export default async function SinglePressPage({ params }: Props) {
           <div className="absolute inset-0 flex items-center bg-white/60">
             <div className="container px-4 md:px-6 lg:px-8">
               <div className="max-w-lg md:max-w-2xl">
-                <h2 className="text-sm sm:text-lg md:text-xl xl:text-3xl font-medium">
+                <h2 className="text-sm sm:text-lg md:text-xl xl:text-3xl font-semibold">
                   {item.title}
                 </h2>
               </div>

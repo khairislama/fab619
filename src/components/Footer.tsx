@@ -7,7 +7,7 @@ function Footer({ className }: { className?: string }) {
   return (
     <footer
       className={cn(
-        "container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] pt-12",
+        "container 2k:max-w-[1750px] 2.5k:max-w-[1900px] 4k:max-w-[2300px] pt-12 mb-8",
         className
       )}
     >

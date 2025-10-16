@@ -9,8 +9,16 @@ import Recommendation from "@/src/components/projects/Recommendation";
 import SingleProjectHeading from "@/src/components/projects/single/single-project-heading";
 import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/src/i18n/navigation";
+import { Link as NavLink } from "@/src/i18n/navigation";
+import Link from "next/link";
 import Footer from "@/src/components/Footer";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type Props = {
   params: Promise<{
@@ -36,7 +44,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: project.title,
       description: project.description,
-      images: [{ url: urlFor(project.image!).url(), width: 800, height: 600 }],
+      images: [
+        { url: urlFor(project.images![0]).url(), width: 800, height: 600 },
+      ],
     },
   };
 }
@@ -57,17 +67,42 @@ export default async function ProjectPage({ params }: Props) {
         <SingleProjectHeading />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src={urlFor(project.image!).url()}
-              alt={`${project.title} project thumbnail`}
-              fill
-              className="object-cover"
-              priority
-              quality={80}
-              sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
-            />
-          </div>
+          {project.images?.length === 1 ? (
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src={urlFor(project.images[0]).url()}
+                alt={project.images[0].alt || ""}
+                fill
+                className="object-cover"
+                priority
+                quality={80}
+                sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+              />
+            </div>
+          ) : (
+            <Carousel>
+              <CarouselContent>
+                {project.images?.map((img, i) => (
+                  <CarouselItem
+                    className="relative aspect-[4/3] overflow-hidden rounded-lg w-full"
+                    key={i}
+                  >
+                    <Image
+                      src={urlFor(img).url()}
+                      alt={img.alt || ""}
+                      fill
+                      className="object-cover"
+                      priority
+                      quality={80}
+                      sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="opacity-0 md:opacity-100 translate-x-14" />
+              <CarouselNext className="opacity-0 md:opacity-100 -translate-x-14" />
+            </Carousel>
+          )}
 
           <div>
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
@@ -120,16 +155,27 @@ export default async function ProjectPage({ params }: Props) {
             {project.media && (
               <Button
                 variant="outline"
-                className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-2xl transition-colors"
+                className="px-8 py-2 border bg-black text-white hover:bg-black hover:text-white hover:bg-black/60 rounded-none transition-colors"
                 aria-label={t("read-more.aria-label")}
               >
-                <Link
+                <NavLink
                   href={{
                     pathname: "/press/[pressSlug]",
                     params: { pressSlug: String(project.media) },
                   }}
                 >
                   {t("read-more.btn")}
+                </NavLink>
+              </Button>
+            )}
+            {project.youtube && (
+              <Button
+                variant="outline"
+                className="px-8 py-2 border bg-[#bf2626] text-white hover:bg-[#90030c] hover:text-white hover:bg-[#90030c]/60 rounded-none transition-colors"
+                aria-label={t("read-more.aria-label")}
+              >
+                <Link href={project.youtube} target="_blank">
+                  Youtube
                 </Link>
               </Button>
             )}

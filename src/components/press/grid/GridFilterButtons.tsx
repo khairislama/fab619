@@ -19,7 +19,7 @@ export function GridFilterButtons() {
         <Button
           key={filter.id}
           variant="ghost"
-          className={`px-6 py-2 text-sm font-medium transition-all rounded-2xl ${
+          className={`px-6 py-2 text-sm font-medium transition-all rounded-none ${
             activeFilter === filter.id
               ? "border border-black"
               : "bg-black text-white hover:bg-black/70 hover:text-white"

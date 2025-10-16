@@ -19,7 +19,7 @@ export default function MenuBtn({ item, setIsOpen }: Readonly<Props>) {
         pathname: "/",
         hash: item.url,
       }}
-      className="text-2xl capitalize transition-all duration-300 ease-in-out sm:hover:text-card-foreground/60"
+      className="text-xl 2xl:text-2xl capitalize transition-all duration-300 ease-in-out sm:hover:text-card-foreground/60"
       onClick={() => {
         if (setIsOpen) setIsOpen(false);
       }}

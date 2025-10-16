@@ -23,22 +23,18 @@ export const projectType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "image",
-      title: "Image",
-      type: "image",
-      description: "Image for the project",
-      options: {
-        hotspot: true,
-      },
-      fields: [
+      name: "images",
+      title: "Images",
+      type: "array",
+      of: [
         {
-          name: "alt",
-          type: "string",
-          title: "Alt Text",
-          description: "Alternative text for screen readers and SEO",
+          type: "image",
+          options: { hotspot: true },
+          fields: [{ name: "alt", type: "string", title: "Alt Text" }],
         },
       ],
-      validation: (rule) => rule.required(),
+      validation: (rule) =>
+        rule.required().min(1).error("At least one image is required."),
     }),
     defineField({
       name: "tag",
@@ -75,6 +71,12 @@ export const projectType = defineType({
       description: "The slug to read more about the project",
     }),
     defineField({
+      name: "youtube",
+      title: "Youtube URL",
+      type: "string",
+      description: "The youtube URL for video to learn more about the project",
+    }),
+    defineField({
       name: "year",
       title: "Year",
       type: "string",
@@ -98,7 +100,7 @@ export const projectType = defineType({
   preview: {
     select: {
       title: "title",
-      media: "image",
+      media: "images.0",
     },
   },
 });

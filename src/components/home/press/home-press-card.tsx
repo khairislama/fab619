@@ -42,11 +42,13 @@ export default function HomePressCard({ item }: PressCardProps) {
         aria-label={`View details about ${item.title}`}
         className="group"
       >
-        <h2 className="text-xl font-bold mt-4 mb-2 group-hover:underline">
+        <h2 className="text-lg 2k:text-xl font-bold mt-2 2k:mt-4 mb-2 group-hover:underline line-clamp-2">
           {item.title}
         </h2>
 
-        <p className="text-gray-700 mb-6 line-clamp-3">{item.description}</p>
+        <p className="text-gray-700 mb-4 2k:mb-6 line-clamp-3">
+          {item.description}
+        </p>
 
         <div className="relative mt-auto group">
           <Image
@@ -56,7 +58,7 @@ export default function HomePressCard({ item }: PressCardProps) {
             height={300}
             className="w-full h-60 object-cover group-hover:brightness-50 transition-all duration-200 ease-in-out"
           />
-          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
             <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>

@@ -6,7 +6,7 @@ function ContactInfo() {
   const translation = useTranslations("contact");
 
   return (
-    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 text-sm">
+    <div className="hidden lg:flex flex-row items-start lg:items-center gap-4 text-sm">
       {/* Phone Contact */}
       <div className="flex items-center space-x-2">
         <Phone className="h-8 w-8 flex-shrink-0" />

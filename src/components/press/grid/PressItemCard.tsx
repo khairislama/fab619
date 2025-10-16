@@ -16,8 +16,8 @@ export function PressItemCard({
   return (
     <Link
       href={{
-        pathname: "/projects/[projectSlug]",
-        params: { projectSlug: String(slug) },
+        pathname: "/press/[pressSlug]",
+        params: { pressSlug: String(slug) },
       }}
     >
       <motion.div
@@ -25,9 +25,9 @@ export function PressItemCard({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         layout
-        className="group relative overflow-hidden bg-gray-50 aspect-[4/3] cursor-pointer"
+        className="group relative bg-gray-50 aspect-[4/3] cursor-pointer"
         role="article"
-        aria-labelledby={`work-title-${_id}`}
+        aria-labelledby={`press_item-${_id}`}
       >
         <div className="relative h-[80%] w-full overflow-hidden rounded-lg bg-gray-200 group-hover:brightness-50 transition-all duration-200 ease-in-out">
           <Image
@@ -38,7 +38,7 @@ export function PressItemCard({
             quality={80}
             sizes="100vw, (max-width: 1200px) 50vw,(max-width: 768px) 30vw"
           />
-          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white rounded-xl px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
+          <div className="absolute hidden group-hover:block right-[40%] top-[40%] bg-white px-4 py-2 shadow-md transition-all duration-300 ease-in-out delay-300">
             <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>

@@ -39,7 +39,7 @@ export default async function PressRecommendation({ slug }: { slug: Slug }) {
             pathname: "/press/[pressSlug]",
             params: { pressSlug: String(prevItem.slug) },
           }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-2 max-w-sm"
         >
           <div className="flex w-full justify-start gap-2">
             <ArrowLeft className="h-6 w-6" />
@@ -52,7 +52,7 @@ export default async function PressRecommendation({ slug }: { slug: Slug }) {
             pathname: "/press/[pressSlug]",
             params: { pressSlug: String(nextItem.slug) },
           }}
-          className="flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-2 max-w-sm"
         >
           <div className="flex w-full justify-end gap-2">
             <span className="font-semibold">{t("next")}</span>

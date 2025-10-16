@@ -36,7 +36,7 @@ export default function FaqSection() {
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
-              <AccordionTrigger className="text-lg font-bold">
+              <AccordionTrigger className="text-sm md:text-lg font-bold text-start">
                 {item.question}
               </AccordionTrigger>
               <AccordionContent>

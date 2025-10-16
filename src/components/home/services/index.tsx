@@ -10,8 +10,8 @@ function HomeServices() {
       id="services"
       className="relative snap-center min-h-screen flex items-center justify-center"
     >
-      <div className="container mx-auto py-24 lg:py-12">
-        <div className="relative w-full h-[150px] overflow-hidden bg-card">
+      <div className="container mx-auto py-24 lg:py-8">
+        <div className="relative w-full h-[130px] 2xl:h-[150px] overflow-hidden bg-card">
           <div className="md:w-full h-full absolute right-0 hidden md:block">
             <Image
               src="/images/services/services-bg.webp"
