@@ -1,6 +1,8 @@
 import HomePressCard from "./home-press-card";
 import { getPressItems } from "@/src/sanity/lib/press/getPressItems";
 
+export const revalidate = 0;
+
 export default async function HomePressGrid() {
   const pressItems = await getPressItems(3);
 
