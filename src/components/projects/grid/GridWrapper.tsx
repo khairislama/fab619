@@ -11,7 +11,7 @@ export function GridWrapper() {
   // Loading state
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2k:grid-cols-4 gap-6">
         {Array.from({ length: 8 }).map((_, index) => (
           <div key={index} className="aspect-[4/3]">
             <Skeleton className="w-full h-full" />
@@ -23,7 +23,7 @@ export function GridWrapper() {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2k:grid-cols-4 gap-6"
       role="tabpanel"
       id={`panel-${activeFilter}`}
       aria-labelledby={`tab-${activeFilter}`}
