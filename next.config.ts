@@ -5,6 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const config: NextConfig = {
   images: {
+    qualities: [50, 80, 85, 90],
     remotePatterns: [
       {
         hostname: "cdn.sanity.io",

@@ -54,7 +54,7 @@ function HomeClients() {
           />
         </div>
         {/* Inverted and slower */}
-        <div className="-ml-8 2xl:ml-24 2xl:-mr-10">
+        <div className="-ml-8 2k:ml-24 2k:-mr-10">
           <Marquee
             key={"marquee-2"}
             showDelay={0.3}
@@ -63,7 +63,7 @@ function HomeClients() {
             CLIENTS_LOGOS={CLIENTS_LOGOS_EDUC}
           />
         </div>
-        <div className="-ml-8 2xl:ml-8 2xl:-mr-6">
+        <div className="-ml-8 2k:ml-8 2k:-mr-6">
           <Marquee
             key={"marquee-3"}
             showDelay={0.6}

@@ -19,7 +19,7 @@ export default function ContactSection() {
           <h2 className="text-5xl xl:text-6xl font-bold tracking-tighter">
             {t("title")}
           </h2>
-          <p className="text-gray-700 text-center xl:text-justify max-w-xl 2xl:max-w-4xl font-ibm_plex_mono">
+          <p className="text-gray-700 text-center xl:text-justify max-w-xl 2k:max-w-4xl font-ibm_plex_mono">
             {t.rich("subtitle", {
               semibold: (chunk) => (
                 <span className="font-semibold">{chunk}</span>
