@@ -37,7 +37,7 @@ export function WorkCard({ _id, slug, title, images }: Partial<Project>) {
             <Eye className="h-10 w-10 fill-gray-900 text-white" />
           </div>
         </div>
-        <h3 className="mt-2 text-lg text-gray-900 font-medium">{title}</h3>
+        <h3 className="mt-2 2k:text-lg text-gray-900 font-medium">{title}</h3>
       </motion.div>
     </Link>
   );

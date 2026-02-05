@@ -52,7 +52,7 @@ export default function ServicesPage({ params }: Props) {
         <div className="absolute inset-0 flex items-center">
           <div className="container px-4 md:px-6 lg:px-8">
             <div className="max-w-md md:max-w-lg">
-              <h2 className="text-sm sm:text-lg md:text-xl font-medium">
+              <h2 className="text-sm sm:text-lg 2k:text-xl font-medium">
                 {t.rich("subtitle", {
                   bold: (chunk) => <span className="font-bold">{chunk}</span>,
                   br: () => <br></br>,

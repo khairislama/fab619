@@ -105,7 +105,7 @@ export default async function ProjectPage({ params }: Props) {
           )}
 
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <h1 className="text-xl md:text-2xl 2xl:text-3xl 2k:text-4xl font-bold mb-4">
               {project.title}
             </h1>
 
@@ -115,7 +115,7 @@ export default async function ProjectPage({ params }: Props) {
                   <h3 className="text-sm font-medium text-muted-foreground">
                     {t("client")}
                   </h3>
-                  <p className="text-lg">{project.client}</p>
+                  <p className="2k:text-lg">{project.client}</p>
                 </div>
               )}
 
@@ -124,7 +124,7 @@ export default async function ProjectPage({ params }: Props) {
                   <h3 className="text-sm font-medium text-muted-foreground">
                     {t("year")}
                   </h3>
-                  <p className="text-lg">{project.year}</p>
+                  <p className="2k:text-lg">{project.year}</p>
                 </div>
               )}
 
@@ -133,7 +133,7 @@ export default async function ProjectPage({ params }: Props) {
                   <h3 className="text-sm font-medium text-muted-foreground">
                     {t("location")}
                   </h3>
-                  <p className="text-lg">{project.location}</p>
+                  <p className="2k:text-lg">{project.location}</p>
                 </div>
               )}
 
@@ -141,13 +141,15 @@ export default async function ProjectPage({ params }: Props) {
                 <h3 className="text-sm font-medium text-muted-foreground">
                   {t("category")}
                 </h3>
-                <p className="text-lg capitalize">{project.tag}</p>
+                <p className="2k:text-lg capitalize">{project.tag}</p>
               </div>
             </div>
 
             <div className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">{t("overview")}</h2>
-              <p className="text-lg text-muted-foreground mb-4">
+              <h2 className="text-lg 2k:text-xl font-semibold mb-4">
+                {t("overview")}
+              </h2>
+              <p className="2k:text-lg text-muted-foreground mb-4">
                 {project.description}
               </p>
             </div>
@@ -197,6 +199,6 @@ export async function generateStaticParams() {
     projects.map((project) => ({
       locale,
       projectSlug: project.slug,
-    }))
+    })),
   );
 }
