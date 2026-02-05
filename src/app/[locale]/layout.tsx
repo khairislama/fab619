@@ -85,7 +85,7 @@ async function LocaleLayoutContent({
         <div className="fixed top-0 left-0 right-0 z-50 h-16 xl:relative xl:h-full xl:w-60 xl:flex-shrink-0">
           <AppSidebar />
         </div>
-        <main className="flex-1 flex flex-col min-w-0 pt-16 xl:pt-0">
+        <main className="flex-1 flex flex-col min-w-0 pt-16 xl:pt-0 debug-screens">
           <div className="flex-1 overflow-auto scrollbar-hide">{children}</div>
         </main>
       </div>

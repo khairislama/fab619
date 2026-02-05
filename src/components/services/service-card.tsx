@@ -30,7 +30,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           <div>
             <h2
               id={`${service.id}-heading`}
-              className="text-2xl lg:text-3xl font-bold text-gray-900"
+              className="text-2xl 2k:text-3xl font-bold text-gray-900"
             >
               {t("title")}
             </h2>
@@ -40,7 +40,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           </div>
         </div>
 
-        <p className="text-gray-700 leading-tight text-lg font-ibm_plex_mono">
+        <p className="text-gray-700 leading-tight 2k:text-lg font-ibm_plex_mono">
           {t.rich("description", {
             focus: (chunk) => (
               <span className="underline font-semibold">{chunk}</span>

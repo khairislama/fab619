@@ -11,7 +11,7 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
   const projects = await getProjects();
 
   const sortedProjects = [...projects].sort((a, b) =>
-    new Date(a.createdAt!) > new Date(b.createdAt!) ? 1 : -1
+    new Date(a.createdAt!) > new Date(b.createdAt!) ? 1 : -1,
   );
 
   const currentIndex = sortedProjects.findIndex((p) => p.slug === slug);
@@ -63,7 +63,7 @@ export default async function Recommendation({ slug }: { slug: Slug }) {
       </div>
       <div className="flex items-center mb-8">
         <ChevronRight className="h-10 w-10" />
-        <h2 className="text-2xl font-bold">{t("recommendation")}</h2>
+        <h2 className="text-lg 2k:text-2xl font-bold">{t("recommendation")}</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {shuffled.map((project) => (
